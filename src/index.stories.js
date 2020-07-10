@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { muiTheme } from 'storybook-addon-material-ui';
 
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -11,10 +10,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 
-const action = msg => () => console.log(msg);
+const action = (msg) => () => console.log(msg);
 
 const MaterialComponent = withStyles(
-  theme => ({
+  (theme) => ({
     card: {
       maxWidth: 800,
       margin: 'auto',
@@ -36,45 +35,22 @@ const MaterialComponent = withStyles(
       <Typography gutterBottom variant="headline" component="h2">
         How to use Storybook
       </Typography>
-      <Typography component="p">
-        $ yarn storybook # to launch Storybook
-      </Typography>
-      <Typography component="p">
-        Select the story from the left panel
-      </Typography>
-      <Typography component="p">
-        Ctrl-Shift-F to toggle Fullscreen mode
-      </Typography>
-      <Typography component="p">
-        Select the theme from Material-UI addon panel dropdown
-      </Typography>
+      <Typography component="p">$ yarn storybook # to launch Storybook</Typography>
+      <Typography component="p">Select the story from the left panel</Typography>
+      <Typography component="p">Ctrl-Shift-F to toggle Fullscreen mode</Typography>
+      <Typography component="p">Select the theme from Material-UI addon panel dropdown</Typography>
     </CardContent>
     <CardActions>
       <Button size="small" variant={variant} onClick={action('Default')}>
         Default
       </Button>
-      <Button
-        size="small"
-        color="primary"
-        variant={variant}
-        onClick={action('primary')}
-      >
+      <Button size="small" color="primary" variant={variant} onClick={action('primary')}>
         primary
       </Button>
-      <Button
-        size="small"
-        color="secondary"
-        variant={variant}
-        onClick={action('secondary')}
-      >
+      <Button size="small" color="secondary" variant={variant} onClick={action('secondary')}>
         secondary
       </Button>
-      <Button
-        size="small"
-        disabled
-        variant={variant}
-        onClick={action('disabled')}
-      >
+      <Button size="small" disabled variant={variant} onClick={action('disabled')}>
         disabled
       </Button>
     </CardActions>
@@ -82,7 +58,6 @@ const MaterialComponent = withStyles(
 ));
 
 storiesOf('Button', module)
-  .addDecorator(muiTheme())
   .add('Text Buttons', () => <MaterialComponent />)
   .add('Outlined Buttons', () => <MaterialComponent variant="outlined" />)
   .add('Contained Buttons', () => <MaterialComponent variant="contained" />);
