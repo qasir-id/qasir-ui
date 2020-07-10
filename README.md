@@ -1,2 +1,2 @@
-# qiui
+# Qasir UI
 Qasir UI Component
