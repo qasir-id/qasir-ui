@@ -1,25 +1,46 @@
-import { makeStyles } from '@material-ui/core/styles';
-// import Button from '@material-ui/core/Button';
-
-export const useStyles = makeStyles((theme) => ({
+const MuiButtonStyled = ({ theme }) => ({
   root: {
-    '& > *': {
-      margin: theme.spacing(1),
+    height: 36,
+    textTransform: 'unset',
+    fontSize: 12,
+    borderRadius: 4,
+  },
+  sizeSmall: {
+    height: 28,
+  },
+  sizeLarge: {
+    height: 48,
+  },
+  contained: {
+    boxShadow: 'none',
+    '&:hover,&:focus': {
+      boxShadow: 'none',
+    },
+    '&:disabled': {
+      backgroundColor: '#DADCE5',
+      color: '#ffffff',
     },
   },
-}));
+  outlined: {
+    border: '1px solid #DADCE5',
+    color: '#474955',
+    '&:hover': {
+      borderColor: theme,
+      color: theme,
+      backgroundColor: '#ffffff',
+    },
+  },
+  containedPrimary: {
+    '&:hover': {
+      backgroundColor: '#D8442D',
+    },
+  },
+  containedSecondary: {
+    color: '#474955',
+    '&:hover': {
+      backgroundColor: '#DCDDDF',
+    },
+  },
+});
 
-// export const StyledButton = withStyles({
-//   root: {
-//     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-//     borderRadius: 3,
-//     border: 0,
-//     color: 'white',
-//     height: 48,
-//     padding: '0 30px',
-//     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-//   },
-//   label: {
-//     textTransform: 'capitalize',
-//   },
-// })(Button);
+export default MuiButtonStyled;

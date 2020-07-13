@@ -13,7 +13,7 @@ import './index.css';
 import App from './App';
 
 // Configs
-import theme from './theme';
+import theme from './components/theme';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
