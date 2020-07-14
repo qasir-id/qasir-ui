@@ -4,7 +4,7 @@ import React from 'react';
 // Components
 import Button from '../button';
 
-const ButtonTypes = () => {
+const ButtonContained = () => {
   return (
     <>
       <Button variant="contained" color="primary">
@@ -16,10 +16,8 @@ const ButtonTypes = () => {
       <Button variant="contained" disabled>
         Disable
       </Button>
-      <Button variant="outlined">Outline</Button>
-      <Button variant="text">Text</Button>
     </>
   );
 };
 
-export default ButtonTypes;
+export default ButtonContained;

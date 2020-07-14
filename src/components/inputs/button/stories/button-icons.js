@@ -4,7 +4,7 @@ import React from 'react';
 // Components
 import Button from '../button';
 
-const ButtonTypes = () => {
+const ButtonIcons = () => {
   return (
     <>
       <Button variant="contained" color="primary">
@@ -22,4 +22,4 @@ const ButtonTypes = () => {
   );
 };
 
-export default ButtonTypes;
+export default ButtonIcons;
