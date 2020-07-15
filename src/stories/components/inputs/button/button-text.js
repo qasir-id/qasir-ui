@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import Button from '../button';
+import Button from 'components/inputs/button';
 
 const ButtonText = () => {
   return (

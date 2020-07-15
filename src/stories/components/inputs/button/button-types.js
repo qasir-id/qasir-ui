@@ -2,9 +2,9 @@
 import React from 'react';
 
 // Components
-import Button from '../button';
+import Button from 'components/inputs/button';
 
-const ButtonContained = () => {
+const ButtonTypes = () => {
   return (
     <>
       <Button variant="contained" color="primary">
@@ -16,8 +16,10 @@ const ButtonContained = () => {
       <Button variant="contained" disabled>
         Disable
       </Button>
+      <Button variant="outlined">Outline</Button>
+      <Button variant="text">Text</Button>
     </>
   );
 };
 
-export default ButtonContained;
+export default ButtonTypes;

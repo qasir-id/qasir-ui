@@ -1,0 +1,42 @@
+import { Meta, Subtitle } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Inputs/Button/README" />
+
+# Button
+
+<Subtitle>
+  Buttons are action items that can initiate a certain action or change state, they can have customisable
+  background, icons and text. Buttons should be easy to discover and clearly indicate the intended action.
+</Subtitle>
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/New-Design-System?node-id=3866%3A5516"
+  height="50%"
+  defaultCollapsed
+/>
+
+## Usage
+
+```js
+import Button from 'qasir-ui/components/input/button';
+```
+
+```html
+<button variant="contained" color="primary">
+  Primary
+</button>
+```
+
+## Parameter options
+
+| Option name                                      | Type           | Default value                  | Description                                            |
+| ------------------------------------------------ | -------------- | ------------------------------ | ------------------------------------------------------ |
+| `type` <Badge status="positive">required</Badge> | `"figma"`      |                                | Fixed parameter.                                       |
+| `url` <Badge status="positive">required</Badge>  | `string` (URL) |                                | An URL to a Figma file/frame/prototype.                |
+| `allowFullscreen`                                | `boolean`      | `false`                        | Whether to allow `<iframe>` to go fullscreen.          |
+| `embedHost`                                      | `string`       | A value of `location.hostname` | Embeds host identifier. ([More info][figma-embed-doc]) |
+
+## MUI Api
+
+<IFrame url="https://material-ui.com/api/button/" height="80%" defaultCollapsed />

@@ -2,9 +2,9 @@
 import React from 'react';
 
 // Components
-import Button from '../button';
+import Button from 'components/inputs/button';
 
-const ButtonIconsLabel = () => {
+const ButtonCustomized = () => {
   return (
     <>
       <Button variant="contained" color="primary">
@@ -22,4 +22,4 @@ const ButtonIconsLabel = () => {
   );
 };
 
-export default ButtonIconsLabel;
+export default ButtonCustomized;
