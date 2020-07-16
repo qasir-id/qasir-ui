@@ -1,0 +1,26 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Type Buttons
+
+<Subtitle>
+  There are text, contained, and toggle buttons. Text buttons are typically used for less important actions.
+</Subtitle>
+<Preview withSource="none">
+  <Story id="components-inputs-button-example--types" />
+</Preview>
+
+```js
+import Button from 'qasir-ui/components/input/button';
+```
+
+```html
+<Button variant="contained" color="primary">Primary</Button>
+
+<Button variant="contained" color="secondary">Secondary</Button>
+
+<Button variant="contained" disabled>Disable</Button>
+
+<Button variant="outlined">Outline</Button>
+
+<Button variant="text">Text</Button>
+```
