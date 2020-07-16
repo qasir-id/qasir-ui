@@ -1,24 +1,12 @@
 // Vendors
 import React from 'react';
 
-// Material UI
-import { makeStyles } from '@material-ui/core/styles';
-
 // Components
-import Button from '../button';
+import Button from 'components/inputs/button';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-}));
-
-const ButtonTypes = () => {
-  const classes = useStyles();
+const ButtonIcons = () => {
   return (
-    <div className={classes.root}>
+    <>
       <Button variant="contained" color="primary">
         Primary
       </Button>
@@ -30,8 +18,8 @@ const ButtonTypes = () => {
       </Button>
       <Button variant="outlined">Outline</Button>
       <Button variant="text">Text</Button>
-    </div>
+    </>
   );
 };
 
-export default ButtonTypes;
+export default ButtonIcons;

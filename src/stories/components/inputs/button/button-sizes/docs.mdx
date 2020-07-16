@@ -1,0 +1,28 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Sizes Buttons
+
+<Subtitle>
+  Fancy larger or smaller buttons? Use the size property.
+</Subtitle>
+<Preview withSource="none">
+  <Story id="components-inputs-button-example--sizes" />
+</Preview>
+
+```js
+import Button from 'qasir-ui/components/input/button';
+```
+
+```html
+<Button variant="contained" color="primary" size="large">
+  Large
+</Button>
+
+<Button variant="contained" color="primary">
+  Medium
+</Button>
+
+<Button variant="contained" color="primary" size="small">
+  Small
+</Button>
+```

@@ -3,6 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // Styles
 import MuiButtonStyled from './inputs/button/style';
+import MuiSelectStyled from './inputs/select/style';
 
 export const variables = {
   theme: '#F04B32',
@@ -30,6 +31,7 @@ const theme = createMuiTheme({
       },
     },
     MuiButton: MuiButtonStyled(variables),
+    MuiSelect: MuiSelectStyled(variables),
   },
 });
 export default theme;

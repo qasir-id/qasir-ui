@@ -1,0 +1,36 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Icons & Label Buttons
+
+<Subtitle>
+  Sometimes you might want to have icons for certain button to enhance the UX of the application as we recognize logos more easily than plain text. For example, if you have a delete button you can label it with a dustbin icon.
+</Subtitle>
+<Preview withSource="none">
+  <Story id="components-inputs-button-example--icons-label" />
+</Preview>
+
+```js
+import Button from 'qasir-ui/components/input/button';
+```
+
+```html
+<Button variant="contained" color="primary" startIcon={<DeleteIcon />}>
+  Delete
+</Button>
+
+<Button variant="contained" color="secondary" endIcon={<SendIcon />}>
+  Send
+</Button>
+
+<Button variant="contained" disabled startIcon={<CloudUploadIcon />}>
+  Upload
+</Button>
+
+<Button variant="outlined" startIcon={<KeyboardVoiceIcon />}>
+  Talk
+</Button>
+
+<Button variant="text" startIcon={<SaveIcon />}>
+  Save
+</Button>
+```
