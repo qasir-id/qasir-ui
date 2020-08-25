@@ -1,19 +1,24 @@
 // Vendors
 import { createMuiTheme } from '@material-ui/core/styles';
 
+// Configs variables
+import { colors } from './variables';
+
 // Styles
 import MuiButtonStyled from './inputs/button/style';
 import MuiSelectStyled from './inputs/select/style';
 
-export const variables = {
-  theme: '#F04B32',
-};
+const defaultTheme = createMuiTheme();
 
 // A custom theme for this app
-const theme = createMuiTheme({
+export const modifyTheme = createMuiTheme({
   palette: {
+    common: {
+      black: '#000',
+      white: '#fff',
+    },
     primary: {
-      main: variables.theme,
+      main: colors.red50,
     },
     secondary: {
       main: '#E9EBEF',
@@ -22,6 +27,10 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: ['"Montserrat"', 'sans-serif'].join(','),
   },
+});
+
+const theme = createMuiTheme({
+  ...modifyTheme,
   overrides: {
     MuiPaper: {
       root: {
@@ -30,8 +39,9 @@ const theme = createMuiTheme({
         backgroundColor: '#fff', // 5d737e
       },
     },
-    MuiButton: MuiButtonStyled(variables),
-    MuiSelect: MuiSelectStyled(variables),
+    MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
+    MuiSelect: MuiSelectStyled(defaultTheme, modifyTheme),
   },
 });
+
 export default theme;

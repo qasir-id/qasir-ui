@@ -1,9 +1,12 @@
-const MuiButtonStyled = ({ theme }) => ({
+const MuiButtonStyled = (defaultTheme, modifyTheme) => ({
   root: {
     height: 36,
     textTransform: 'unset',
-    fontSize: 12,
     borderRadius: 4,
+  },
+  label: {
+    fontSize: 12,
+    fontWeight: 600,
   },
 
   sizeSmall: {
@@ -41,8 +44,8 @@ const MuiButtonStyled = ({ theme }) => ({
     border: '1px solid #DADCE5',
     color: '#474955',
     '&:hover': {
-      borderColor: theme,
-      color: theme,
+      borderColor: modifyTheme.palette.primary.main,
+      color: modifyTheme.palette.primary.main,
       backgroundColor: '#ffffff',
     },
   },
