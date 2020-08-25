@@ -24,29 +24,29 @@ const MuiButtonStyled = (defaultTheme, modifyTheme) => ({
       boxShadow: 'none',
     },
     '&:disabled': {
-      backgroundColor: '#DADCE5',
-      color: '#ffffff',
+      backgroundColor: modifyTheme.palette.secondary.disabled,
+      color: modifyTheme.palette.common.white,
     },
   },
   containedPrimary: {
     '&:hover': {
-      backgroundColor: '#D8442D',
+      backgroundColor: modifyTheme.palette.primary.hover,
     },
   },
   containedSecondary: {
-    color: '#474955',
+    color: modifyTheme.palette.secondary.text,
     '&:hover': {
-      backgroundColor: '#DCDDDF',
+      backgroundColor: modifyTheme.palette.secondary.hover,
     },
   },
 
   outlined: {
     border: '1px solid #DADCE5',
-    color: '#474955',
+    color: modifyTheme.palette.primary.text,
     '&:hover': {
       borderColor: modifyTheme.palette.primary.main,
       color: modifyTheme.palette.primary.main,
-      backgroundColor: '#ffffff',
+      backgroundColor: modifyTheme.palette.common.white,
     },
   },
 });

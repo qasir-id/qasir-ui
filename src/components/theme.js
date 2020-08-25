@@ -2,7 +2,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 // Configs variables
-import { colors } from './variables';
+import colors from './variables/colors';
 
 // Styles
 import MuiButtonStyled from './inputs/button/style';
@@ -14,14 +14,19 @@ const defaultTheme = createMuiTheme();
 export const modifyTheme = createMuiTheme({
   palette: {
     common: {
-      black: '#000',
-      white: '#fff',
+      black: colors.black90,
+      white: colors.white,
     },
     primary: {
       main: colors.red50,
+      hover: '#D8442D',
+      text: colors.black90,
     },
     secondary: {
-      main: '#E9EBEF',
+      main: colors.grey50,
+      disabled: colors.grey70,
+      text: colors.black90,
+      hover: '#DCDDDF',
     },
   },
   typography: {
@@ -36,7 +41,7 @@ const theme = createMuiTheme({
       root: {
         padding: '20px 10px',
         margin: '10px',
-        backgroundColor: '#fff', // 5d737e
+        backgroundColor: colors.white,
       },
     },
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
