@@ -16,11 +16,23 @@ import { Badge } from '@storybook/components';
   defaultCollapsed
 />
 
-## Usage
+### Import
 
 ```js
-import Button from 'qasir-ui/components/input/button';
+import Button from 'qasir-ui/inputs/button';
 ```
+
+### With Dynamic Import (Next.js)
+
+```js
+import dynamic from 'next/dynamic';
+```
+
+```js
+const Button = dynamic(() => import('qasir-ui/inputs/button'));
+```
+
+### Usage
 
 ```html
 <Button variant="contained" color="primary">
@@ -28,6 +40,6 @@ import Button from 'qasir-ui/components/input/button';
 </Button>
 ```
 
-## MUI Api
+### MUI Api
 
 <IFrame url="https://material-ui.com/api/button/" height="80%" defaultCollapsed />
