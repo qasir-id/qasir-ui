@@ -1,9 +1,9 @@
 {
-  "name": "qasir-ui",
+  "name": "qasir-ui-dev",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^11.0.0",
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
@@ -17,13 +17,10 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=nnkmnd7wfvm"
+    "chromatic": "npx chromatic --project-token=nnkmnd7wfvm",
+    "publish:npm": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,9 +38,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.12.10",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-design-assets": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
@@ -62,7 +61,8 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ],
     "plugins": [
       "@babel/plugin-transform-react-jsx"
