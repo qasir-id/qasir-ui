@@ -1,6 +1,6 @@
 {
   "name": "qasir-ui-dev",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": false,
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -20,7 +20,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=nnkmnd7wfvm",
-    "publish:npm": "rm -rf components && mkdir components && babel src/components -d components --copy-files"
+    "build:variables": "rm -rf variables && mkdir variables && babel src/components/variables -d variables --copy-files",
+    "build:inputs": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files",
+    "build": "npm-run-all build:variables build:inputs"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,6 +56,7 @@
     "@storybook/theming": "^5.3.19",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.0.0",
+    "npm-run-all": "^4.1.5",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-is": "^16.13.1",
     "storybook-addon-designs": "^5.4.0",
