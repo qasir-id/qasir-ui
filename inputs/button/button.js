@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _Button = _interopRequireDefault(require("@material-ui/core/Button"));
 
-var _theme = _interopRequireDefault(require("../../theme"));
+var _theme = _interopRequireDefault(require("../../variables/theme"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

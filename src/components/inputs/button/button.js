@@ -5,7 +5,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-import theme from '../../theme';
+import theme from '../../variables/theme';
 
 export default (props) => {
   const { children } = props;

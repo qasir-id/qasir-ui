@@ -2,11 +2,10 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 // Configs variables
-import colors from './variables/colors';
+import colors from './colors';
 
 // Styles
-import MuiButtonStyled from './inputs/button/style';
-import MuiSelectStyled from './inputs/select/style';
+import MuiButtonStyled from '../inputs/button/style';
 
 const defaultTheme = createMuiTheme();
 
@@ -45,7 +44,6 @@ const theme = createMuiTheme({
       },
     },
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
-    MuiSelect: MuiSelectStyled(defaultTheme, modifyTheme),
   },
 });
 
