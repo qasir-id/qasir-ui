@@ -1,6 +1,6 @@
 {
   "name": "qasir-ui-dev",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -20,7 +20,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=nnkmnd7wfvm",
-    "publish:npm": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files"
+    "publish:npm": "rm -rf components && mkdir components && babel src/components -d components --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
