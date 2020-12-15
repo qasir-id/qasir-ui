@@ -9,7 +9,7 @@ import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
 import SaveIcon from '@material-ui/icons/Save';
 
 // Components
-import Button from 'components/inputs/button';
+import Button from 'components/inputs/Button';
 
 const ButtonIconsLabel = () => {
   return (

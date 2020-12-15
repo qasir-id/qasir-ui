@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import Typography from 'components/data-display/typography';
+import Typography from 'components/data-display/Typography';
 
 const TypographyCaption = () => {
   return (

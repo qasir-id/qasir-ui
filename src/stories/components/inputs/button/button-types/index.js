@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import Button from 'components/inputs/button';
+import Button from 'components/inputs/Button';
 
 const ButtonTypes = () => {
   return (
