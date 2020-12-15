@@ -7,7 +7,7 @@ import TextField from 'components/inputs/TextField';
 const TextFieldTypes = () => {
   return (
     <>
-      <TextField label="Outlined" variant="outlined" />
+      <TextField label="Single Line Field" variant="outlined" />
     </>
   );
 };
