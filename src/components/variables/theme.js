@@ -4,9 +4,13 @@ import { createMuiTheme } from '@material-ui/core/styles';
 // Configs variables
 import colors from './colors';
 
-// Styles
-import MuiButtonStyled from '../inputs/button/style';
-import MuiTypographyStyled from '../data-display/typography/style';
+// Styles sections
+// Data display
+import MuiTypographyStyled from '../data-display/Typography/style';
+
+// Inputs
+import MuiButtonStyled from '../inputs/Button/style';
+import MuiTextFieldStyled from '../inputs/TextField/style';
 
 const defaultTheme = createMuiTheme();
 
@@ -46,6 +50,7 @@ const theme = createMuiTheme({
     },
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
+    MuiTextField: MuiTextFieldStyled(defaultTheme, modifyTheme),
   },
 });
 
