@@ -15,6 +15,9 @@ import TextFieldFormPropsDocs from './textfield-form-props/docs.mdx';
 import TextFieldValidation from './textfield-validation';
 import TextFieldValidationDocs from './textfield-validation/docs.mdx';
 
+import TextFieldMultiline from './textfield-multiline';
+import TextFieldMultilineDocs from './textfield-multiline/docs.mdx';
+
 import TextFieldSelect from './textfield-select';
 import TextFieldSelectDocs from './textfield-select/docs.mdx';
 
@@ -82,6 +85,19 @@ validation.story = {
   parameters: {
     docs: {
       page: TextFieldValidationDocs,
+    },
+  },
+};
+
+export const multiline = () => (
+  <Wrapper>
+    <TextFieldMultiline />
+  </Wrapper>
+);
+multiline.story = {
+  parameters: {
+    docs: {
+      page: TextFieldMultilineDocs,
     },
   },
 };

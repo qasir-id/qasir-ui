@@ -1,0 +1,16 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+<h1>Multiline</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>The multiline prop transforms the text field into a <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a> or a <a target="_blank" href="https://material-ui.com/components/textarea-autosize/">TextareaAutosize</a>.</p>
+
+<Preview withSource="none">
+  <Story id="components-inputs-textfield-example--multiline" />
+</Preview>
+
+```js
+import TextField from 'qasir-ui/inputs/TextField';
+```
+
+```html
+<TextField label="Hello World" variant="outlined" multiline rows={4} />
+```
