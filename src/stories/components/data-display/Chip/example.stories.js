@@ -6,8 +6,11 @@ import { withDesign } from 'storybook-addon-designs';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import BadgeComponent from './badge';
-import BadgeDocs from './badge/docs.mdx';
+import ChipComponent from './Chip';
+import ChipDocs from './Chip/docs.mdx';
+
+import CustomChip from './CustomChip';
+import CustomChipDocs from './CustomChip/docs.mdx';
 
 import 'font-family.css';
 
@@ -25,22 +28,37 @@ const Wrapper = ({ children }) => {
 };
 
 export default {
-  title: 'Components/Data Display/chip/Example',
+  title: 'Components/Data Display/Chip/Example',
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
   },
 };
-export const Badge = () => (
+export const Chip = () => (
   <Wrapper>
-    <BadgeComponent />
+    <ChipComponent />
   </Wrapper>
 );
 
-Badge.story = {
+export const Custom = () => (
+  <Wrapper>
+    <CustomChip />
+  </Wrapper>
+)
+
+Custom.story = {
   parameters: {
     docs: {
-      page: BadgeDocs,
+      page: CustomChipDocs
+    }
+  }
+}
+
+
+Chip.story = {
+  parameters: {
+    docs: {
+      page: ChipDocs,
     },
   },
 };

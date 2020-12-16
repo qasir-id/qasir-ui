@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Data Display/Chip/README"/>
+
+<h1>Chip</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Chips are compact elements that represent an input, attribute, or action.
+</p>
+
+<h3 style={{marginTop: 20}}>Montserrat Font CDN</h3>
+<code style={{marginBottom: 30}}>https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap</code>
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
+  height="50%"
+  defaultCollapsed
+/>
+
+### Import
+
+```js
+import Chip from 'qasir-ui/data-display/Chip';
+```
+
+### With Dynamic Import (Next.js)
+
+```js
+import dynamic from 'next/dynamic';
+```
+
+```js
+const Chip = dynamic(() => import('qasir-ui/data-display/Chip'));
+```
+
+### Usage
+
+```html
+<Chip color="primary" label="Primary" size="small"/>
+
+<Chip color="secondary" label="Secondary" size="small"/>
+
+<Chip color="default" label="Default" size="small"/>
+
+
+<Chip color="primary" label="Primary" size="medium"/>
+
+<Chip color="secondary" label="Secondary" size="medium"/>
+
+<Chip color="default" label="Default" size="medium"/>
+```
+
+### MUI Api
+
+<IFrame url="https://material-ui.com/api/chip/" height="80%" defaultCollapsed />

@@ -7,6 +7,7 @@ import colors from './colors';
 // Styles sections
 // Data display
 import MuiTypographyStyled from '../data-display/Typography/style';
+import MuiChipStyled from '../data-display/Chip/style';
 
 // Inputs
 import MuiButtonStyled from '../inputs/Button/style';
@@ -51,6 +52,7 @@ const theme = createMuiTheme({
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
     MuiTextField: MuiTextFieldStyled(defaultTheme, modifyTheme),
+    MuiChip: MuiChipStyled(defaultTheme,modifyTheme)
   },
 });
 

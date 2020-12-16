@@ -1,0 +1,40 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Chip
+
+<Subtitle>
+  Chips are compact elements that represent an input, attribute, or action.
+</Subtitle>
+<Preview withSource="none">
+  <Story id="components-data-display-chip-example--chip" />
+</Preview>
+
+### Import
+```js
+import Chip from 'qasir-ui/data-display/Chip';
+```
+
+### Usage
+```html
+<Chip color="primary" label="Primary" size="small"/>
+
+<Chip color="secondary" label="Secondary" size="small"/>
+
+<Chip color="default" label="Default" size="small"/>
+```
+
+```html
+<Chip color="primary" label="Primary" size="medium"/>
+
+<Chip color="secondary" label="Secondary" size="medium"/>
+
+<Chip color="default" label="Default" size="medium"/>
+```
+
+```html
+<Chip color="primary" label="Primary" size="medium" disabled/>
+
+<Chip color="secondary" label="Secondary" size="medium" disabled/>
+
+<Chip color="default" label="Default" size="medium" disabled/>
+```
