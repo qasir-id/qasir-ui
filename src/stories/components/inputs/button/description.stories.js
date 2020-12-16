@@ -32,27 +32,61 @@ export default {
     design: { disabled: true },
   },
   argTypes: {
-    backgroundColor: { control: 'color' },
+    Label: { control: 'text' },
+    Type: {
+      control: {
+        type: 'select',
+        options: ['primary', 'secondary', 'disable', 'outline', 'text'],
+      },
+    },
+    Size: {
+      control: {
+        type: 'select',
+        options: ['large', 'medium', 'small'],
+      },
+    },
+    FullWidth: {
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 };
 
-export const description = () => (
+export const description = (args) => (
   <Wrapper>
     <Button
-      variant="contained"
-      color="primary"
+      {...args}
+      variant={
+        (args.Type == 'primary' && 'contained') ||
+        (args.Type == 'secondary' && 'contained') ||
+        (args.Type == 'disable' && 'contained') ||
+        (args.Type == 'outline' && 'outlined') ||
+        (args.Type == 'text' && 'text')
+      }
+      disabled={args.Type == 'disable'}
+      color={args.Type == 'primary' ? args.Type : args.Type == 'secondary' ? args.Type : ''}
+      size={args.Size}
+      fullWidth={args.FullWidth}
       onClick={action('onClick')}
       onMouseEnter={action('onMouseEnter')}
       onMouseLeave={action('onMouseLeave')}
     >
-      Hello World
+      {args.Label}
     </Button>
   </Wrapper>
 );
+
 description.story = {
   parameters: {
     docs: {
       page: ButtonDescriptionDocs,
     },
   },
+};
+
+description.args = {
+  Label: 'Hello World',
+  Type: 'primary',
+  Size: 'medium',
 };
