@@ -9,6 +9,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextFieldTypes from './textfield-types';
 import TextFieldTypesDocs from './textfield-types/docs.mdx';
 
+import TextFieldFormProps from './textfield-form-props';
+import TextFieldFormPropsDocs from './textfield-form-props/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,6 +44,19 @@ types.story = {
   parameters: {
     docs: {
       page: TextFieldTypesDocs,
+    },
+  },
+};
+
+export const formProps = () => (
+  <Wrapper>
+    <TextFieldFormProps />
+  </Wrapper>
+);
+formProps.story = {
+  parameters: {
+    docs: {
+      page: TextFieldFormPropsDocs,
     },
   },
 };

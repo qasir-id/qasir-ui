@@ -33,6 +33,9 @@ import ButtonLoadingDocs from './button-loading/docs.mdx';
 import ButtonCustomized from './button-customized';
 import ButtonCustomizedDocs from './button-customized/docs.mdx';
 
+import ButtonFullWidth from './button-full-width';
+import ButtonFullWidthDocs from './button-full-width/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -135,41 +138,55 @@ iconsLabel.story = {
   },
 };
 
-export const icons = () => (
-  <Wrapper>
-    <ButtonIcons />
-  </Wrapper>
-);
-icons.story = {
-  parameters: {
-    docs: {
-      page: ButtonIconsDocs,
-    },
-  },
-};
+// export const icons = () => (
+//   <Wrapper>
+//     <ButtonIcons />
+//   </Wrapper>
+// );
+// icons.story = {
+//   parameters: {
+//     docs: {
+//       page: ButtonIconsDocs,
+//     },
+//   },
+// };
 
-export const loading = () => (
-  <Wrapper>
-    <ButtonLoading />
-  </Wrapper>
-);
-loading.story = {
-  parameters: {
-    docs: {
-      page: ButtonLoadingDocs,
-    },
-  },
-};
+// export const loading = () => (
+//   <Wrapper>
+//     <ButtonLoading />
+//   </Wrapper>
+// );
+// loading.story = {
+//   parameters: {
+//     docs: {
+//       page: ButtonLoadingDocs,
+//     },
+//   },
+// };
 
-export const customized = () => (
+// export const customized = () => (
+//   <Wrapper>
+//     <ButtonCustomized />
+//   </Wrapper>
+// );
+// customized.story = {
+//   parameters: {
+//     docs: {
+//       page: ButtonCustomizedDocs,
+//     },
+//   },
+// };
+
+export const fullWidth = () => (
   <Wrapper>
-    <ButtonCustomized />
+    <ButtonFullWidth />
   </Wrapper>
 );
-customized.story = {
+fullWidth.story = {
+  name: 'Full Width',
   parameters: {
     docs: {
-      page: ButtonCustomizedDocs,
+      page: ButtonFullWidthDocs,
     },
   },
 };

@@ -18,6 +18,12 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
         color: colors.black90,
         fontWeight: 500,
       },
+      '&-multiline': {
+        height: 'auto',
+      },
+      '&-inputMultiline': {
+        padding: 0,
+      },
     },
     '& .MuiFormLabel': {
       '&-root': {

@@ -1,10 +1,8 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Preview, Story } from '@storybook/addon-docs/blocks';
 
-# Contained Buttons
+<h1>Contained Buttons</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Contained buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to your app.</p>
 
-<Subtitle>
-  Contained buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to your app.
-</Subtitle>
 <Preview withSource="none">
   <Story id="components-inputs-button-example--contained" />
 </Preview>
@@ -15,8 +13,12 @@ import Button from 'qasir-ui/inputs/Button';
 
 ```html
 <Button variant="contained" color="primary">Primary</Button>
+```
 
+```html
 <Button variant="contained" color="secondary">Secondary</Button>
+```
 
+```html
 <Button variant="contained" disabled>Disable</Button>
 ```
