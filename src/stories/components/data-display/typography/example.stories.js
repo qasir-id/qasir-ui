@@ -51,6 +51,7 @@ export const heading = () => (
 );
 heading.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TypographyHeadingDocs,
     },
@@ -64,6 +65,7 @@ export const subtitle = () => (
 );
 subtitle.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TypographySubtitleDocs,
     },
@@ -77,6 +79,7 @@ export const body = () => (
 );
 body.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TypographyBodyDocs,
     },
@@ -90,6 +93,7 @@ export const caption = () => (
 );
 caption.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TypographyCaptionDocs,
     },
@@ -103,6 +107,7 @@ export const overline = () => (
 );
 overline.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TypographyOverlineDocs,
     },

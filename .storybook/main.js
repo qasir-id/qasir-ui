@@ -7,5 +7,6 @@ module.exports = {
     'storybook-addon-designs',
     '@storybook/addon-docs',
     '@storybook/addon-storysource',
+    '@etchteam/storybook-addon-status/register',
   ],
 };

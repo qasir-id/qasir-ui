@@ -6,8 +6,8 @@ import { withDesign } from 'storybook-addon-designs';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import Button from 'components/inputs/Button';
-import ButtonDescriptionDocs from './description.docs.mdx';
+import TextField from 'components/inputs/TextField';
+import TextFieldDescriptionDocs from './description.docs.mdx';
 
 import 'font-family.css';
 
@@ -25,7 +25,7 @@ const Wrapper = ({ children }) => {
 };
 
 export default {
-  title: 'Components/Inputs/Button',
+  title: 'Components/Inputs/TextField',
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
@@ -34,15 +34,13 @@ export default {
 
 export const description = () => (
   <Wrapper>
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+    <TextField label="Hello World" variant="outlined" />
   </Wrapper>
 );
 description.story = {
   parameters: {
     docs: {
-      page: ButtonDescriptionDocs,
+      page: TextFieldDescriptionDocs,
     },
   },
 };

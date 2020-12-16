@@ -66,6 +66,7 @@ export const types = () => (
 );
 types.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonTypesDocs,
     },
@@ -79,6 +80,7 @@ export const contained = () => (
 );
 contained.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonContainedDocs,
     },
@@ -92,6 +94,7 @@ export const text = () => (
 );
 text.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonTextDocs,
     },
@@ -105,6 +108,7 @@ export const outlined = () => (
 );
 outlined.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonOutlinedDocs,
     },
@@ -118,6 +122,7 @@ export const sizes = () => (
 );
 sizes.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonSizesDocs,
     },
@@ -132,6 +137,7 @@ export const iconsLabel = () => (
 iconsLabel.story = {
   name: 'With Icons & Label',
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonIconsLabelDocs,
     },
@@ -185,6 +191,7 @@ export const fullWidth = () => (
 fullWidth.story = {
   name: 'Full Width',
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonFullWidthDocs,
     },

@@ -57,6 +57,7 @@ export const types = () => (
 );
 types.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldTypesDocs,
     },
@@ -70,6 +71,7 @@ export const formProps = () => (
 );
 formProps.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldFormPropsDocs,
     },
@@ -83,6 +85,7 @@ export const validation = () => (
 );
 validation.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldValidationDocs,
     },
@@ -96,6 +99,7 @@ export const multiline = () => (
 );
 multiline.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldMultilineDocs,
     },
@@ -109,6 +113,7 @@ export const select = () => (
 );
 select.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldSelectDocs,
     },
@@ -122,6 +127,7 @@ export const icons = () => (
 );
 icons.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldIconsDocs,
     },
@@ -135,6 +141,7 @@ export const inputAdornments = () => (
 );
 inputAdornments.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldInputAdornmentsDocs,
     },
