@@ -1,6 +1,7 @@
 // Vendors
 import React from 'react';
 import { withDesign } from 'storybook-addon-designs';
+import { action } from '@storybook/addon-actions';
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -30,12 +31,20 @@ export default {
   parameters: {
     design: { disabled: true },
   },
-  argTypes: { onClick: { action: 'clicked' } },
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 };
 
 export const description = () => (
   <Wrapper>
-    <Button variant="contained" color="primary">
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={action('onClick')}
+      onMouseEnter={action('onMouseEnter')}
+      onMouseLeave={action('onMouseLeave')}
+    >
       Hello World
     </Button>
   </Wrapper>

@@ -1,6 +1,5 @@
 import { addParameters, addDecorator } from '@storybook/react';
 import { withPerformance } from 'storybook-addon-performance';
-import '@storybook/addon-console';
 
 addParameters({
   viewMode: 'story',
