@@ -1,0 +1,20 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+<h1>Validation</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>The <code>error</code> prop toggles the error state, the <code>helperText</code> prop can then be used to provide feedback to the user about the error.</p>
+
+<Preview withSource="none">
+  <Story id="components-inputs-textfield-example--validation" />
+</Preview>
+
+```js
+import TextField from 'qasir-ui/inputs/TextField';
+```
+
+```html
+<TextField error label="Error" defaultValue="Hello World" variant="outlined" />
+```
+
+```html
+<TextField error label="Error" defaultValue="Hello World" helperText="Incorrect entry." variant="outlined" />
+```
