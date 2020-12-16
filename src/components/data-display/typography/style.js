@@ -1,16 +1,18 @@
 const MuiTypographyStyled = (defaultTheme, modifyTheme) => ({
   root: {
     color: modifyTheme.palette.common.black,
-    '&.MuiTypography-subtitle3': {
-      fontWeight: 700,
-      fontSize: 12,
-      lineHeight: '16px',
-    },
-    '&.MuiTypography-caption1': {
-      fontSize: 14,
-    },
-    '&.MuiTypography-caption2': {
-      fontSize: 12,
+    '&.MuiTypography': {
+      '&-subtitle3': {
+        fontWeight: 700,
+        fontSize: 12,
+        lineHeight: '16px',
+      },
+      '&-caption1': {
+        fontSize: 14,
+      },
+      '&-caption2': {
+        fontSize: 12,
+      },
     },
   },
   h1: {

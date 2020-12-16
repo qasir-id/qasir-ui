@@ -1,4 +1,4 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 <h1>Form Props</h1>
 <p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Standard form attributes are supported e.g. <code>required</code>, <code>disabled</code>, type, etc. as well as a <code>helperText</code> which is used to give context about a field’s input, such as how the input will be used.</p>
@@ -13,4 +13,28 @@ import TextField from 'qasir-ui/inputs/TextField';
 
 ```html
 <TextField required label="Required*" defaultValue="Hello World" variant="outlined" />
+```
+
+```html
+<TextField disabled label="Disabled" defaultValue="Hello World" variant="outlined" />
+```
+
+```html
+<TextField label="Password" type="password" autoComplete="current-password" variant="outlined" />
+```
+
+```html
+<TextField label="Read Only" defaultValue="Hello World" InputProps={{ readOnly: true }} variant="outlined" />
+```
+
+```html
+<TextField label="Number" type="number" InputLabelProps={{ shrink: true }} variant="outlined" />
+```
+
+```html
+<TextField label="Search field" type="search" variant="outlined" />
+```
+
+```html
+<TextField label="Helper text" defaultValue="Hello World" helperText="Some important text" variant="outlined" />
 ```
