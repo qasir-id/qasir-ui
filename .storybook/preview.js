@@ -1,4 +1,5 @@
-import { addParameters } from '@storybook/react';
+import { addParameters, addDecorator } from '@storybook/react';
+import { withPerformance } from 'storybook-addon-performance';
 
 addParameters({
   viewMode: 'story',
@@ -15,3 +16,5 @@ addParameters({
     Deprecated: '#F04B32',
   },
 });
+
+addDecorator(withPerformance);

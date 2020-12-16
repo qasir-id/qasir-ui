@@ -8,5 +8,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-storysource',
     '@etchteam/storybook-addon-status/register',
+    '@storybook/addon-a11y',
+    'storybook-addon-performance/register',
   ],
 };
