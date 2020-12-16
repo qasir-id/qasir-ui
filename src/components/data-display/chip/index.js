@@ -1,3 +1,3 @@
-import Badge from './badge';
+import Chip from './Chip';
 
-export default Badge;
+export default Chip;
