@@ -1,0 +1,20 @@
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+
+<h1>Icons</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>There are multiple ways to display an icon with a text field.</p>
+
+<Preview withSource="none">
+  <Story id="components-inputs-textfield-example--icons" />
+</Preview>
+
+```js
+import TextField from 'qasir-ui/inputs/TextField';
+```
+
+```html
+<TextField label="Single Line Field" variant="outlined" />
+```
+
+```html
+<TextField label="Multi Line Field" variant="outlined" multiline rows={4} />
+```

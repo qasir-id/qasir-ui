@@ -18,6 +18,12 @@ import TextFieldValidationDocs from './textfield-validation/docs.mdx';
 import TextFieldSelect from './textfield-select';
 import TextFieldSelectDocs from './textfield-select/docs.mdx';
 
+import TextFieldIcons from './textfield-icons';
+import TextFieldIconsDocs from './textfield-icons/docs.mdx';
+
+import TextFieldInputAdornments from './textfield-input-adornments';
+import TextFieldInputAdornmentsDocs from './textfield-input-adornments/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -89,6 +95,32 @@ select.story = {
   parameters: {
     docs: {
       page: TextFieldSelectDocs,
+    },
+  },
+};
+
+export const icons = () => (
+  <Wrapper>
+    <TextFieldIcons />
+  </Wrapper>
+);
+icons.story = {
+  parameters: {
+    docs: {
+      page: TextFieldIconsDocs,
+    },
+  },
+};
+
+export const inputAdornments = () => (
+  <Wrapper>
+    <TextFieldInputAdornments />
+  </Wrapper>
+);
+inputAdornments.story = {
+  parameters: {
+    docs: {
+      page: TextFieldInputAdornmentsDocs,
     },
   },
 };
