@@ -30,6 +30,7 @@ export default {
   parameters: {
     design: { disabled: true },
   },
+  argTypes: { onClick: { action: 'clicked' } },
 };
 
 export const description = () => (

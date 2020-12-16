@@ -1899,6 +1899,13 @@
     react-inspector "^4.0.0"
     uuid "^3.3.2"
 
+"@storybook/addon-console@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-console/-/addon-console-1.2.2.tgz#018cd712e1ed6eee1a7eae57c3d96f1fbbedc191"
+  integrity sha512-aTuYoz1Fit9PAhy0VDTjQ5rovRz5a+DgPRIaA5cktkiA9Y0ikK/cu525DDZLTh7oNMOt0fmRYyYPtknTMyeXrQ==
+  dependencies:
+    global "^4.3.2"
+
 "@storybook/addon-design-assets@^5.3.19":
   version "5.3.21"
   resolved "https://registry.yarnpkg.com/@storybook/addon-design-assets/-/addon-design-assets-5.3.21.tgz#e64481f5ec29df42065d0ddfcc595c4d59106c7e"
@@ -1990,6 +1997,23 @@
     react-syntax-highlighter "^11.0.2"
     regenerator-runtime "^0.13.3"
     util-deprecate "^1.0.2"
+
+"@storybook/addon-viewport@^6.1.11":
+  version "6.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.1.11.tgz#70c6c2e81a800e4cd217693a30448bb4e3cbc811"
+  integrity sha512-VgCRLpTu56WzSJ0piBu4nL99GtXeMcDxaLvEZKyVCoYjyQZxRcg4N9OFwxpnu6bYYF7O4pMbs2wITc4mW6YSEg==
+  dependencies:
+    "@storybook/addons" "6.1.11"
+    "@storybook/api" "6.1.11"
+    "@storybook/client-logger" "6.1.11"
+    "@storybook/components" "6.1.11"
+    "@storybook/core-events" "6.1.11"
+    "@storybook/theming" "6.1.11"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.13.7"
 
 "@storybook/addons@5.3.19":
   version "5.3.19"
