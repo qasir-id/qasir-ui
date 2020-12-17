@@ -57,7 +57,7 @@ export const types = () => (
 );
 types.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TextFieldTypesDocs,
     },

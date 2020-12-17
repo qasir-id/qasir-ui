@@ -53,26 +53,25 @@ export default {
   },
 };
 
-export const description = (args) => (
+export const description = ({ Label, Type, Size, FullWidth }) => (
   <Wrapper>
     <Button
-      {...args}
       variant={
-        (args.Type == 'primary' && 'contained') ||
-        (args.Type == 'secondary' && 'contained') ||
-        (args.Type == 'disable' && 'contained') ||
-        (args.Type == 'outline' && 'outlined') ||
-        (args.Type == 'text' && 'text')
+        (Type == 'primary' && 'contained') ||
+        (Type == 'secondary' && 'contained') ||
+        (Type == 'disable' && 'contained') ||
+        (Type == 'outline' && 'outlined') ||
+        (Type == 'text' && 'text')
       }
-      disabled={args.Type == 'disable'}
-      color={args.Type == 'primary' ? args.Type : args.Type == 'secondary' ? args.Type : ''}
-      size={args.Size}
-      fullWidth={args.FullWidth}
+      disabled={Type == 'disable'}
+      color={Type == 'primary' ? Type : Type == 'secondary' ? Type : ''}
+      size={Size}
+      fullWidth={FullWidth}
       onClick={action('onClick')}
       onMouseEnter={action('onMouseEnter')}
       onMouseLeave={action('onMouseLeave')}
     >
-      {args.Label}
+      {Label}
     </Button>
   </Wrapper>
 );

@@ -8,7 +8,7 @@ const TextFieldFormProps = () => {
   return (
     <>
       <TextField required label="Required" defaultValue="Hello World" variant="outlined" />
-      <TextField disabled label="Disabled" defaultValue="Hello World" variant="outlined" />
+      <TextField disabled defaultValue="Disabled" variant="outlined" labelWidth={0} />
       <TextField label="Password" type="password" autoComplete="current-password" variant="outlined" />
       <TextField
         label="Read Only"

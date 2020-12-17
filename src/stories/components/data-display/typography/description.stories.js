@@ -63,26 +63,24 @@ export default {
   },
 };
 
-export const description = (args) => (
+export const description = ({ Heading, Subtitle, Body, Caption, Overline }) => (
   <Wrapper>
     <h3>Heading</h3>
-    <Typography variant={args.Heading}>
+    <Typography variant={Heading}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
     <h3 style={{ marginTop: 20 }}>Subtitle</h3>
     <Typography
-      variant={
-        args.Subtitle == 'subtitle1' ? args.Subtitle : args.Subtitle == 'subtitle2' ? args.Subtitle : ''
-      }
-      className={args.Subtitle == 'subtitle3' ? 'MuiTypography-subtitle3' : ''}
-      component={args.Subtitle == 'subtitle3' ? 'h6' : ''}
+      variant={Subtitle == 'subtitle1' ? Subtitle : Subtitle == 'subtitle2' ? Subtitle : ''}
+      className={Subtitle == 'subtitle3' ? 'MuiTypography-subtitle3' : ''}
+      component={Subtitle == 'subtitle3' ? 'h6' : ''}
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
     <h3 style={{ marginTop: 20 }}>Body</h3>
-    <Typography variant={args.Body}>
+    <Typography variant={Body}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
@@ -90,9 +88,9 @@ export const description = (args) => (
     <Typography
       variant="caption"
       className={
-        args.Caption == 'caption1'
+        Caption == 'caption1'
           ? 'MuiTypography-caption1'
-          : args.Caption == 'caption2'
+          : Caption == 'caption2'
           ? 'MuiTypography-caption2'
           : ''
       }
@@ -101,7 +99,7 @@ export const description = (args) => (
       dolore magna aliqua.
     </Typography>
     <h3 style={{ marginTop: 20 }}>Overline</h3>
-    <Typography variant={args.Overline ? 'overline' : ''}>
+    <Typography variant={Overline ? 'overline' : ''}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>

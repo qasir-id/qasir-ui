@@ -4,11 +4,14 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
     '& .MuiInputBase': {
       '&-root': {
         height: 48,
-        '& fieldset': {
-          top: '-7px',
-        },
         '& legend': {
-          fontSize: 9,
+          fontSize: '10.5px',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: colors.grey50,
+          '& .MuiInputBase-input': {
+            color: colors.black30,
+          },
         },
       },
       '&-input': {
@@ -25,12 +28,44 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
         padding: 0,
       },
     },
+    '& label': {
+      '&.Mui-focused': {
+        color: colors.black30,
+        fontSize: 15,
+      },
+    },
     '& .MuiFormLabel': {
       '&-root': {
         color: colors.black30,
         fontSize: 12,
         fontWeight: 500,
         marginTop: '-1px',
+        '&.MuiInputLabel-shrink': {
+          fontSize: 14,
+          marginTop: 1,
+        },
+      },
+    },
+    '& .MuiOutlinedInput': {
+      '&-root': {
+        '& .MuiOutlinedInput-notchedOutline': {
+          borderColor: colors.grey70,
+        },
+        '&.Muifocused': {
+          '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: colors.grey70,
+          },
+        },
+      },
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: colors.red50,
+    },
+    '&:hover': {
+      '.MuiOutlinedInput-root': {
+        '.MuiOutlinedInput-notchedOutline': {
+          borderColor: colors.grey70,
+        },
       },
     },
   },
