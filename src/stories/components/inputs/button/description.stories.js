@@ -32,20 +32,23 @@ export default {
     design: { disabled: true },
   },
   argTypes: {
-    Label: { control: 'text' },
-    Type: {
+    label: { name: 'Text', control: 'text' },
+    type: {
+      name: 'Type',
       control: {
         type: 'select',
         options: ['primary', 'secondary', 'disable', 'outline', 'text'],
       },
     },
-    Size: {
+    size: {
+      name: 'Size',
       control: {
         type: 'select',
         options: ['large', 'medium', 'small'],
       },
     },
-    FullWidth: {
+    fullWidth: {
+      name: 'Full Width',
       control: {
         type: 'boolean',
       },
@@ -53,25 +56,25 @@ export default {
   },
 };
 
-export const description = ({ Label, Type, Size, FullWidth }) => (
+export const description = ({ label, type, size, fullWidth }) => (
   <Wrapper>
     <Button
       variant={
-        (Type == 'primary' && 'contained') ||
-        (Type == 'secondary' && 'contained') ||
-        (Type == 'disable' && 'contained') ||
-        (Type == 'outline' && 'outlined') ||
-        (Type == 'text' && 'text')
+        (type == 'primary' && 'contained') ||
+        (type == 'secondary' && 'contained') ||
+        (type == 'disable' && 'contained') ||
+        (type == 'outline' && 'outlined') ||
+        (type == 'text' && 'text')
       }
-      disabled={Type == 'disable'}
-      color={Type == 'primary' ? Type : Type == 'secondary' ? Type : ''}
-      size={Size}
-      fullWidth={FullWidth}
+      disabled={type == 'disable'}
+      color={type == 'primary' ? type : type == 'secondary' ? type : ''}
+      size={size}
+      fullWidth={fullWidth}
       onClick={action('onClick')}
       onMouseEnter={action('onMouseEnter')}
       onMouseLeave={action('onMouseLeave')}
     >
-      {Label}
+      {label}
     </Button>
   </Wrapper>
 );
@@ -85,7 +88,7 @@ description.story = {
 };
 
 description.args = {
-  Label: 'Hello World',
-  Type: 'primary',
-  Size: 'medium',
+  label: 'Hello World',
+  type: 'primary',
+  size: 'medium',
 };

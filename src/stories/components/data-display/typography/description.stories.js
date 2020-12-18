@@ -31,31 +31,36 @@ export default {
     design: { disabled: true },
   },
   argTypes: {
-    Heading: {
+    heading: {
+      name: 'Heading',
       control: {
         type: 'select',
         options: ['h1', 'h2', 'h3', 'h4', 'h5'],
       },
     },
-    Subtitle: {
+    subtitle: {
+      name: 'Subtitle',
       control: {
         type: 'select',
         options: ['subtitle1', 'subtitle2', 'subtitle3'],
       },
     },
-    Body: {
+    body: {
+      name: 'Body',
       control: {
         type: 'select',
         options: ['body1', 'body2'],
       },
     },
-    Caption: {
+    caption: {
+      name: 'Caption',
       control: {
         type: 'select',
         options: ['caption1', 'caption2'],
       },
     },
-    Overline: {
+    overline: {
+      name: 'Overline',
       control: {
         type: 'boolean',
       },
@@ -63,24 +68,24 @@ export default {
   },
 };
 
-export const description = ({ Heading, Subtitle, Body, Caption, Overline }) => (
+export const description = ({ heading, subtitle, body, caption, overline }) => (
   <Wrapper>
     <h3>Heading</h3>
-    <Typography variant={Heading}>
+    <Typography variant={heading}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
     <h3 style={{ marginTop: 20 }}>Subtitle</h3>
     <Typography
-      variant={Subtitle == 'subtitle1' ? Subtitle : Subtitle == 'subtitle2' ? Subtitle : ''}
-      className={Subtitle == 'subtitle3' ? 'MuiTypography-subtitle3' : ''}
-      component={Subtitle == 'subtitle3' ? 'h6' : ''}
+      variant={subtitle == 'subtitle1' ? subtitle : subtitle == 'subtitle2' ? subtitle : ''}
+      className={subtitle == 'subtitle3' ? 'MuiTypography-subtitle3' : ''}
+      component={subtitle == 'subtitle3' ? 'h6' : ''}
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
     <h3 style={{ marginTop: 20 }}>Body</h3>
-    <Typography variant={Body}>
+    <Typography variant={body}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
@@ -88,9 +93,9 @@ export const description = ({ Heading, Subtitle, Body, Caption, Overline }) => (
     <Typography
       variant="caption"
       className={
-        Caption == 'caption1'
+        caption == 'caption1'
           ? 'MuiTypography-caption1'
-          : Caption == 'caption2'
+          : caption == 'caption2'
           ? 'MuiTypography-caption2'
           : ''
       }
@@ -99,7 +104,7 @@ export const description = ({ Heading, Subtitle, Body, Caption, Overline }) => (
       dolore magna aliqua.
     </Typography>
     <h3 style={{ marginTop: 20 }}>Overline</h3>
-    <Typography variant={Overline ? 'overline' : ''}>
+    <Typography variant={overline ? 'overline' : ''}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
@@ -115,8 +120,8 @@ description.story = {
 };
 
 description.args = {
-  Heading: 'h1',
-  Subtitle: 'subtitle1',
-  Body: 'body1',
-  Caption: 'caption1',
+  heading: 'h1',
+  subtitle: 'subtitle1',
+  body: 'body1',
+  caption: 'caption1',
 };

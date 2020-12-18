@@ -107,7 +107,7 @@ export const icons = () => (
 );
 icons.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TextFieldIconsDocs,
     },

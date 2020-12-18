@@ -85,6 +85,9 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
       },
       '&-multiline': {
         padding: 14,
+        '& .MuiInputBase-input': {
+          height: 'auto',
+        },
       },
     },
     '& .MuiInput-underline:after': {

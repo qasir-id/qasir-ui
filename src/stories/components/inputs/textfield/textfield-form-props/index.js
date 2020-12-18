@@ -7,6 +7,7 @@ import TextField from 'components/inputs/TextField';
 const TextFieldFormProps = () => {
   return (
     <>
+      <TextField type="text" label="Text" defaultValue="Hello World" variant="outlined" />
       <TextField required label="Required" defaultValue="Hello World" variant="outlined" />
       <TextField disabled defaultValue="Disabled" variant="outlined" labelWidth={0} />
       <TextField label="Password" type="password" autoComplete="current-password" variant="outlined" />
