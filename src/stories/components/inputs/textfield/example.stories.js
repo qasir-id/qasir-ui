@@ -18,14 +18,8 @@ import TextFieldValidationDocs from './textfield-validation/docs.mdx';
 import TextFieldMultiline from './textfield-multiline';
 import TextFieldMultilineDocs from './textfield-multiline/docs.mdx';
 
-import TextFieldSelect from './textfield-select';
-import TextFieldSelectDocs from './textfield-select/docs.mdx';
-
 import TextFieldIcons from './textfield-icons';
 import TextFieldIconsDocs from './textfield-icons/docs.mdx';
-
-import TextFieldInputAdornments from './textfield-input-adornments';
-import TextFieldInputAdornmentsDocs from './textfield-input-adornments/docs.mdx';
 
 import 'font-family.css';
 
@@ -71,7 +65,7 @@ export const formProps = () => (
 );
 formProps.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TextFieldFormPropsDocs,
     },
@@ -85,7 +79,7 @@ export const validation = () => (
 );
 validation.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TextFieldValidationDocs,
     },
@@ -99,23 +93,9 @@ export const multiline = () => (
 );
 multiline.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TextFieldMultilineDocs,
-    },
-  },
-};
-
-export const select = () => (
-  <Wrapper>
-    <TextFieldSelect />
-  </Wrapper>
-);
-select.story = {
-  parameters: {
-    status: 'Development', // Stable | Development | Deprecated
-    docs: {
-      page: TextFieldSelectDocs,
     },
   },
 };
@@ -130,20 +110,6 @@ icons.story = {
     status: 'Development', // Stable | Development | Deprecated
     docs: {
       page: TextFieldIconsDocs,
-    },
-  },
-};
-
-export const inputAdornments = () => (
-  <Wrapper>
-    <TextFieldInputAdornments />
-  </Wrapper>
-);
-inputAdornments.story = {
-  parameters: {
-    status: 'Development', // Stable | Development | Deprecated
-    docs: {
-      page: TextFieldInputAdornmentsDocs,
     },
   },
 };

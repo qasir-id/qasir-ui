@@ -27,6 +27,16 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
       '&-inputMultiline': {
         padding: 0,
       },
+      '&-adornedStart': {
+        '& input': {
+          paddingLeft: 0,
+        },
+      },
+      '&-adornedEnd': {
+        '& input': {
+          paddingRight: 0,
+        },
+      },
     },
     '& label': {
       '&.Mui-focused': {
@@ -44,6 +54,9 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
           fontSize: 14,
           marginTop: 1,
         },
+        '&.Mui-error': {
+          color: colors.red50,
+        },
       },
     },
     '& .MuiOutlinedInput': {
@@ -56,6 +69,22 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
             borderColor: colors.grey70,
           },
         },
+        '&.Mui-error': {
+          '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: colors.red50,
+          },
+          '&.Muifocused': {
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: colors.red50,
+            },
+          },
+          '& input': {
+            color: colors.red50,
+          },
+        },
+      },
+      '&-multiline': {
+        padding: 14,
       },
     },
     '& .MuiInput-underline:after': {
@@ -72,6 +101,15 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
       '&-root': {
         color: colors.black30,
         fontSize: 12,
+        '&.Mui-error': {
+          color: colors.red50,
+        },
+      },
+    },
+    '& .MuiSelect-select.MuiSelect-select': {
+      paddingRight: 24,
+      '&.MuiSelect-selectMenu': {
+        height: 'auto',
       },
     },
   },

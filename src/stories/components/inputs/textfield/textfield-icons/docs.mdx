@@ -8,13 +8,26 @@ import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
 </Preview>
 
 ```js
+import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from 'qasir-ui/inputs/TextField';
 ```
 
 ```html
-<TextField label="Single Line Field" variant="outlined" />
+<TextField
+  label="Label"
+  InputProps={{
+    startAdornment: <InputAdornment position="start">$</InputAdornment>,
+  }}
+  variant="outlined"
+/>
 ```
 
 ```html
-<TextField label="Multi Line Field" variant="outlined" multiline rows={4} />
+<TextField
+  label="Label"
+  InputProps={{
+    startAdornment: <InputAdornment position="end">$</InputAdornment>,
+  }}
+  variant="outlined"
+/>
 ```
