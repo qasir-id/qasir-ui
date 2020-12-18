@@ -26,7 +26,12 @@ const TextFieldFormProps = () => {
         }}
         variant="outlined"
       />
-      <TextField label="Search field" type="search" variant="outlined" />
+      <TextField
+        label="Search field"
+        type="search"
+        variant="outlined"
+        endIcon={<img src="component/assets/icons/close.svg" />}
+      />
       <TextField
         label="Helper text"
         defaultValue="Hello World"

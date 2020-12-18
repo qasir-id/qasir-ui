@@ -68,6 +68,12 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
         },
       },
     },
+    '& .MuiFormHelperText': {
+      '&-root': {
+        color: colors.black30,
+        fontSize: 12,
+      },
+    },
   },
 });
 
