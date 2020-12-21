@@ -40,6 +40,7 @@ export const description = () => (
 description.story = {
   parameters: {
     docs: {
+      status: 'Development', // Stable | Development | Deprecated
       page: ChipDocs,
     },
   },

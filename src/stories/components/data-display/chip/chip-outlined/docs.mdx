@@ -1,21 +1,13 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
-import { Badge } from '@storybook/components';
+import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Components/Data Display/Chip"/>
+# Chip
 
-<h1>Chip</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Chips are compact elements that represent an input, attribute, or action.
-</p>
-
-<h3 style={{marginTop: 20}}>Montserrat Font CDN</h3>
-<code style={{marginBottom: 30}}>https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap</code>
-
-<Figma
-  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
-  height="50%"
-  defaultCollapsed
-/>
+<Subtitle>
+  Chips are compact elements that represent an input, attribute, or action.
+</Subtitle>
+<Preview withSource="none">
+  <Story id="components-data-display-chip-example--outlined" />
+</Preview>
 
 ### Import
 ```js
@@ -25,13 +17,13 @@ import Chip from 'qasir-ui/data-display/Chip';
 ### Usage
 
 ```jsx
-      <Chip label="Basic" />
+      <Chip variant="outlined" label="Basic" />
 ```
 ```jsx 
-      <Chip label="Disabled" disabled />
+      <Chip variant="outlined" label="Disabled" disabled />
 ```
 ### Event Handler
-```jsx
+```js
   const handleClick = () => {
     alert('You clicked the Chip.');
   };
@@ -43,10 +35,11 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 
 ```jsx
-      <Chip avatar={<Avatar>M</Avatar>} label="Clickable" onClick={handleClick} />
+      <Chip variant="outlined" avatar={<Avatar>M</Avatar>} label="Clickable" onClick={handleClick} />
 ```
 ```jsx  
 <Chip
+  variant="outlined"
   avatar={<Avatar alt="Natacha" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" />}
   label="Deletable"
   onDelete={handleDelete}
@@ -54,6 +47,7 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 ```jsx
 <Chip
+  variant="outlined"
   icon={<FaceIcon />}
   label="Clickable deletable"
   onClick={handleClick}
@@ -62,6 +56,7 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 ```jsx
 <Chip
+  variant="outlined"
   label="Custom delete icon"
   onClick={handleClick}
   onDelete={handleDelete}
@@ -69,10 +64,11 @@ import Chip from 'qasir-ui/data-display/Chip';
 />
 ```
 ```jsx
-      <Chip label="Clickable Link" component="a" href="#chip" clickable />
+      <Chip variant="outlined" label="Clickable Link" component="a" href="#chip" clickable />
 ```
 ```jsx 
 <Chip
+  variant="outlined"
   avatar={<Avatar>M</Avatar>}
   label="Primary clickable"
   clickable
@@ -83,6 +79,7 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 ```jsx
 <Chip
+  variant="outlined"
   icon={<FaceIcon />}
   label="Primary clickable"
   clickable
@@ -92,18 +89,15 @@ import Chip from 'qasir-ui/data-display/Chip';
 />
 ```
 ```jsx
-      <Chip label="Deletable primary" onDelete={handleDelete} color="primary" />
+      <Chip variant="outlined" label="Deletable primary" onDelete={handleDelete} color="primary" />
 ```
 
 ```jsx  
 <Chip
+  variant="outlined"
   icon={<FaceIcon />}
   label="Deletable secondary"
   onDelete={handleDelete}
   color="secondary"
 />
 ```
-
-### MUI Api
-
-<IFrame url="https://material-ui.com/api/chip/" height="80%" defaultCollapsed />
