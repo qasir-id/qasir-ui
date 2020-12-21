@@ -9,11 +9,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import ChipComponent from './chip';
 import ChipDocs from './chip/docs.mdx';
 
-import CustomChip from './custom-chip';
-import CustomChipDocs from './custom-chip/docs.mdx';
+import CustomChip from './chip-custom';
+import CustomChipDocs from './chip-custom/docs.mdx';
 
 import OutlinedChip from './chip-outlined';
 import OutlinedChipDocs from './chip-outlined/docs.mdx';
+
+import ArrayChip from './chip-array';
+import ArrayChipDocs from './chip-array/docs.mdx';
 
 import 'font-family.css';
 
@@ -55,7 +58,22 @@ export const Custom = () => (
   </Wrapper>
 );
 
+export const ChipArray = () => (
+    <Wrapper>
+      <ArrayChip/>
+    </Wrapper>
+)
 
+
+
+ChipArray.story = {
+    parameters: {
+        status: 'Development', // Stable | Development | Deprecated,
+        docs: {
+            page: ArrayChipDocs
+        }
+    }
+}
 
 Outlined.story = {
     parameters: {

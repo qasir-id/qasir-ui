@@ -16,14 +16,14 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ### Usage
 
-```html
+```jsx
       <Chip variant="outlined" label="Basic" />
 ```
-```html 
+```jsx 
       <Chip variant="outlined" label="Disabled" disabled />
 ```
-### Function HanldeClick for example Usage
-```html
+### Event Handler
+```js
   const handleClick = () => {
     alert('You clicked the Chip.');
   };
@@ -34,10 +34,10 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```
 
-```html
+```jsx
       <Chip variant="outlined" avatar={<Avatar>M</Avatar>} label="Clickable" onClick={handleClick} />
 ```
-```html  
+```jsx  
 <Chip
   variant="outlined"
   avatar={<Avatar alt="Natacha" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" />}
@@ -45,7 +45,7 @@ import Chip from 'qasir-ui/data-display/Chip';
   onDelete={handleDelete}
 />
 ```
-```html
+```jsx
 <Chip
   variant="outlined"
   icon={<FaceIcon />}
@@ -54,7 +54,7 @@ import Chip from 'qasir-ui/data-display/Chip';
   onDelete={handleDelete}
 />
 ```
-```html
+```jsx
 <Chip
   variant="outlined"
   label="Custom delete icon"
@@ -63,10 +63,10 @@ import Chip from 'qasir-ui/data-display/Chip';
   deleteIcon={<DoneIcon />}
 />
 ```
-```html
+```jsx
       <Chip variant="outlined" label="Clickable Link" component="a" href="#chip" clickable />
 ```
-```html 
+```jsx 
 <Chip
   variant="outlined"
   avatar={<Avatar>M</Avatar>}
@@ -77,7 +77,7 @@ import Chip from 'qasir-ui/data-display/Chip';
   deleteIcon={<DoneIcon />}
 />
 ```
-```html
+```jsx
 <Chip
   variant="outlined"
   icon={<FaceIcon />}
@@ -88,11 +88,11 @@ import Chip from 'qasir-ui/data-display/Chip';
   deleteIcon={<DoneIcon />}
 />
 ```
-```html
+```jsx
       <Chip variant="outlined" label="Deletable primary" onDelete={handleDelete} color="primary" />
 ```
 
-```html  
+```jsx  
 <Chip
   variant="outlined"
   icon={<FaceIcon />}
