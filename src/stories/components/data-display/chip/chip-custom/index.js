@@ -8,10 +8,7 @@ const CustomChip = () => {
     return (
         <>
             <h2>Custom Chip</h2>
-            <Chip className="MuiChip-alert" label="Alert"/>
-            <Chip className="MuiChip-positive" label="Positive"/>
-            <Chip className="MuiChip-warning" label="Warning"/>
-            <Chip className="MuiChip-discount" label="Discount"/>
+            <Chip customBackground="#FFFF00" customFont="#008000"  label="Custom Color"/>
         </>
     )
 }
