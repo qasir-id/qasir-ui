@@ -12,6 +12,9 @@ import ChipDocs from './chip/docs.mdx';
 import CustomChip from './custom-chip';
 import CustomChipDocs from './custom-chip/docs.mdx';
 
+import OutlinedChip from './chip-outlined';
+import OutlinedChipDocs from './chip-outlined/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -40,14 +43,32 @@ export const Chip = () => (
   </Wrapper>
 );
 
+export const Outlined = () => (
+    <Wrapper>
+        <OutlinedChip/>
+    </Wrapper>
+)
+
 export const Custom = () => (
   <Wrapper>
     <CustomChip />
   </Wrapper>
-)
+);
+
+
+
+Outlined.story = {
+    parameters: {
+        status: 'Development', // Stable | Development | Deprecated,
+        docs: {
+            page: OutlinedChipDocs
+        }
+    }
+}
 
 Custom.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated,
     docs: {
       page: CustomChipDocs
     }
@@ -57,6 +78,7 @@ Custom.story = {
 
 Chip.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated,
     docs: {
       page: ChipDocs,
     },
