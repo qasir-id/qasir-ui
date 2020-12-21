@@ -1,6 +1,6 @@
 {
   "name": "qasir-ui-dev",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": false,
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -22,7 +22,8 @@
     "chromatic": "npx chromatic --project-token=nnkmnd7wfvm",
     "build:variables": "rm -rf variables && mkdir variables && babel src/components/variables -d variables --copy-files",
     "build:inputs": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files",
-    "build": "npm-run-all build:variables build:inputs"
+    "build:data-display": "rm -rf data-display && mkdir data-display && babel src/components/data-display -d data-display --copy-files",
+    "build": "npm-run-all build:variables build:inputs build:data-display"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -8,8 +8,9 @@ node_modules
 
 # production
 /build
-/inputs
 /variables
+/inputs
+/data-display
 
 # storybook
 build-storybook.log
