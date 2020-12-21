@@ -8,10 +8,10 @@ import Chip from '@material-ui/core/Chip';
 import theme from '../../variables/theme';
 
 export default (props) => {
-
+    const { customBackground, customFont } = props
     return (
         <ThemeProvider theme={theme}>
-            <Chip {...props}/>
+            <Chip style={{backgroundColor: customBackground, color: customFont}} {...props}/>
         </ThemeProvider>
     )
 }
