@@ -5,9 +5,13 @@ import React from 'react';
 import Tabs from 'components/navigation/Tabs';
 
 const SimpleTabs = () => {
+    const [data, setData ] = React.useState([
+        {id: '0', label: 'Semua Produk', description: 'Semua Produk'},
+        {id: '1', label: 'Kategori', description: 'Semua Kategori'}
+    ])
     return(
         <>
-        <Tabs> test </Tabs>
+        <Tabs data={data}/>
         </>
     )
 }

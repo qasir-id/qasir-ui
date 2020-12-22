@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import SimpleTabs from './tabs-simple';
-import SimpleTabsDocs from './tabs-simple/docs.mdx';
+import SimpleTabsDocs from './description.docs.mdx';
 
 import 'font-family.css';
 
@@ -39,8 +39,8 @@ export const description = () => (
 
 description.story = {
   parameters: {
+    status: 'Development', // Stable | Development | Deprecated
     docs: {
-      status: 'Development', // Stable | Development | Deprecated
       page: SimpleTabsDocs,
     },
   },

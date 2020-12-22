@@ -1,7 +1,10 @@
+import colors from '../../variables/colors';
+
 const MuiTabsStyled = (defaultTheme, modifyTheme) => ({
     root: {
-        flexGrow: 1,
-        backgroundColor: modifyTheme.pallete.common.white
+        backgroundColor: "#fff",
+        color: colors.red50,
+        fontWeight: 700,
     }
 });
 

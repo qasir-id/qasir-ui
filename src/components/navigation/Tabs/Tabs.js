@@ -13,8 +13,7 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <ThemeProvider 
-      theme={theme}
+    <div 
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -26,7 +25,7 @@ function TabPanel(props) {
           <Typography>{children}</Typography>
         </Box>
       )}
-    </ThemeProvider>
+    </div>
   );
 }
 
@@ -44,24 +43,28 @@ function a11yProps(index) {
 }
 
 export default (props) => {
+  const {data} = props
   const [value, setValue] = React.useState(0);
   // const {data} = props
-  const [data, setData ] = React.useState([
-      {id: '0', label: 'Semua Produk', description: 'Semua Produk'},
-      {id: '1', label: 'Kategori', description: 'Semua Kategori'}
-  ])
+  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+    <ThemeProvider theme={theme}>           
+      <AppBar style={{background: '#fff'}} position="static">
+        <Tabs 
+          value={value} 
+          onChange={handleChange} 
+          aria-label="simple tabs example" 
+          TabIndicatorProps={{style: {backgroundColor: '#F04B32'}}}
+          {...props}
+        >
           {data.map((item, index) => (
-              <Tab label={item.label} {...a11yProps(index)} />
-          ))}
+            <Tab label={item.label} {...a11yProps(index)} />
+            ))}
         </Tabs>
       </AppBar>
       {data.map((item, index) => (
