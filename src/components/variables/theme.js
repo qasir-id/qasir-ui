@@ -14,6 +14,9 @@ import MuiChipStyled from '../data-display/Chip/style';
 import MuiButtonStyled from '../inputs/Button/style';
 import MuiTextFieldStyled from '../inputs/TextField/style';
 
+// Navigation
+import MuiTabsStyled from '../navigation/Tabs/style';
+
 const defaultTheme = createMuiTheme();
 
 // A custom theme for this app
@@ -53,7 +56,8 @@ const theme = createMuiTheme({
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
     MuiTextField: MuiTextFieldStyled(defaultTheme, modifyTheme),
-    MuiChip: MuiChipStyled(defaultTheme,modifyTheme)
+    MuiChip: MuiChipStyled(defaultTheme,modifyTheme),
+    MuiTabs: MuiTabsStyled(defaultTheme, modifyTheme)
   },
 });
 
