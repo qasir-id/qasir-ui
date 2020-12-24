@@ -14,19 +14,16 @@ Chips are compact elements that represent an input, attribute, or action.
 import Chip from 'qasir-ui/data-display/Chip';
 ```
 
+### Props
+```html
+(Required if you want to change Chip Background and Font Color)
+```
+```js
+customBackground = String
+customFont = String 
+```
+
 ### Usage
-```html
-<Chip className="MuiChip-alert" label="Alert"/>
-```
-
-```html
-<Chip className="MuiChip-positive" label="Positive"/>
-```
-
-```html
-<Chip className="MuiChip-warning" label="Warning"/>
-```
-
-```html
-<Chip className="MuiChip-discount" label="Discount"/>
+```jsx
+<Chip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
 ```
