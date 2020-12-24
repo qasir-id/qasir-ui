@@ -8,3 +8,4 @@ build-storybook.log
 jsconfig.json
 yarn.lock
 package.lock
+storybook-static
