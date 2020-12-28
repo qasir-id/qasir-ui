@@ -1,0 +1,55 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Navigation/Tabs"/>
+
+
+<h1>Simple Tabs</h1>
+
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Tabs make it easy to explore and switch between different views.
+</p>
+
+<Preview withSource="none">
+  <Story id="components-navigation-tabs-example--simple-tabs" />
+</Preview>
+
+
+<h3 style={{marginTop: 20}}>Montserrat Font CDN</h3>
+<code style={{marginBottom: 30}}>https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap</code>
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
+  height="50%"
+  defaultCollapsed
+/>
+
+### Import 
+```js
+import Tabs from 'qasir-ui/navigation/Tabs';
+```
+### Props
+```js
+data = Array of Objects
+```
+### State for Example Usage
+```js
+const [data, setData ] = React.useState([
+        {id: '0', label: 'Semua Produk', description: 'Semua Produk'},
+        {id: '1', label: 'Kategori', description: 'Semua Kategori'}
+]);
+```
+
+
+### Usage
+```html
+  Pass the data as Props
+```
+
+```jsx
+<Tabs data={data}/>
+```
+
+### MUI Api
+
+<IFrame url="https://material-ui.com/api/tabs/" height="80%" defaultCollapsed />

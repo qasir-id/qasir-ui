@@ -6,8 +6,8 @@ import { withDesign } from 'storybook-addon-designs';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import ChipComponent from './chip';
-import ChipDocs from './description.docs.mdx';
+import SimpleTabs from './tabs-simple';
+import SimpleTabsDocs from './tabs-simple/docs.mdx';
 
 import 'font-family.css';
 
@@ -25,23 +25,23 @@ const Wrapper = ({ children }) => {
 };
 
 export default {
-  title: 'Components/Data Display/Chip',
+  title: 'Components/Navigation/Tabs/Example',
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
   },
 };
-export const description = () => (
+export const simpleTabs = () => (
   <Wrapper>
-    <ChipComponent />
+    <SimpleTabs />
   </Wrapper>
 );
 
-description.story = {
+simpleTabs.story = {
   parameters: {
     status: 'Development', // Stable | Development | Deprecated
     docs: {
-      page: ChipDocs,
+      page: SimpleTabsDocs,
     },
   },
 };
