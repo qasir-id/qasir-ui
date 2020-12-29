@@ -9,48 +9,47 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 ```js
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import Select from 'qasir-ui/inputs/Select';
+import InputLabel from 'qasir-ui/inputs/InputLabel';
 ```
 
 ```html
-<FormControl variant="outlined">
+<FormControl variant="outlined" style={{ minWidth: 150 }}>
   <InputLabel>Simple Select</InputLabel>
-    <Select
-      label="Simple Select"
-      inputProps={{
-        name: 'simple-select',
-      }}
-    >
-      <MenuItem value="">
-        <em>None</em>
-      </MenuItem>
-      <MenuItem value={10}>Ten</MenuItem>
-      <MenuItem value={20}>Twenty</MenuItem>
-      <MenuItem value={30}>Thirty</MenuItem>
-    </Select>
+  <Select
+    label="Simple Select"
+    inputProps={{
+      name: 'simple-select',
+    }}
+  >
+    <MenuItem value="">
+      <em>None</em>
+    </MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
 </FormControl>
 ```
 
 ```html
-<FormControl variant="outlined">
+<FormControl variant="outlined" style={{ minWidth: 150 }}>
   <InputLabel>Native Select</InputLabel>
-    <Select
-      native
-      label="Native Select"
-      inputProps={{
-        name: 'native-select',
-      }}
-    >
-      <MenuItem value="">
-        <em>None</em>
-      </MenuItem>
-      <MenuItem value={10}>Ten</MenuItem>
-      <MenuItem value={20}>Twenty</MenuItem>
-      <MenuItem value={30}>Thirty</MenuItem>
-    </Select>
+  <Select
+    native
+    label="Native Select"
+    inputProps={{
+      name: 'native-select',
+      className: 'MuiSelectNative',
+    }}
+  >
+    <option aria-label="None" value="" />
+    <option value={10}>Ten</option>
+    <option value={20}>Twenty</option>
+    <option value={30}>Thirty</option>
+  </Select>
 </FormControl>
 ```
 
