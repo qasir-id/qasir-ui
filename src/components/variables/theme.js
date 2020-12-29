@@ -5,17 +5,18 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import colors from './colors';
 
 // Styles sections
-// Data display
-import MuiTypographyStyled from '../data-display/Typography/style';
-import MuiChipStyled from '../data-display/Chip/style';
-
-
 // Inputs
 import MuiButtonStyled from '../inputs/Button/style';
 import MuiTextFieldStyled from '../inputs/TextField/style';
+import MuiSelectStyled from '../inputs/Select/style';
+import MuiInputLabelStyled from '../inputs/InputLabel/style';
 
 // Navigation
 import MuiTabsStyled from '../navigation/Tabs/style';
+
+// Data display
+import MuiTypographyStyled from '../data-display/Typography/style';
+import MuiChipStyled from '../data-display/Chip/style';
 
 const defaultTheme = createMuiTheme();
 
@@ -46,18 +47,30 @@ export const modifyTheme = createMuiTheme({
 const theme = createMuiTheme({
   ...modifyTheme,
   overrides: {
-    MuiPaper: {
+    // Inputs
+    MuiInputLabel: MuiInputLabelStyled(defaultTheme, modifyTheme),
+    MuiOutlinedInput: {
       root: {
-        padding: '20px 10px',
-        margin: '10px',
-        backgroundColor: colors.white,
+        '&:hover': {
+          notchedOutline: {
+            borderColor: colors.grey70,
+          },
+        },
+      },
+      notchedOutline: {
+        borderColor: colors.grey70,
       },
     },
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
-    MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
     MuiTextField: MuiTextFieldStyled(defaultTheme, modifyTheme),
-    MuiChip: MuiChipStyled(defaultTheme,modifyTheme),
-    MuiTabs: MuiTabsStyled(defaultTheme, modifyTheme)
+    MuiSelect: MuiSelectStyled(defaultTheme, modifyTheme),
+
+    // Navigation
+    MuiTabs: MuiTabsStyled(defaultTheme, modifyTheme),
+
+    // Data display
+    MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
+    MuiChip: MuiChipStyled(defaultTheme, modifyTheme),
   },
 });
 

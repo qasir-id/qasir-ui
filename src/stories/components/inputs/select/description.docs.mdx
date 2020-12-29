@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Inputs/Select/README" />
+
+<h1>Select</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Select components are used for collecting user provided information from a list of options.</p>
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=3866%3A5516"
+  height="50%"
+  defaultCollapsed
+/>
+
+### Import
+
+```js
+import Button from 'qasir-ui/inputs/Button';
+```
+
+### With Dynamic Import (Next.js)
+
+```js
+import dynamic from 'next/dynamic';
+```
+
+```js
+const Button = dynamic(() => import('qasir-ui/inputs/Button'));
+```
+
+### Usage
+
+```html
+<Button variant="contained" color="primary">
+  Hello World
+</Button>
+```
+
+### MUI Api
+
+<IFrame url="https://material-ui.com/api/button/" height="80%" defaultCollapsed />
