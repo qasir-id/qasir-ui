@@ -5,7 +5,7 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
       '&-root': {
         height: 48,
         '& legend': {
-          fontSize: '10.5px',
+          fontSize: 12,
         },
         '&.Mui-disabled': {
           backgroundColor: colors.grey50,
@@ -51,7 +51,7 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
         fontWeight: 500,
         marginTop: '-1px',
         '&.MuiInputLabel-shrink': {
-          fontSize: 14,
+          fontSize: 12,
           marginTop: 1,
         },
         '&.Mui-error': {
@@ -114,6 +114,9 @@ const MuiTextFieldStyled = (defaultTheme, modifyTheme) => ({
       '&.MuiSelect-selectMenu': {
         height: 'auto',
       },
+    },
+    '& .MuiInputLabel-outlined.MuiInputLabel-shrink': {
+      transform: 'translate(14px, -6px)',
     },
   },
 });

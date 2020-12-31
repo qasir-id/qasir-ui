@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Inputs/Select/README" />
+
+<h1>Select</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Select components are used for collecting user provided information from a list of options.</p>
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=3894%3A468"
+  height="50%"
+  defaultCollapsed
+/>
+
+### Import
+
+```js
+import FormControl from '@material-ui/core/FormControl';
+import MenuItem from '@material-ui/core/MenuItem';
+
+import Select from 'qasir-ui/inputs/Select';
+import InputLabel from 'qasir-ui/inputs/InputLabel';
+```
+
+### With Dynamic Import (Next.js)
+
+```js
+import dynamic from 'next/dynamic';
+```
+
+```js
+const Select = dynamic(() => import('qasir-ui/inputs/Select'));
+```
+
+### Usage
+
+```html
+<FormControl variant="outlined" style={{ minWidth: 150 }}>
+  <InputLabel>Simple Select</InputLabel>
+  <Select
+    label="Simple Select"
+    inputProps={{
+      name: 'simple-select',
+    }}
+  >
+    <MenuItem value="">
+      <em>None</em>
+    </MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
+</FormControl>
+```
+
+### MUI Api
+
+<IFrame url="https://material-ui.com/api/select/" height="80%" defaultCollapsed />
