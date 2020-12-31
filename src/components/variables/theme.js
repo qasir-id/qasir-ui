@@ -5,6 +5,9 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import colors from './colors';
 
 // Styles sections
+// Layout
+import MuiContainerStyled from '../layout/Container/style';
+
 // Inputs
 import MuiButtonStyled from '../inputs/Button/style';
 import MuiTextFieldStyled from '../inputs/TextField/style';
@@ -42,11 +45,23 @@ export const modifyTheme = createMuiTheme({
   typography: {
     fontFamily: ['"Montserrat"', 'sans-serif'].join(','),
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
 });
 
 const theme = createMuiTheme({
   ...modifyTheme,
   overrides: {
+    // Layout
+    MuiContainer: MuiContainerStyled(defaultTheme, modifyTheme),
+
     // Inputs
     MuiInputLabel: MuiInputLabelStyled(defaultTheme, modifyTheme),
     MuiOutlinedInput: {

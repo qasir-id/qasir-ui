@@ -8,10 +8,9 @@ import TextField from '@material-ui/core/TextField';
 import theme from '../../variables/theme';
 
 export default (props) => {
-  const { children } = props;
   return (
     <ThemeProvider theme={theme}>
-      <TextField {...props}>{children}</TextField>
+      <TextField {...props} />
     </ThemeProvider>
   );
 };
