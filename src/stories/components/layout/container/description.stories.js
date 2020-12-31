@@ -57,7 +57,7 @@ export const description = ({ type, size }) => (
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ContainerDescriptionDocs,
     },

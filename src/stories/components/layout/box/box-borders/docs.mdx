@@ -1,0 +1,28 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+<h1>Borders</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</p>
+
+<Preview withSource="none">
+  <Story id="components-layout-box-example--borders" />
+</Preview>
+
+```js
+import Box from 'qasir-ui/inputs/Box';
+```
+
+```html
+<Box border={1} />
+<Box borderTop={1} />
+<Box borderRight={1} />
+<Box borderBottom={1} />
+<Box borderLeft={1} />
+```
+
+```html
+<Box borderColor="#F04B32" border={1} />
+```
+
+```html
+<Box borderRadius="50%" />
+```
