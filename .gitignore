@@ -9,8 +9,10 @@ node_modules
 # production
 /build
 /variables
+/layout
 /inputs
 /data-display
+/navigation
 
 # storybook
 build-storybook.log

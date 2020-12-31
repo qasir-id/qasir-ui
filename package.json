@@ -21,9 +21,11 @@
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=nnkmnd7wfvm",
     "build:variables": "rm -rf variables && mkdir variables && babel src/components/variables -d variables --copy-files",
+    "build:layout": "rm -rf layout && mkdir layout && babel src/components/layout -d layout --copy-files",
     "build:inputs": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files",
+    "build:navigation": "rm -rf navigation && mkdir navigation && babel src/components/navigation -d navigation --copy-files",
     "build:data-display": "rm -rf data-display && mkdir data-display && babel src/components/data-display -d data-display --copy-files",
-    "build": "npm-run-all build:variables build:inputs build:data-display"
+    "build": "npm-run-all build:variables build:layout build:inputs build:navigation build:data-display"
   },
   "eslintConfig": {
     "extends": "react-app"
