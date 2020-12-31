@@ -8,10 +8,9 @@ import Button from '@material-ui/core/Button';
 import theme from '../../variables/theme';
 
 export default (props) => {
-  const { children } = props;
   return (
     <ThemeProvider theme={theme}>
-      <Button {...props}>{children}</Button>
+      <Button {...props} />
     </ThemeProvider>
   );
 };

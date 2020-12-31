@@ -1,0 +1,32 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+<h1>Container Sizes</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.</p>
+
+<Preview withSource="none">
+  <Story id="components-layout-container-example--sizes" />
+</Preview>
+
+```js
+import Container from 'qasir-ui/inputs/Container';
+```
+
+```html
+<Container maxWidth="xl">...</Container>
+```
+
+```html
+<Container maxWidth="lg">...</Container>
+```
+
+```html
+<Container maxWidth="md">...</Container>
+```
+
+```html
+<Container maxWidth="sm">...</Container>
+```
+
+```html
+<Container maxWidth="xs">...</Container>
+```
