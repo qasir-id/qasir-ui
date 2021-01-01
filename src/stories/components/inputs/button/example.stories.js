@@ -69,6 +69,9 @@ types.story = {
     status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonTypesDocs,
+      source: {
+        code: 'Some custom string here',
+      },
     },
     options: { showPanel: false },
   },

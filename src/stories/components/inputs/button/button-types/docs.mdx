@@ -1,20 +1,18 @@
-import { Preview, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Preview, Story } from '@storybook/addon-docs/blocks';
 import Button from 'components/inputs/Button';
 
 <h1>Type Buttons</h1>
 <p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>There are text, contained, and toggle buttons. Text buttons are typically used for less important actions.</p>
 
-<Preview withSource="none">
+<Preview withSource="none" withToolbar>
   <Story id="." />
 </Preview>
-
-<Canvas withSource="none" withToolbar>
-  <Button variant="contained" color="primary">Primary</Button>
-</Canvas>
 
 ```js
 import Button from 'qasir-ui/inputs/Button';
 ```
+
+<Button variant="contained" color="primary">Primary</Button>
 
 ```html
 <Button variant="contained" color="primary">Primary</Button>
