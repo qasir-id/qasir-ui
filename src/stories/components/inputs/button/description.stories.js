@@ -82,6 +82,7 @@ export const description = ({ label, type, size, fullWidth }) => (
 
 description.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: ButtonDescriptionDocs,
     },
