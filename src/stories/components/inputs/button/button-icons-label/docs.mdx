@@ -1,31 +1,48 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Subtitle } from '@storybook/addon-docs/blocks';
+import DeleteIcon from '@material-ui/icons/Delete';
+import SendIcon from '@material-ui/icons/Send';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
+import SaveIcon from '@material-ui/icons/Save';
 
-<h1>Icons & Label Buttons</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Sometimes you might want to have icons for certain button to enhance the UX of the application as we recognize logos more easily than plain text. For example, if you have a delete button you can label it with a dustbin icon.</p>
+import Button from 'components/inputs/Button';
 
-<Preview withSource="none">
-  <Story id="components-inputs-button-example--icons-label" />
-</Preview>
+# Icons & Label Buttons
+<Subtitle>Sometimes you might want to have icons for certain button to enhance the UX of the application as we recognize logos more easily than plain text. For example, if you have a delete button you can label it with a dustbin icon.</Subtitle>
+
+### Import
 
 ```js
 import Button from 'qasir-ui/inputs/Button';
 ```
 
+### Usage
+
+<Button variant="contained" color="primary" startIcon={<DeleteIcon />} style={{marginTop: 20}}>Delete</Button>
+
 ```html
 <Button variant="contained" color="primary" startIcon={<DeleteIcon />}>Delete</Button>
 ```
+
+<Button variant="contained" color="secondary" endIcon={<SendIcon />}>Send</Button>
 
 ```html
 <Button variant="contained" color="secondary" endIcon={<SendIcon />}>Send</Button>
 ```
 
+<Button variant="contained" disabled startIcon={<CloudUploadIcon />}>Upload</Button>
+
 ```html
 <Button variant="contained" disabled startIcon={<CloudUploadIcon />}>Upload</Button>
 ```
 
+<Button variant="outlined" startIcon={<KeyboardVoiceIcon />}>Talk</Button>
+
 ```html
 <Button variant="outlined" startIcon={<KeyboardVoiceIcon />}>Talk</Button>
 ```
+
+<Button variant="text" startIcon={<SaveIcon />}>Save</Button>
 
 ```html
 <Button variant="text" startIcon={<SaveIcon />}>Save</Button>

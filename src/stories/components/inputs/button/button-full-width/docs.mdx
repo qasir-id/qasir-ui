@@ -1,15 +1,18 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Subtitle } from '@storybook/addon-docs/blocks';
+import Button from 'components/inputs/Button';
 
-<h1>Full Width Buttons</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>The buttons will take up the full width of its container.</p>
+# Full Width Buttons
+<Subtitle>The buttons will take up the full width of its container.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-inputs-button-example--full-width" />
-</Preview>
+### Import
 
 ```js
 import Button from 'qasir-ui/inputs/Button';
 ```
+
+### Usage
+
+<Button variant="contained" color="primary" fullWidth style={{marginTop: 20}}>Full Width</Button>
 
 ```html
 <Button variant="contained" color="primary" fullWidth>Full Width</Button>
