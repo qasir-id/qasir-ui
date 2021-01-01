@@ -30,6 +30,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: true },
   },
   argTypes: {
     label: { name: 'Text', control: 'text' },

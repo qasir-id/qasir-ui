@@ -70,6 +70,7 @@ types.story = {
     docs: {
       page: ButtonTypesDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -84,6 +85,7 @@ contained.story = {
     docs: {
       page: ButtonContainedDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -98,6 +100,7 @@ text.story = {
     docs: {
       page: ButtonTextDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -112,6 +115,7 @@ outlined.story = {
     docs: {
       page: ButtonOutlinedDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -126,6 +130,7 @@ sizes.story = {
     docs: {
       page: ButtonSizesDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -141,6 +146,7 @@ iconsLabel.story = {
     docs: {
       page: ButtonIconsLabelDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -195,5 +201,6 @@ fullWidth.story = {
     docs: {
       page: ButtonFullWidthDocs,
     },
+    options: { showPanel: false },
   },
 };

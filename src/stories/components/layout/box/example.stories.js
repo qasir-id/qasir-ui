@@ -9,6 +9,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import BoxBorders from './box-borders';
 import BoxBordersDocs from './box-borders/docs.mdx';
 
+import BoxDisplay from './box-display';
+import BoxDisplayDocs from './box-display/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -42,6 +45,20 @@ borders.story = {
     status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: BoxBordersDocs,
+    },
+  },
+};
+
+export const display = () => (
+  <Wrapper>
+    <BoxDisplay />
+  </Wrapper>
+);
+display.story = {
+  parameters: {
+    status: 'Development', // Stable | Development | Deprecated
+    docs: {
+      page: BoxDisplayDocs,
     },
   },
 };

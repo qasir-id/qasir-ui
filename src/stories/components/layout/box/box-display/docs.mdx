@@ -1,0 +1,29 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+import Button from 'components/inputs/Button';
+
+<h1>Display</h1>
+<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Quickly and responsively toggle the display value of components and more with the display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
+
+<Preview withSource="none">  
+  <Story id="components-layout-box-example--display" />
+</Preview>
+
+```js
+import Box from 'qasir-ui/inputs/Box';
+```
+
+```html
+<Box border={1} />
+<Box borderTop={1} />
+<Box borderRight={1} />
+<Box borderBottom={1} />
+<Box borderLeft={1} />
+```
+
+```html
+<Box borderColor="#F04B32" border={1} />
+```
+
+```html
+<Box borderRadius="50%" />
+```

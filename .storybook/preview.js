@@ -2,8 +2,8 @@ import { addParameters, addDecorator } from '@storybook/react';
 import { withPerformance } from 'storybook-addon-performance';
 
 addParameters({
-  viewMode: 'story',
-  docs: { page: null },
+  // viewMode: 'story',
+  // docs: { page: null },
   options: {
     showRoots: true,
   },
