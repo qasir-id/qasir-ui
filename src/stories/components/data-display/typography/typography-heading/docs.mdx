@@ -1,30 +1,42 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import Typography from 'components/data-display/Typography';
 
-# Heading
+<Title>Heading</Title>
+<Subtitle>A HTML heading or HTML h tag can be defined as a title or a subtitle which you want to display on the webpage.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-data-display-typography-example--heading" />
-</Preview>
+### Import
 
 ```js
 import Typography from 'qasir-ui/data-display/Typography';
 ```
 
+### Usage
+
+<Typography variant="h1" style={{marginTop: 20}}>Heading 1</Typography>
+
 ```html
 <Typography variant="h1">Heading 1</Typography>
 ```
+
+<Typography variant="h2">Heading 2</Typography>
 
 ```html
 <Typography variant="h2">Heading 2</Typography>
 ```
 
+<Typography variant="h3">Heading 3</Typography>
+
 ```html
 <Typography variant="h3">Heading 3</Typography>
 ```
 
+<Typography variant="h4">Heading 4</Typography>
+
 ```html
 <Typography variant="h4">Heading 4</Typography>
 ```
+
+<Typography variant="h5">Heading 5</Typography>
 
 ```html
 <Typography variant="h5">Heading 5</Typography>

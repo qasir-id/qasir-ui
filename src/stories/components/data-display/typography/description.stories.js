@@ -29,6 +29,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: true },
   },
   argTypes: {
     heading: {
@@ -70,12 +71,12 @@ export default {
 
 export const description = ({ heading, subtitle, body, caption, overline }) => (
   <Wrapper>
-    <h3>Heading</h3>
+    <h3 style={{ fontFamily: ['"Montserrat"', 'sans-serif'].join(',') }}>Heading</h3>
     <Typography variant={heading}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
-    <h3 style={{ marginTop: 20 }}>Subtitle</h3>
+    <h3 style={{ marginTop: 50, fontFamily: ['"Montserrat"', 'sans-serif'].join(',') }}>Subtitle</h3>
     <Typography
       variant={subtitle == 'subtitle1' ? subtitle : subtitle == 'subtitle2' ? subtitle : ''}
       className={subtitle == 'subtitle3' ? 'MuiTypography-subtitle3' : ''}
@@ -84,12 +85,12 @@ export const description = ({ heading, subtitle, body, caption, overline }) => (
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
-    <h3 style={{ marginTop: 20 }}>Body</h3>
+    <h3 style={{ marginTop: 50, fontFamily: ['"Montserrat"', 'sans-serif'].join(',') }}>Body</h3>
     <Typography variant={body}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
-    <h3 style={{ marginTop: 20 }}>Caption</h3>
+    <h3 style={{ marginTop: 50, fontFamily: ['"Montserrat"', 'sans-serif'].join(',') }}>Caption</h3>
     <Typography
       variant="caption"
       className={
@@ -103,7 +104,7 @@ export const description = ({ heading, subtitle, body, caption, overline }) => (
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.
     </Typography>
-    <h3 style={{ marginTop: 20 }}>Overline</h3>
+    <h3 style={{ marginTop: 50, fontFamily: ['"Montserrat"', 'sans-serif'].join(',') }}>Overline</h3>
     <Typography variant={overline ? 'overline' : ''}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.

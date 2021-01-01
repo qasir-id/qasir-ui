@@ -1,35 +1,20 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
 import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
 import { Badge } from '@storybook/components';
 
 <Meta title="Components/Data Display/Typography/README" />
 
-<h1>Typography</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Use typography to present your design and content as clearly and efficiently as possible.</p>
+<Title>Typography</Title>
+<Subtitle>Use typography to present your design and content as clearly and efficiently as possible.</Subtitle>
 
-<h3 style={{marginTop: 20}}>Montserrat Font CDN</h3>
+### Montserrat Font CDN
+
 <code style={{marginBottom: 30}}>https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap</code>
-
-<Figma
-  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
-  height="50%"
-  defaultCollapsed
-/>
 
 ### Import
 
 ```js
 import Typography from 'qasir-ui/data-display/typography';
-```
-
-### With Dynamic Import (Next.js)
-
-```js
-import dynamic from 'next/dynamic';
-```
-
-```js
-const Typography = dynamic(() => import('qasir-ui/data-display/typography'));
 ```
 
 ### Usage
@@ -40,6 +25,14 @@ const Typography = dynamic(() => import('qasir-ui/data-display/typography'));
 </Typography>
 ```
 
-### MUI Api
+### Props
 
 <IFrame url="https://material-ui.com/api/typography/#props" height="80%" defaultCollapsed />
+
+### Design
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
+  height="50%"
+  defaultCollapsed
+/>
