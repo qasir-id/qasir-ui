@@ -1,15 +1,16 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
 import colors from '../../components/variables/colors';
 
 <Meta title="System/Colors" />
 
-<h1>Colors</h1>
+<Title>Colors</Title>
 
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>At Qasir, colors play an important role when we are working with a product, a service or a space. The right combination of colors can influence how users feel, think, and behave.</p>
+<Subtitle>At Qasir, colors play an important role when we are working with a product, a service or a space. The right combination of colors can influence how users feel, think, and behave.</Subtitle>
 
-<h3 style={{marginTop: 40}}>Primary Color</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Qasir color palette has been created to reflect the spirit of our brand. Red is used across all our communication as an essential element of branding.</p>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Black is used primarily for body text and headings, and White & Grey is used for screen backgrounds and negative space.</p>
+### Primary Color
+
+<Subtitle>Qasir color palette has been created to reflect the spirit of our brand. Red is used across all our communication as an essential element of branding.</Subtitle>
+<Subtitle>Black is used primarily for body text and headings, and White & Grey is used for screen backgrounds and negative space.</Subtitle>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red50}}>
@@ -32,8 +33,9 @@ import colors from '../../components/variables/colors';
     </div>
 </div>
 
-<h3 style={{marginTop: 40}}>Secondary Color</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Secondary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </p>
+### Secondary Color
+
+<Subtitle>Secondary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </Subtitle>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black50}}>
@@ -68,8 +70,9 @@ import colors from '../../components/variables/colors';
     </div>
 </div>
 
-<h3 style={{marginTop: 40}}>Tertiary Color</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Tertiary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </p>
+### Tertiary Color
+
+<Subtitle>Tertiary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </Subtitle>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange50}}>
@@ -92,8 +95,9 @@ import colors from '../../components/variables/colors';
     </div>
 </div>
 
-<h3 style={{marginTop: 40}}>Shades & Tint</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>We intend for tints and shades to be ever evolving, offering an endless palette to choose from. Usage of these colors varies depending on scenarios, but they come in handy for components in our products.</p>
+### Shades & Tint
+
+<Subtitle>We intend for tints and shades to be ever evolving, offering an endless palette to choose from. Usage of these colors varies depending on scenarios, but they come in handy for components in our products.</Subtitle>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red90}}>
@@ -293,12 +297,13 @@ import colors from '../../components/variables/colors';
     </div>
 </div>
 
-<h3 style={{marginTop: 40}}>Color Usage</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Colors in Qasirapp are used sparingly to draw attention to important elements and those that we want the user to take action on, this maintains visual hierarchy. Also certain colors have inherent meaning for a large majority of users. For example, we use shade of red to communicate an error, this helps to communicate visually.</p>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Following is a set of specific guidelines for when and how to use each color in our palette.</p>
+### Color Usage
+
+<Subtitle>Colors in Qasirapp are used sparingly to draw attention to important elements and those that we want the user to take action on, this maintains visual hierarchy. Also certain colors have inherent meaning for a large majority of users. For example, we use shade of red to communicate an error, this helps to communicate visually.</Subtitle>
+<Subtitle>Following is a set of specific guidelines for when and how to use each color in our palette.</Subtitle>
 
 <h4 style={{marginTop: 20}}>Divider</h4>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
     <thead>
         <tr>
             <th style={{textAlign: 'center', width: '1%'}}>Color</th>
@@ -320,7 +325,7 @@ import colors from '../../components/variables/colors';
 </table>
 
 <h4 style={{marginTop: 30}}>Background</h4>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
     <thead>
         <tr>
             <th style={{textAlign: 'center', width: '1%'}}>Color</th>
@@ -350,7 +355,7 @@ import colors from '../../components/variables/colors';
 </table>
 
 <h4 style={{marginTop: 30}}>Outline</h4>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
     <thead>
         <tr>
             <th style={{textAlign: 'center', width: '1%'}}>Color</th>
@@ -372,7 +377,7 @@ import colors from '../../components/variables/colors';
 </table>
 
 <h4 style={{marginTop: 30}}>Button</h4>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
     <thead>
         <tr>
             <th style={{textAlign: 'center', width: '1%'}}>Color</th>
@@ -434,7 +439,7 @@ import colors from '../../components/variables/colors';
 </table>
 
 <h4 style={{marginTop: 30}}>Icon</h4>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
     <thead>
         <tr>
             <th style={{textAlign: 'center', width: '1%'}}>Color</th>
@@ -472,7 +477,7 @@ import colors from '../../components/variables/colors';
 </table>
 
 <h4 style={{marginTop: 30}}>Text</h4>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
     <thead>
         <tr>
             <th style={{textAlign: 'center', width: '1%'}}>Color</th>

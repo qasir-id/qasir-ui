@@ -1,15 +1,16 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
 import { TabsState } from '@storybook/components';
 import colors from '../../components/variables/colors';
 
 <Meta title="Getting Started/Platforms" />
 
-<h1>Supported Platforms</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Learn about the platforms, from modern to old, that are supported by Qasir-UI.</p>
+<Title>Supported Platforms</Title>
+<Subtitle>Learn about the platforms, from modern to old, that are supported by Qasir-UI.</Subtitle>
 
-<h3 style={{marginBottom: 5, marginTop: 10}}>Browser</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(','), marginTop: 0}}>Qasir-UI supports the latest, stable releases of all major browsers and platforms. It also supports Internet Explorer 11. You don't need to provide any JavaScript polyfill as it manages unsupported browser features internally and in isolation.</p>
-<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>
+### Browser
+
+<Subtitle>Qasir-UI supports the latest, stable releases of all major browsers and platforms. It also supports Internet Explorer 11. You don't need to provide any JavaScript polyfill as it manages unsupported browser features internally and in isolation.</Subtitle>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14}}>
     <thead>
         <tr>
             <th>IE</th>
@@ -30,11 +31,11 @@ import colors from '../../components/variables/colors';
     </tbody>
 </table>
 
-<h3 style={{marginBottom: 5, marginTop: 30}}>Server</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(','), marginTop: 0}}>Because Qasir-UI supports server-side rendering, it needs to support the latest, stable releases of <a target="_blank" href="https://github.com/nodejs/node">Node.js</a>. Where possible, the <a target="_blank" href="https://github.com/nodejs/Release#lts-schedule1">LTS versions</a> that are in maintenance are supported. We recommend using node v10.x or newer. However we still support node v8.x.</p>
+### Server
+<Subtitle>Because Qasir-UI supports server-side rendering, it needs to support the latest, stable releases of <a target="_blank" href="https://github.com/nodejs/node">Node.js</a>. Where possible, the <a target="_blank" href="https://github.com/nodejs/Release#lts-schedule1">LTS versions</a> that are in maintenance are supported. We recommend using node v10.x or newer. However we still support node v8.x.</Subtitle>
 
-<h3 style={{marginBottom: 5, marginTop: 30}}>React</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(','), marginTop: 0}}>Qasir-UI supports the most recent versions of React, starting with ^16.8.0 (the one with the hooks).</p>
+### React
+<Subtitle>Qasir-UI supports the most recent versions of React, starting with ^16.8.0 (the one with the hooks).</Subtitle>
 
-<h3 style={{marginBottom: 5, marginTop: 30}}>TypeScript</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(','), marginTop: 0}}>Qasir-UI requires a minimum version of TypeScript 3.2.</p>
+### TypeScript
+<Subtitle>Qasir-UI requires a minimum version of TypeScript 3.2.</Subtitle>

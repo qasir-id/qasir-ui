@@ -1,10 +1,10 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks'
 import { TabsState } from '@storybook/components'
 
 <Meta title="Getting Started/Installation" />
 
-<h1>Quick Start</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>To install and save in your package.json dependencies, run:</p>
+<Title>Quick Start</Title>
+<Subtitle>To install and save in your package.json dependencies, run:</Subtitle>
 
 <TabsState initial="yarn">
   <div id="yarn" title="Yarn"><div>
@@ -23,8 +23,8 @@ npm i qasir-ui
   </div></div>
 </TabsState>
 
-<h3>Montserrat Font</h3>
-<p style={{fontSize: 16, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Qasir-UI was designed with the <a target="_blank" href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> font in mind. So be sure to follow these instructions. For instance, via Google Web Fonts:</p>
+<Title>Montserrat Font</Title>
+<Subtitle>Qasir-UI was designed with the <a target="_blank" href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> font in mind. So be sure to follow these instructions. For instance, via Google Web Fonts:</Subtitle>
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
