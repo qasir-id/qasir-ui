@@ -32,6 +32,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: false },
   },
 };
 
@@ -56,7 +57,7 @@ export const display = () => (
 );
 display.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: BoxDisplayDocs,
     },

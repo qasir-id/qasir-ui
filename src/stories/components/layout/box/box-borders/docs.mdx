@@ -1,15 +1,18 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {BoxBorder, BoxBorderColor, BoxBorderRadius} from './index';
 
-<h1>Borders</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</p>
+<Title>Borders</Title>
+<Subtitle>Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-layout-box-example--borders" />
-</Preview>
+### Import
 
 ```jsx
 import Box from 'qasir-ui/inputs/Box';
 ```
+
+### Usage
+
+<BoxBorder />
 
 ```jsx
 <Box border={1} />
@@ -19,9 +22,13 @@ import Box from 'qasir-ui/inputs/Box';
 <Box borderLeft={1} />
 ```
 
+<BoxBorderColor />
+
 ```jsx
 <Box borderColor="#F04B32" border={1} />
 ```
+
+<BoxBorderRadius />
 
 ```jsx
 <Box borderRadius="50%" />

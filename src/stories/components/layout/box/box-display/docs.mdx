@@ -1,29 +1,92 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
-import Button from 'components/inputs/Button';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {BoxDisplayInline, BoxDisplayBlock, BoxDisplayHidingElements, BoxDisplayPrint,
+ BoxDisplayOverflow, BoxDisplayTextOverflow, BoxDisplayVisibility, BoxDisplayWhitespace} from './index';
 
-<h1>Display</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Quickly and responsively toggle the display value of components and more with the display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
+<Title>Display</Title>
+<Subtitle>Quickly and responsively toggle the display value of components and more with the display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</Subtitle>
 
-<Preview withSource="none">  
-  <Story id="components-layout-box-example--display" />
-</Preview>
+### Import
 
 ```jsx
-import Box from 'qasir-ui/inputs/Box';
+import Box from 'qasir-ui/layout/Box';
 ```
 
-```jsx
-<Box border={1} />
-<Box borderTop={1} />
-<Box borderRight={1} />
-<Box borderBottom={1} />
-<Box borderLeft={1} />
-```
+### Usage
+
+<BoxDisplayInline />
 
 ```jsx
-<Box borderColor="#F04B32" border={1} />
+<Box display="inline" />
 ```
 
+<BoxDisplayBlock />
+
 ```jsx
-<Box borderRadius="50%" />
+<Box display="block" />
+```
+
+<BoxDisplayHidingElements />
+
+```jsx
+<Box display={{ xs: 'block', md: 'none' }}>
+  hide on screens wider than md
+</Box>
+<Box display={{ xs: 'none', md: 'block' }}>
+  hide on screens smaller than md
+</Box>
+```
+
+<BoxDisplayPrint />
+
+```jsx
+<Box display="block" displayPrint="none">
+  Screen Only (Hide on print only)
+</Box>
+<Box display="none" displayPrint="block">
+  Print Only (Hide on screen only)
+</Box>
+```
+
+<BoxDisplayOverflow />
+
+```jsx
+<Box overflow="hidden">
+  Overflow Hidden. Overflow Hidden. Overflow Hidden.
+</Box>
+<Box overflow="auto">
+  Overflow Auto. Overflow Auto. Overflow Auto.
+</Box>
+```
+
+<BoxDisplayTextOverflow />
+
+```jsx
+<Box textOverflow="clip" overflow="hidden">
+  Text Overflow Clip. Text Overflow Clip.
+</Box>
+<Box textOverflow="ellipsis" overflow="hidden">
+  Text Overflow Ellipsis. Text Overflow Ellipsis.
+</Box>
+```
+
+<BoxDisplayVisibility />
+
+```jsx
+<Box visibility="visible">
+  Visibility Visible
+</Box>
+<Box visibility="hidden">
+  Visibility Hidden
+</Box>
+```
+
+<BoxDisplayWhitespace />
+
+```jsx
+<Box whiteSpace="nowrap">
+  White Space Nowrap
+</Box>
+<Box whiteSpace="nowrap">
+  White Space Normal
+</Box>
 ```

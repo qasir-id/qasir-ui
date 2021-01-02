@@ -12,6 +12,10 @@ addParameters({
     Development: '#CC8000',
     Deprecated: '#F04B32',
   },
+  facelift: {
+    enhanceUi: true,
+    defaultVariant: 'light',
+  },
 });
 
 addDecorator(withPerformance);

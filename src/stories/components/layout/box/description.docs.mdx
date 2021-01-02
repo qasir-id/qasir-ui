@@ -1,16 +1,16 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
 import { Design, IFrame } from 'storybook-addon-designs/esm/blocks';
 import { Badge, TabsState } from '@storybook/components';
 
 <Meta title="Components/Layout/Box" />
 
-<h1>Box</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>The Box component serves as a wrapper component for most of the CSS utility needs.</p>
+<Title>Box</Title>
+<Subtitle>The Box component serves as a wrapper component for most of the CSS utility needs.</Subtitle>
 
 ### Import
 
 ```jsx
-import Box from 'qasir-ui/inputs/Box';
+import Box from 'qasir-ui/layout/Box';
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ import Box from 'qasir-ui/inputs/Box';
 </Box>
 ```
 
-### MUI Api
+### Props
 
 <TabsState initial="borders">
   <div id="borders" title="Borders">

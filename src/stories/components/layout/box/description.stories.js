@@ -29,6 +29,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: true },
   },
   argTypes: {
     type: {
