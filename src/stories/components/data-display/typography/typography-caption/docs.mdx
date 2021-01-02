@@ -1,18 +1,24 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import Typography from 'components/data-display/Typography';
 
-# Caption
+<Title>Caption</Title>
+<Subtitle>The HTML caption element specifies the caption (or title) of a table.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-data-display-typography-example--caption" />
-</Preview>
+### Import
 
 ```js
 import Typography from 'qasir-ui/data-display/Typography';
 ```
 
+### Usage
+
+<Typography variant="caption" className="MuiTypography-caption1" style={{marginTop: 20}}>Caption 1</Typography>
+
 ```html
 <Typography variant="caption" className="MuiTypography-caption1">Caption 1</Typography>
 ```
+
+<Typography variant="caption" className="MuiTypography-caption2">Caption 2</Typography>
 
 ```html
 <Typography variant="caption" className="MuiTypography-caption2">Caption 2</Typography>

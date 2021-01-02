@@ -1,14 +1,18 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import Typography from 'components/data-display/Typography';
 
-# Overline
+<Title>Overline</Title>
+<Subtitle>An overline, overscore, or overbar, is a typographical feature of a horizontal line drawn immediately above the text. </Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-data-display-typography-example--overline" />
-</Preview>
+### Import
 
 ```js
 import Typography from 'qasir-ui/data-display/Typography';
 ```
+
+### Usage
+
+<Typography variant="overline" style={{marginTop: 20}}>Overline</Typography>
 
 ```html
 <Typography variant="overline">Overline</Typography>
