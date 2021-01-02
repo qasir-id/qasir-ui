@@ -12,6 +12,9 @@ import BoxBordersDocs from './box-borders/docs.mdx';
 import BoxDisplay from './box-display';
 import BoxDisplayDocs from './box-display/docs.mdx';
 
+import BoxFlexbox from './box-flexbox';
+import BoxFlexboxDocs from './box-flexbox/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -60,6 +63,20 @@ display.story = {
     status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: BoxDisplayDocs,
+    },
+  },
+};
+
+export const flexbox = () => (
+  <Wrapper>
+    <BoxFlexbox />
+  </Wrapper>
+);
+flexbox.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxFlexboxDocs,
     },
   },
 };

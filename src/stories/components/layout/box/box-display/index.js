@@ -6,13 +6,14 @@ import Box from 'components/layout/Box';
 
 const defaultProps = {
   bgcolor: '#cfe8fc',
-  m: 1,
+  mr: 2,
+  mb: 1,
   p: 1,
 };
 
 export const BoxDisplayInline = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 20 }}>Inline</h3>
+    <h3 style={{ marginBottom: 20 }}>Inline</h3>
     <div style={{ width: '100%' }}>
       <Box display="inline" {...defaultProps}>
         inline
@@ -26,7 +27,7 @@ export const BoxDisplayInline = () => (
 
 export const BoxDisplayBlock = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>Block</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>Block</h3>
     <div style={{ width: '100%' }}>
       <Box display="block" {...defaultProps}>
         block
@@ -40,7 +41,7 @@ export const BoxDisplayBlock = () => (
 
 export const BoxDisplayHidingElements = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>Hiding elements</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>Hiding elements</h3>
     <div style={{ width: '100%' }}>
       <Box display={{ xs: 'block', md: 'none' }} {...defaultProps}>
         hide on screens wider than md
@@ -54,7 +55,7 @@ export const BoxDisplayHidingElements = () => (
 
 export const BoxDisplayPrint = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>Display in print</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>Display in print</h3>
     <div style={{ width: '100%' }}>
       <Box display="block" displayPrint="none" {...defaultProps}>
         Screen Only (Hide on print only)
@@ -68,7 +69,7 @@ export const BoxDisplayPrint = () => (
 
 export const BoxDisplayOverflow = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>Overflow</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>Overflow</h3>
     <div style={{ width: 200, whiteSpace: 'nowrap' }}>
       <Box overflow="hidden" {...defaultProps}>
         Overflow Hidden. Overflow Hidden. Overflow Hidden.
@@ -82,7 +83,7 @@ export const BoxDisplayOverflow = () => (
 
 export const BoxDisplayTextOverflow = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>Text Overflow</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>Text Overflow</h3>
     <div style={{ width: 200, whiteSpace: 'nowrap' }}>
       <Box textOverflow="clip" overflow="hidden" {...defaultProps}>
         Text Overflow Clip. Text Overflow Clip.
@@ -96,7 +97,7 @@ export const BoxDisplayTextOverflow = () => (
 
 export const BoxDisplayVisibility = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>Visibility</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>Visibility</h3>
     <div style={{ width: '100%' }}>
       <Box visibility="visible" {...defaultProps}>
         Visibility Visible
@@ -110,7 +111,7 @@ export const BoxDisplayVisibility = () => (
 
 export const BoxDisplayWhitespace = () => (
   <>
-    <h3 style={{ paddingLeft: 7, marginBottom: 10, marginTop: 30 }}>White Space</h3>
+    <h3 style={{ marginBottom: 10, marginTop: 30 }}>White Space</h3>
     <div style={{ width: 200 }}>
       <Box whiteSpace="nowrap" {...defaultProps}>
         White Space Nowrap
