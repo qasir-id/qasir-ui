@@ -10,6 +10,5 @@ module.exports = {
     '@storybook/addon-controls',
     'storybook-addon-designs',
     'storybook-addon-performance/register',
-    'storybook-facelift',
   ],
 };

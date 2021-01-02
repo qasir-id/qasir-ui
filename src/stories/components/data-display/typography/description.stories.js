@@ -114,6 +114,7 @@ export const description = ({ heading, subtitle, body, caption, overline }) => (
 
 description.story = {
   parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: TypographyDescriptionDocs,
     },
