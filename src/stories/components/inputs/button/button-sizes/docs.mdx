@@ -1,7 +1,7 @@
-import { Subtitle } from '@storybook/addon-docs/blocks';
-import Button from 'components/inputs/Button';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {ButtonLarge, ButtonMedium, ButtonSmall} from './index';
 
-# Sizes Buttons
+<Title>Sizes Buttons</Title>
 <Subtitle>Fancy larger or smaller buttons? Use the size property.</Subtitle>
 
 ### Import
@@ -12,19 +12,19 @@ import Button from 'qasir-ui/inputs/Button';
 
 ### Usage
 
-<Button variant="contained" color="primary" size="large" style={{marginTop: 20}}>Large</Button>
+<ButtonLarge style={{marginTop: 20}} />
 
 ```html
 <Button variant="contained" color="primary" size="large">Large</Button>
 ```
 
-<Button variant="contained" color="primary">Medium</Button>
+<ButtonMedium />
 
 ```html
 <Button variant="contained" color="primary">Medium</Button>
 ```
 
-<Button variant="contained" color="primary" size="small">Small</Button>
+<ButtonSmall />
 
 ```html
 <Button variant="contained" color="primary" size="small">Small</Button>

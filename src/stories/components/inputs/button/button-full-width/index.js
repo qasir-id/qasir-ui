@@ -4,10 +4,10 @@ import React from 'react';
 // Components
 import Button from 'components/inputs/Button';
 
-const ButtonFullWidth = () => {
+const ButtonFullWidth = (props) => {
   return (
     <>
-      <Button variant="contained" color="primary" fullWidth>
+      <Button variant="contained" color="primary" fullWidth {...props}>
         Full Width
       </Button>
     </>

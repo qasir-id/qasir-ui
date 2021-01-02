@@ -1,13 +1,8 @@
-import { Subtitle } from '@storybook/addon-docs/blocks';
-import DeleteIcon from '@material-ui/icons/Delete';
-import SendIcon from '@material-ui/icons/Send';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
-import SaveIcon from '@material-ui/icons/Save';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
 
-import Button from 'components/inputs/Button';
+import {ButtonPrimaryStartIcon, ButtonSecondaryEndIcon, ButtonDisableStartIcon, ButtonOutlineStartIcon, ButtonTextStartIcon} from './index';
 
-# Icons & Label Buttons
+<Title>Icons & Label Buttons</Title>
 <Subtitle>Sometimes you might want to have icons for certain button to enhance the UX of the application as we recognize logos more easily than plain text. For example, if you have a delete button you can label it with a dustbin icon.</Subtitle>
 
 ### Import
@@ -18,31 +13,31 @@ import Button from 'qasir-ui/inputs/Button';
 
 ### Usage
 
-<Button variant="contained" color="primary" startIcon={<DeleteIcon />} style={{marginTop: 20}}>Delete</Button>
+<ButtonPrimaryStartIcon style={{marginTop: 20}} />
 
 ```html
 <Button variant="contained" color="primary" startIcon={<DeleteIcon />}>Delete</Button>
 ```
 
-<Button variant="contained" color="secondary" endIcon={<SendIcon />}>Send</Button>
+<ButtonSecondaryEndIcon />
 
 ```html
 <Button variant="contained" color="secondary" endIcon={<SendIcon />}>Send</Button>
 ```
 
-<Button variant="contained" disabled startIcon={<CloudUploadIcon />}>Upload</Button>
+<ButtonDisableStartIcon />
 
 ```html
 <Button variant="contained" disabled startIcon={<CloudUploadIcon />}>Upload</Button>
 ```
 
-<Button variant="outlined" startIcon={<KeyboardVoiceIcon />}>Talk</Button>
+<ButtonOutlineStartIcon />
 
 ```html
 <Button variant="outlined" startIcon={<KeyboardVoiceIcon />}>Talk</Button>
 ```
 
-<Button variant="text" startIcon={<SaveIcon />}>Save</Button>
+<ButtonTextStartIcon />
 
 ```html
 <Button variant="text" startIcon={<SaveIcon />}>Save</Button>
