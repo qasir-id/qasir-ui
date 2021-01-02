@@ -1,19 +1,24 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {ContainerFluid, ContainerFixed} from './index';
 
-<h1>Container Types</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Set the max-width to match the min-width of the current breakpoint. This is useful if you'd prefer to design for a fixed set of sizes instead of trying to accommodate a fully fluid viewport. It's fluid by default.</p>
+<Title>Container Types</Title>
+<Subtitle>Set the max-width to match the min-width of the current breakpoint. This is useful if you'd prefer to design for a fixed set of sizes instead of trying to accommodate a fully fluid viewport. It's fluid by default.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-layout-container-example--types" />
-</Preview>
+### Import
 
 ```jsx
 import Container from 'qasir-ui/inputs/Container';
 ```
 
+### Usage
+
+<ContainerFluid />
+
 ```jsx
 <Container>...</Container>
 ```
+
+<ContainerFixed />
 
 ```jsx
 <Container fixed>...</Container>

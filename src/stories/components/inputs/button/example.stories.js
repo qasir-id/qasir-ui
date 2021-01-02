@@ -38,6 +38,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: false },
   },
 };
 
@@ -53,7 +54,6 @@ types.story = {
     docs: {
       page: ButtonTypesDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -68,7 +68,6 @@ sizes.story = {
     docs: {
       page: ButtonSizesDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -84,7 +83,6 @@ iconsLabel.story = {
     docs: {
       page: ButtonIconsLabelDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -100,6 +98,5 @@ fullWidth.story = {
     docs: {
       page: ButtonFullWidthDocs,
     },
-    options: { showPanel: false },
   },
 };

@@ -41,6 +41,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: false },
   },
 };
 
@@ -55,7 +56,6 @@ heading.story = {
     docs: {
       page: TypographyHeadingDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -70,7 +70,6 @@ subtitle.story = {
     docs: {
       page: TypographySubtitleDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -85,7 +84,6 @@ body.story = {
     docs: {
       page: TypographyBodyDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -100,7 +98,6 @@ caption.story = {
     docs: {
       page: TypographyCaptionDocs,
     },
-    options: { showPanel: false },
   },
 };
 
@@ -115,6 +112,5 @@ overline.story = {
     docs: {
       page: TypographyOverlineDocs,
     },
-    options: { showPanel: false },
   },
 };
