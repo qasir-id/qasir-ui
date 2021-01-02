@@ -4,29 +4,13 @@ import { Badge } from '@storybook/components';
 
 <Meta title="Components/Inputs/TextField/README" />
 
-<h1>Text Field</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Text fields let users enter and edit text.</p>
-
-<Figma
-  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=3894%3A468"
-  height="50%"
-  defaultCollapsed
-/>
+<Title>Text Field</Title>
+<Subtitle>Text fields let users enter and edit text.</Subtitle>
 
 ### Import
 
 ```js
 import TextField from 'qasir-ui/inputs/TextField';
-```
-
-### With Dynamic Import (Next.js)
-
-```js
-import dynamic from 'next/dynamic';
-```
-
-```js
-const TextField = dynamic(() => import('qasir-ui/inputs/TextField'));
 ```
 
 ### Usage
@@ -35,6 +19,14 @@ const TextField = dynamic(() => import('qasir-ui/inputs/TextField'));
 <TextField label="Outlined" variant="outlined" />
 ```
 
-### MUI Api
+### Props
 
 <IFrame url="https://material-ui.com/api/text-field/#props" height="80%" defaultCollapsed />
+
+### Design
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=3894%3A468"
+  height="50%"
+  defaultCollapsed
+/>

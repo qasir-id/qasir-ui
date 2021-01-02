@@ -55,6 +55,7 @@ types.story = {
     docs: {
       page: TextFieldTypesDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -69,6 +70,7 @@ formProps.story = {
     docs: {
       page: TextFieldFormPropsDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -83,6 +85,7 @@ validation.story = {
     docs: {
       page: TextFieldValidationDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -97,6 +100,7 @@ multiline.story = {
     docs: {
       page: TextFieldMultilineDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -111,5 +115,6 @@ icons.story = {
     docs: {
       page: TextFieldIconsDocs,
     },
+    options: { showPanel: false },
   },
 };

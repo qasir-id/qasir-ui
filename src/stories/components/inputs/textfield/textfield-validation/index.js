@@ -4,19 +4,26 @@ import React from 'react';
 // Components
 import TextField from 'components/inputs/TextField';
 
-const TextFieldValidation = () => {
-  return (
-    <>
-      <TextField error label="Error" defaultValue="Hello World" variant="outlined" />
-      <TextField
-        error
-        label="Error"
-        defaultValue="Hello World"
-        helperText="Incorrect entry."
-        variant="outlined"
-      />
-    </>
-  );
-};
+export const TextFieldValidationError = (props) => (
+  <TextField error label="Error" defaultValue="Hello World" variant="outlined" {...props} />
+);
+
+export const TextFieldValidationErrorHelperText = (props) => (
+  <TextField
+    error
+    label="Error"
+    defaultValue="Hello World"
+    helperText="Incorrect entry."
+    variant="outlined"
+    {...props}
+  />
+);
+
+const TextFieldValidation = () => (
+  <>
+    {TextFieldValidationError()}
+    {TextFieldValidationErrorHelperText()}
+  </>
+);
 
 export default TextFieldValidation;

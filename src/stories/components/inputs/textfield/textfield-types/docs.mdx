@@ -1,15 +1,18 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import TextFieldTypes from './index';
 
-<h1>Types</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Text fields let users enter and edit text.</p>
+<Title>Types</Title>
+<Subtitle>Text fields let users enter and edit text.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-inputs-textfield-example--types" />
-</Preview>
+### Import
 
 ```js
 import TextField from 'qasir-ui/inputs/TextField';
 ```
+
+### Usage
+
+<TextFieldTypes style={{marginTop: 20}} />
 
 ```html
 <TextField label="Hello World" variant="outlined" />

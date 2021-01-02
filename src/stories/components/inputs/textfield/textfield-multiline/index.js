@@ -4,10 +4,10 @@ import React from 'react';
 // Components
 import TextField from 'components/inputs/TextField';
 
-const TextFieldMultiline = () => {
+const TextFieldMultiline = (props) => {
   return (
     <>
-      <TextField label="Hello World" variant="outlined" multiline rows={4} />
+      <TextField label="Hello World" variant="outlined" multiline rows={4} {...props} />
     </>
   );
 };

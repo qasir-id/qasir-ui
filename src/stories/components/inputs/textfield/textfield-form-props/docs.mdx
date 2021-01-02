@@ -1,44 +1,63 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {TextFieldFormPropsText, TextFieldFormPropsRequired, TextFieldFormPropsDisabled, TextFieldFormPropsPassword, TextFieldFormPropsReadonly, TextFieldFormPropsNumber, 
+  TextFieldFormPropsSearch, TextFieldFormPropsHelpertext
+} from './index';
 
-<h1>Form Props</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Standard form attributes are supported e.g. <code>required</code>, <code>disabled</code>, type, etc. as well as a <code>helperText</code> which is used to give context about a field’s input, such as how the input will be used.</p>
+<Title>Form Props</Title>
+<Subtitle>Standard form attributes are supported e.g. <code>required</code>, <code>disabled</code>, type, etc. as well as a <code>helperText</code> which is used to give context about a field’s input, such as how the input will be used.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-inputs-textfield-example--form-props" />
-</Preview>
+### Import
 
-```js
+```jsx
 import TextField from 'qasir-ui/inputs/TextField';
 ```
 
-```html
+# Usage
+
+<TextFieldFormPropsText style={{marginTop: 20}} />
+
+```jsx
 <TextField type="text" label="Text" defaultValue="Hello World" variant="outlined" />
 ```
 
-```html
+<TextFieldFormPropsRequired />
+
+```jsx
 <TextField required label="Required*" defaultValue="Hello World" variant="outlined" />
 ```
 
-```html
+<TextFieldFormPropsDisabled />
+
+```jsx
 <TextField disabled defaultValue="Disabled" variant="outlined" labelWidth={0} />
 ```
 
-```html
+<TextFieldFormPropsPassword />
+
+```jsx
 <TextField label="Password" type="password" autoComplete="current-password" variant="outlined" />
 ```
 
-```html
+<TextFieldFormPropsReadonly />
+
+```jsx
 <TextField label="Read Only" defaultValue="Hello World" InputProps={{ readOnly: true }} variant="outlined" />
 ```
 
-```html
+<TextFieldFormPropsNumber />
+
+```jsx
 <TextField label="Number" type="number" InputLabelProps={{ shrink: true }} variant="outlined" />
 ```
 
-```html
+<TextFieldFormPropsSearch />
+
+```jsx
 <TextField label="Search field" type="search" variant="outlined" />
 ```
 
-```html
+<TextFieldFormPropsHelpertext />
+
+```jsx
 <TextField label="Helper text" defaultValue="Hello World" helperText="Some important text" variant="outlined" />
 ```

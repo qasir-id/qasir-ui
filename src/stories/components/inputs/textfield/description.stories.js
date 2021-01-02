@@ -31,6 +31,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: { showPanel: true },
   },
   argTypes: {
     defaultValue: { name: 'Default Value', control: 'text' },

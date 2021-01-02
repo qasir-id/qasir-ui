@@ -1,18 +1,21 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {TextFieldIconsStart, TextFieldIconsEnd} from './index';
 
-<h1>Icons</h1>
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>There are multiple ways to display an icon with a text field.</p>
+<Title>Icons</Title>
+<Subtitle>There are multiple ways to display an icon with a text field.</Subtitle>
 
-<Preview withSource="none">
-  <Story id="components-inputs-textfield-example--icons" />
-</Preview>
+### Import
 
-```js
+```jsx
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from 'qasir-ui/inputs/TextField';
 ```
 
-```html
+### Usage
+
+<TextFieldIconsStart style={{marginTop: 20}} />
+
+```jsx
 <TextField
   label="Label"
   InputProps={{
@@ -22,7 +25,9 @@ import TextField from 'qasir-ui/inputs/TextField';
 />
 ```
 
-```html
+<TextFieldIconsEnd />
+
+```jsx
 <TextField
   label="Label"
   InputProps={{
