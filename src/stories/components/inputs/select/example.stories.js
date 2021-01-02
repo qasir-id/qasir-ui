@@ -52,6 +52,7 @@ types.story = {
     docs: {
       page: SelectTypesDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -66,6 +67,7 @@ formProps.story = {
     docs: {
       page: SelectFormPropsDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -80,6 +82,7 @@ multiple.story = {
     docs: {
       page: SelectMultipleDocs,
     },
+    options: { showPanel: false },
   },
 };
 
@@ -94,5 +97,6 @@ grouping.story = {
     docs: {
       page: SelectGroupingDocs,
     },
+    options: { showPanel: false },
   },
 };
