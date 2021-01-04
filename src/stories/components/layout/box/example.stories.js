@@ -15,6 +15,24 @@ import BoxDisplayDocs from './box-display/docs.mdx';
 import BoxFlexbox from './box-flexbox';
 import BoxFlexboxDocs from './box-flexbox/docs.mdx';
 
+import BoxPalette from './box-palette';
+import BoxPaletteDocs from './box-palette/docs.mdx';
+
+import BoxPositions from './box-positions';
+import BoxPositionsDocs from './box-positions/docs.mdx';
+
+import BoxShadows from './box-shadows';
+import BoxShadowsDocs from './box-shadows/docs.mdx';
+
+import BoxSizing from './box-sizing';
+import BoxSizingDocs from './box-sizing/docs.mdx';
+
+import BoxSpacing from './box-spacing';
+import BoxSpacingDocs from './box-spacing/docs.mdx';
+
+import BoxTypography from './box-typography';
+import BoxTypographyDocs from './box-typography/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -77,6 +95,90 @@ flexbox.story = {
     status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: BoxFlexboxDocs,
+    },
+  },
+};
+
+export const palette = () => (
+  <Wrapper>
+    <BoxPalette />
+  </Wrapper>
+);
+palette.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxPaletteDocs,
+    },
+  },
+};
+
+export const positions = () => (
+  <Wrapper>
+    <BoxPositions />
+  </Wrapper>
+);
+positions.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxPositionsDocs,
+    },
+  },
+};
+
+export const shadows = () => (
+  <Wrapper>
+    <BoxShadows />
+  </Wrapper>
+);
+shadows.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxShadowsDocs,
+    },
+  },
+};
+
+export const sizing = () => (
+  <Wrapper>
+    <BoxSizing />
+  </Wrapper>
+);
+sizing.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxSizingDocs,
+    },
+  },
+};
+
+export const spacing = () => (
+  <Wrapper>
+    <BoxSpacing />
+  </Wrapper>
+);
+spacing.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxSpacingDocs,
+    },
+  },
+};
+
+export const typography = () => (
+  <Wrapper>
+    <BoxTypography />
+  </Wrapper>
+);
+typography.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: BoxTypographyDocs,
     },
   },
 };
