@@ -1,54 +1,53 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Title, Subtitle, Meta } from '@storybook/addon-docs/blocks';
 import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
 import { Badge } from '@storybook/components';
 
+import SimpleTabs from './tabs-simple/index';
+
 <Meta title="Components/Navigation/Tabs"/>
 
-<h1>Tabs</h1>
 
-<p style={{fontSize: 18, fontFamily: ['"Montserrat"', 'sans-serif'].join(',')}}>Tabs make it easy to explore and switch between different views.
-</p>
+<Title>Simple Tabs</Title>
 
-<Preview withSource="none">
-  <Story id="components-navigation-tabs-example--simple-tabs" />
-</Preview>
+<Subtitle>Tabs make it easy to explore and switch between different views.
+</Subtitle>
 
 
-<h3 style={{marginTop: 20}}>Montserrat Font CDN</h3>
-<code style={{marginBottom: 30}}>https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap</code>
+
+### Import 
+```js
+import Tabs from 'qasir-ui/navigation/Tabs';
+```
+
+### Usage 
+```jsx
+const SimpleTabs = (props) => {
+    const [data, setData ] = React.useState([
+        {id: '0', label: 'All Products', description: 'All Products'},
+        {id: '1', label: 'Categories', description: 'All Categories'}
+    ])
+    return(
+        <>
+          <Tabs data={data} {...props}/>
+        </>
+    )
+}
+
+```
+
+
+
+### Required Props
+<ArgsTable of={SimpleTabs} />
+
+### Props
+
+<IFrame url="https://material-ui.com/api/tabs/#props" height="80%" defaultCollapsed />
+
+### Design
 
 <Figma
   url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
   height="50%"
   defaultCollapsed
 />
-
-### Import 
-```js
-import Tabs from 'qasir-ui/navigation/Tabs';
-```
-### Props
-```js
-data = Array of Objects
-```
-### State for Example Usage
-```js
-const [data, setData ] = React.useState([
-        {id: '0', label: 'Semua Produk', description: 'Semua Produk'},
-        {id: '1', label: 'Kategori', description: 'Semua Kategori'}
-]);
-```
-
-
-### Usage
-```html
-  Pass the data as Props
-```
-
-```jsx
-<Tabs data={data}/>
-```
-
-### MUI Api
-
-<IFrame url="https://material-ui.com/api/tabs/#props" height="80%" defaultCollapsed />

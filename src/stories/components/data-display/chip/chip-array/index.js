@@ -1,24 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Chip from 'components/data-display/Chip';
-import Paper from '@material-ui/core/Paper';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    listStyle: 'none',
-    padding: theme.spacing(0.5),
-    margin: 0,
-  },
-  chip: {
-    margin: theme.spacing(0.5),
-  },
-}));
-
-export default function ChipsArray() {
-  const classes = useStyles();
+export default function ChipsArray(props) {
   const [chipData, setChipData] = React.useState([
     { key: 0, label: 'Imam' },
     { key: 1, label: 'Ngadiono' },
@@ -33,19 +16,19 @@ export default function ChipsArray() {
   };
 
   return (
-    <Paper component="ul" className={classes.root}>
+    <>
       {chipData.map((data) => {
         return (
-          <li key={data.key}>
+          <span key={data.key}>
             <Chip
               color="primary"
               label={data.label}
               onDelete={data.label === 'Imam' ? undefined : handleDelete(data)}
-              className={classes.chip}
+              {...props}
             />
-          </li>
+          </span>
         );
       })}
-    </Paper>
+    </>
   );
 }
