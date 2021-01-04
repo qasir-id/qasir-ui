@@ -6,14 +6,14 @@ import { withDesign } from 'storybook-addon-designs';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import ChipComponent from './chip';
-import ChipDocs from './chip/docs.mdx';
+import ChipComponent from './chip-types';
+import ChipDocs from './chip-types/docs.mdx';
 
 import CustomChip from './chip-custom';
 import CustomChipDocs from './chip-custom/docs.mdx';
 
-import OutlinedChip from './chip-outlined';
-import OutlinedChipDocs from './chip-outlined/docs.mdx';
+import ChipProps from './chip-props';
+import OutlinedChipDocs from './chip-props/docs.mdx';
 
 import ArrayChip from './chip-array';
 import ArrayChipDocs from './chip-array/docs.mdx';
@@ -38,17 +38,18 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
-  },
+    options: {showPanel: false}
+  }
 };
-export const Chip = () => (
+export const Types = () => (
   <Wrapper>
     <ChipComponent />
   </Wrapper>
 );
 
-export const Outlined = () => (
+export const chipProps = () => (
     <Wrapper>
-        <OutlinedChip/>
+        <ChipProps/>
     </Wrapper>
 )
 
@@ -75,7 +76,7 @@ ChipArray.story = {
     }
 }
 
-Outlined.story = {
+chipProps.story = {
     parameters: {
         status: 'Development', // Stable | Development | Deprecated,
         docs: {
@@ -94,7 +95,7 @@ Custom.story = {
 }
 
 
-Chip.story = {
+Types.story = {
   parameters: {
     status: 'Development', // Stable | Development | Deprecated,
     docs: {

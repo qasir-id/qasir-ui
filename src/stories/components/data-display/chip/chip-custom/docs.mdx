@@ -1,13 +1,15 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Subtitle, Preview, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import CustomChip from './index'
 
 # Chip
 
 <Subtitle>
 Chips are compact elements that represent an input, attribute, or action.
 </Subtitle>
-<Preview withSource="none">
-  <Story id="components-data-display-chip-example--custom" />
-</Preview>
+
+<CustomChip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
+
+<div style={{marginBottom: 50}}></div>
 
 ### Import
 ```js
@@ -15,13 +17,9 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 
 ### Props
-```html
-(Required if you want to change Chip Background and Font Color)
-```
-```js
-customBackground = String
-customFont = String 
-```
+<ArgsTable of={CustomChip} />
+
+
 
 ### Usage
 ```jsx

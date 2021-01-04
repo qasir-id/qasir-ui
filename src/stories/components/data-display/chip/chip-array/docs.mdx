@@ -1,13 +1,15 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle, Preview, Story, Source } from '@storybook/addon-docs/blocks';
+import ChipsArray from './index';
 
-# Chip
+<Title>Chip</Title>
 
 <Subtitle>
   Chips are compact elements that represent an input, attribute, or action.
 </Subtitle>
-<Preview withSource="none">
-  <Story id="components-data-display-chip-example--chip-array" />
-</Preview>
+
+<ChipsArray style={{margin: 5}}/>
+
+<div style={{marginTop: 20}}></div>
 
 ### Import
 ```js
@@ -15,44 +17,35 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 
 ### Usage
-```js
+```jsx
 export default function ChipsArray() {
-    .....
-}
-```
-### State (use react-hooks)
-```js
-const [chipData, setChipData] = React.useState([
+  const [chipData, setChipData] = React.useState([
     { key: 0, label: 'Imam' },
     { key: 1, label: 'Ngadiono' },
     { key: 2, label: 'Harry' },
     { key: 3, label: 'Adi' },
     { key: 4, label: 'Shendy' },
     { key: 5, label: 'Ridho' },
-]);
-```
+  ]);
 
-### Event Handler
-
-```js
-const handleDelete = (chipToDelete) => () => {
+  const handleDelete = (chipToDelete) => () => {
     setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
-};
-```
+  };
 
-```jsx
-return (
-    {chipData.map((data) => {
+  return (
+    <>
+      {chipData.map((data) => {
         return (
-          <li key={data.key}>
+          <span key={data.key}>
             <Chip
               color="primary"
               label={data.label}
               onDelete={data.label === 'Imam' ? undefined : handleDelete(data)}
-              className={classes.chip}
             />
-          </li>
+          </span>
         );
-    })}
-);
+      })}
+    </>
+  );
+}
 ```

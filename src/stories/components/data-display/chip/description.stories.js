@@ -6,7 +6,7 @@ import { withDesign } from 'storybook-addon-designs';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import ChipComponent from './chip';
+import ChipComponent from './chip-types';
 import ChipDocs from './description.docs.mdx';
 
 import 'font-family.css';
@@ -29,6 +29,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     design: { disabled: true },
+    options: {showPanel: true}
   },
 };
 export const description = () => (
