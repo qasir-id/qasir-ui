@@ -19,15 +19,15 @@ import Chip from 'qasir-ui/data-display/Chip';
 <ChipsArray style={{margin: 5}}/>
 
 
-```jsx
+```js
 export default function ChipsArray() {
   const [chipData, setChipData] = React.useState([
-    { key: 0, label: 'Imam' },
-    { key: 1, label: 'Ngadiono' },
-    { key: 2, label: 'Harry' },
-    { key: 3, label: 'Adi' },
-    { key: 4, label: 'Shendy' },
-    { key: 5, label: 'Ridho' },
+      { key: 0, label: 'Imam' },
+      { key: 1, label: 'Ngadiono' },
+      { key: 2, label: 'Harry' },
+      { key: 3, label: 'Adi' },
+      { key: 4, label: 'Shendy' },
+      { key: 5, label: 'Ridho' },
   ]);
 
   const handleDelete = (chipToDelete) => () => {
