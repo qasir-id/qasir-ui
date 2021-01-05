@@ -6,7 +6,10 @@ import { withDesign } from 'storybook-addon-designs';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import Hidden from 'components/layout/Hidden';
+import HiddenBreakpointUp from './hidden-breakpoint-up';
+import HiddenBreakpointDown from './hidden-breakpoint-down';
+import HiddenBreakpointOnly from './hidden-breakpoint-only';
+
 import HiddenDescriptionDocs from './description.docs.mdx';
 
 import 'font-family.css';
@@ -33,20 +36,10 @@ export default {
   },
   argTypes: {
     type: {
-      name: 'Style Functions',
+      name: 'Breakpoint',
       control: {
         type: 'select',
-        options: [
-          'borders',
-          'display',
-          'flexbox',
-          'palette',
-          'positions',
-          'shadows',
-          'sizing',
-          'spacing',
-          'typography',
-        ],
+        options: ['up', 'down', 'only'],
       },
     },
   },
@@ -61,13 +54,15 @@ const defaultProps = {
 
 export const description = ({ type }) => (
   <Wrapper>
-    <Hidden />
+    {type == 'up' && <HiddenBreakpointUp />}
+    {type == 'down' && <HiddenBreakpointDown />}
+    {type == 'only' && <HiddenBreakpointOnly />}
   </Wrapper>
 );
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: HiddenDescriptionDocs,
     },
@@ -75,5 +70,5 @@ description.story = {
 };
 
 description.args = {
-  type: 'borders',
+  type: 'up',
 };

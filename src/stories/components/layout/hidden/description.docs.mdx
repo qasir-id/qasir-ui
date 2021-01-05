@@ -9,7 +9,9 @@ import { Badge } from '@storybook/components';
 
 ### How it works
 <Subtitle>
-  Hidden works with a range of breakpoints e.g. xsUp or mdDown, or one or more breakpoints e.g. only='sm' or only={['md', 'xl']}. Ranges and individual breakpoints can be used simultaneously to achieve very customized behavior. The ranges are inclusive of the specified breakpoints.
+  Hidden works with a range of breakpoints e.g. <code>xsUp</code> or <code>mdDown</code>, or one or more breakpoints e.g. <code>only='sm'</code> or <code>only={['md', 'xl']}</code>.
+Ranges and individual breakpoints can be used simultaneously to achieve very customized behavior.
+The ranges are inclusive of the specified breakpoints.
 </Subtitle>
 
 ```sh 
@@ -30,9 +32,7 @@ import Hidden from 'qasir-ui/layout/Hidden';
 ### Usage
 
 ```jsx
-<Button variant="contained" color="primary">
-  Hello World
-</Button>
+<Hidden xsUp>...</Hidden>
 ```
 
 ### Props

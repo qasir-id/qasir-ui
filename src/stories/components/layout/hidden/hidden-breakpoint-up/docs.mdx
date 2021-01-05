@@ -1,43 +1,37 @@
-import { Title, Subtitle } from '@storybook/addon-docs/blocks';
-import {ButtonPrimary, ButtonSecondary, ButtonDisable, ButtonOutline, ButtonText} from './index';
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import HiddenBreakpointUp from './index';
 
-<Title>Type Buttons</Title>
-<Subtitle>There are text, contained, and toggle buttons. Text buttons are typically used for less important actions.</Subtitle>
+<Title>Breakpoint Up</Title>
+<Subtitle>Using any breakpoint <code>up</code> property, the given <em>children</em> will be hidden <em>at or above</em> the breakpoint.</Subtitle>
 
 ### Import
 
 ```jsx
-import Button from 'qasir-ui/inputs/Button';
+import Hidden from 'qasir-ui/layout/Hidden';
 ```
 
 ### Usage
 
-<ButtonPrimary style={{marginTop: 20}} />
+<HiddenBreakpointUp />
 
-```jsx
-<Button variant="contained" color="primary">Primary</Button>
-```
-
-<ButtonSecondary />
-
-```jsx
-<Button variant="contained" color="secondary">Secondary</Button>
-```
-
-<ButtonDisable />
-
-```jsx
-<Button variant="contained" disabled>Disable</Button>
-```
-
-<ButtonOutline />
-
-```jsx
-<Button variant="outlined">Outline</Button>
-```
-
-<ButtonText />
-
-```jsx
-<Button variant="text">Text</Button>
-```
+<Source
+  language='jsx'
+  code={dedent`
+     <Hidden xsUp>
+      <span>xsUp</span>
+    </Hidden>
+    <Hidden smUp>
+      <span>smUp</span>
+    </Hidden>
+    <Hidden mdUp>
+      <span>mdUp</span>
+    </Hidden>
+    <Hidden lgUp>
+      <span>lgUp</span>
+    </Hidden>
+    <Hidden xlUp>
+      <span>xlUp</span>
+    </Hidden>
+  `}
+/>

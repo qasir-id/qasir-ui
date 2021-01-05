@@ -1,43 +1,46 @@
-import { Title, Subtitle } from '@storybook/addon-docs/blocks';
-import {ButtonPrimary, ButtonSecondary, ButtonDisable, ButtonOutline, ButtonText} from './index';
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import HiddenBreakpointUp from './index';
 
-<Title>Type Buttons</Title>
-<Subtitle>There are text, contained, and toggle buttons. Text buttons are typically used for less important actions.</Subtitle>
+<Title>Breakpoint only</Title>
+<Subtitle>Using the breakpoint <code>only</code> property, the given <em>children</em> will be hidden <em>at</em> the specified breakpoint(s).</Subtitle>
+
+<p>The <code>only</code> property can be used in two ways:</p>
+<ul>
+<li>list a single breakpoint</li>
+<li>list an array of breakpoints</li>
+</ul>
 
 ### Import
 
 ```jsx
-import Button from 'qasir-ui/inputs/Button';
+import Hidden from 'qasir-ui/layout/Hidden';
 ```
 
 ### Usage
 
-<ButtonPrimary style={{marginTop: 20}} />
+<HiddenBreakpointUp />
 
-```jsx
-<Button variant="contained" color="primary">Primary</Button>
-```
-
-<ButtonSecondary />
-
-```jsx
-<Button variant="contained" color="secondary">Secondary</Button>
-```
-
-<ButtonDisable />
-
-```jsx
-<Button variant="contained" disabled>Disable</Button>
-```
-
-<ButtonOutline />
-
-```jsx
-<Button variant="outlined">Outline</Button>
-```
-
-<ButtonText />
-
-```jsx
-<Button variant="text">Text</Button>
-```
+<Source
+  language='jsx'
+  code={dedent`
+     <Hidden only="xs">
+        <span>Hidden on xs</span>
+      </Hidden>
+      <Hidden only="sm">
+        <span>Hidden on sm</span>
+      </Hidden>
+      <Hidden only="md">
+        <span>Hidden on md</span>
+      </Hidden>
+      <Hidden only="lg">
+        <span>Hidden on lg</span>
+      </Hidden>
+      <Hidden only="xl">
+        <span>Hidden on xl</span>
+      </Hidden>
+      <Hidden only={['sm', 'md']}>
+        <span>Hidden on sm and md</span>
+      </Hidden>
+  `}
+/>

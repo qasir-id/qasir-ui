@@ -1,47 +1,42 @@
 // Vendors
 import React from 'react';
+import withWidth from '@material-ui/core/withWidth';
 
 // Components
-import Button from 'components/inputs/Button';
+import Hidden from 'components/layout/Hidden';
+import Box from 'components/layout/Box';
 
-export const ButtonPrimary = (props) => (
-  <Button variant="contained" color="primary" {...props}>
-    Primary
-  </Button>
-);
+const defaultProps = {
+  bgcolor: '#cfe8fc',
+  p: 2,
+  mb: 2,
+  style: { width: '5rem', height: '5rem' },
+};
 
-export const ButtonSecondary = (props) => (
-  <Button variant="contained" color="secondary" {...props}>
-    Secondary
-  </Button>
-);
+const HiddenBreakpointDown = (props) => {
+  const { width } = props;
+  return (
+    <>
+      <p>
+        Current width: <b>{width}</b>
+      </p>
+      <Hidden xsDown>
+        <Box {...defaultProps}>xsDown</Box>
+      </Hidden>
+      <Hidden smDown>
+        <Box {...defaultProps}>smDown</Box>
+      </Hidden>
+      <Hidden mdDown>
+        <Box {...defaultProps}>mdDown</Box>
+      </Hidden>
+      <Hidden lgDown>
+        <Box {...defaultProps}>lgDown</Box>
+      </Hidden>
+      <Hidden xlDown>
+        <Box {...defaultProps}>xlDown</Box>
+      </Hidden>
+    </>
+  );
+};
 
-export const ButtonDisable = (props) => (
-  <Button variant="contained" disabled {...props}>
-    Disable
-  </Button>
-);
-
-export const ButtonOutline = (props) => (
-  <Button variant="outlined" {...props}>
-    Outline
-  </Button>
-);
-
-export const ButtonText = (props) => (
-  <Button variant="text" {...props}>
-    Text
-  </Button>
-);
-
-const ButtonTypes = () => (
-  <>
-    {ButtonPrimary()}
-    {ButtonSecondary()}
-    {ButtonDisable()}
-    {ButtonOutline()}
-    {ButtonText()}
-  </>
-);
-
-export default ButtonTypes;
+export default withWidth()(HiddenBreakpointDown);

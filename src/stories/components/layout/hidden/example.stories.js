@@ -9,6 +9,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import HiddenBreakpointUp from './hidden-breakpoint-up';
 import HiddenBreakpointUpDocs from './hidden-breakpoint-up/docs.mdx';
 
+import HiddenBreakpointDown from './hidden-breakpoint-down';
+import HiddenBreakpointDownDocs from './hidden-breakpoint-down/docs.mdx';
+
+import HiddenBreakpointOnly from './hidden-breakpoint-only';
+import HiddenBreakpointOnlyDocs from './hidden-breakpoint-only/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,11 +45,38 @@ export const breakpointUp = () => (
   </Wrapper>
 );
 breakpointUp.story = {
-  breakpointUp: {
-    name: 'Breakpoint Up',
-    status: 'Development', // Stable | Development | Deprecated
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: HiddenBreakpointUpDocs,
+    },
+  },
+};
+
+export const breakpointDown = () => (
+  <Wrapper>
+    <HiddenBreakpointDown />
+  </Wrapper>
+);
+breakpointDown.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: HiddenBreakpointDownDocs,
+    },
+  },
+};
+
+export const breakpointOnly = () => (
+  <Wrapper>
+    <HiddenBreakpointOnly />
+  </Wrapper>
+);
+breakpointOnly.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: HiddenBreakpointOnlyDocs,
     },
   },
 };
