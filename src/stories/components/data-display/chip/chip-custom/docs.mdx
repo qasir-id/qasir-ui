@@ -1,13 +1,12 @@
-import { Subtitle, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
 import CustomChip from './index'
 
-# Chip
+<Title>Custom Chip</Title>
 
 <Subtitle>
-Chips are compact elements that represent an input, attribute, or action.
+Override Font Color and Background Color to the component. Check below for more details.
 </Subtitle>
 
-<CustomChip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
 
 
 ### Import
@@ -16,11 +15,34 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 
 ### Props
-<ArgsTable of={CustomChip} />
 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
 
+  </tr>
+  <tr>
+    <td>customBackground</td>
+    <td>String</td>
+    <td>The background color of the component. It supports those theme colors that make sense for this component.</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>customFont</td>
+    <td>String</td>
+    <td>The font color of the component. It supports those theme colors that make sense for this component.</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### Usage
+
+<CustomChip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
+
+
 ```jsx
 <Chip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
 ```

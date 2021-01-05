@@ -1,14 +1,14 @@
-import { Subtitle } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
 import {ChipBasic, ChipOutlined} from './index'
 
-# Chip
+<Title>Type Chips</Title>
 
 <Subtitle>
-  Chips are compact elements that represent an input, attribute, or action.
+  You can use the <code>variant</code> prop to choose kind of chip types, eg: <code>default</code> / <code>outlined</code>
 </Subtitle>
 
 ### Import
-```js
+```jsx
 import Chip from 'qasir-ui/data-display/Chip';
 ```
 
@@ -18,7 +18,7 @@ import Chip from 'qasir-ui/data-display/Chip';
 <ChipBasic />
 
 ```jsx
-      <Chip label="Basic" />
+      <Chip label="Basic" variant="default" />
 ```
 
 <ChipOutlined />
