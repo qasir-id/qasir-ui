@@ -14,7 +14,8 @@ import {
 } from './index.js';
 
 <Title>Chip Props</Title>
-<Subtitle>Chips are compact elements that represent an input, attribute, or action.</Subtitle>
+<Subtitle>Chips allow users to enter information, make selections, filter content, or trigger actions.
+While included here as a standalone component, the most common use will be in some form of input, so some of the behaviour demonstrated here is not shown in context.</Subtitle>
 
 ### Import
 
@@ -22,25 +23,24 @@ import {
 import Chip from 'qasir-ui/data-display/Chip';
 ```
 
-# Usage
+### Usage
 
 <OutlinedBasicChip style={{marginTop: 20}} />
 
 ```jsx
-<Chip label="Basic" variant="outlined" />
+<Chip label="Basic" />
 ```
 
 <OutlinedDisabledChip />
 
 ```jsx
-<Chip label="Disabled" disabled  variant="outlined" />
+<Chip label="Disabled" disabled />
 ```
 
 <OutlinedAvatarChip />
 
 ```jsx
 <Chip 
-  variant="outlined" 
   avatar={<Avatar>M</Avatar>} 
   label="Clickable" 
   onClick={() => alert('clicked')}
@@ -51,7 +51,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip
-  variant="outlined"
   avatar={<Avatar alt="Natacha" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" />}
   label="Deletable"
   onDelete={() => alert('deleted')}
@@ -62,7 +61,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip
-  variant="outlined"
   icon={<FaceIcon />}
   label="Clickable deletable"
   onClick={() => alert('clicked')}
@@ -74,7 +72,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip
-  variant="outlined"
   label="Custom delete icon"
   onClick={() => alert('clicked')}
   onDelete={() => alert('deleted')}
@@ -86,7 +83,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip 
-  variant="outlined" 
   label="Clickable Link" 
   component="a" 
   href="#chip" 
@@ -98,7 +94,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip
-  variant="outlined"
   avatar={<Avatar>M</Avatar>}
   label="Primary clickable"
   clickable
@@ -112,7 +107,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip
-  variant="outlined"
   icon={<FaceIcon />}
   label="Primary clickable"
   clickable
@@ -126,7 +120,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip 
-  variant="outlined" 
   label="Deletable primary" 
   onDelete={() => alert('deleted')} 
   color="primary"
@@ -137,7 +130,6 @@ import Chip from 'qasir-ui/data-display/Chip';
 
 ```jsx
 <Chip
-  variant="outlined"
   icon={<FaceIcon />}
   label="Deletable secondary"
   onDelete={() => alert('deleted')}

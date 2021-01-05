@@ -4,10 +4,9 @@ import ChipsArray from './index';
 <Title>Chip</Title>
 
 <Subtitle>
-  Chips are compact elements that represent an input, attribute, or action.
+An example of rendering multiple Chips from an array of values. Deleting a chip removes it from the array. Note that since no <code>onClick</code> property is defined, the Chip can be focused, but does not gain depth while clicked or touched.
 </Subtitle>
 
-<ChipsArray style={{margin: 5}}/>
 
 
 ### Import
@@ -16,6 +15,10 @@ import Chip from 'qasir-ui/data-display/Chip';
 ```
 
 ### Usage
+
+<ChipsArray style={{margin: 5}}/>
+
+
 ```jsx
 export default function ChipsArray() {
   const [chipData, setChipData] = React.useState([

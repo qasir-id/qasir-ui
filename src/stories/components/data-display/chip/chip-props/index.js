@@ -10,14 +10,14 @@ import DoneIcon from '@material-ui/icons/Done';
 export const OutlinedBasicChip = (props) => {
   return(
     <>
-      <Chip label="Basic" variant="outlined" {...props}/>
+      <Chip label="Basic" {...props}/>
     </>
   )
 };
 export const OutlinedDisabledChip = (props) => {
   return(
     <>
-      <Chip label="Disabled" disabled  variant="outlined" {...props}/>
+      <Chip label="Disabled" disabled {...props}/>
     </>
   )
 };
@@ -25,7 +25,6 @@ export const OutlinedAvatarChip = (props) => {
   return (
   <>
     <Chip 
-        variant="outlined" 
         avatar={<Avatar>M</Avatar>} 
         label="Clickable" 
         onClick={() => alert('clicked')}
@@ -38,7 +37,6 @@ export const OutlinedImageChip = (props) => {
   return(
     <>
        <Chip
-        variant="outlined"
         avatar={<Avatar alt="Natacha" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" />}
         label="Deletable"
         onDelete={() => alert('deleted')}
@@ -51,7 +49,6 @@ export const OutlinedIconChipClickable = (props) => {
   return(
   <>
     <Chip
-        variant="outlined"
         icon={<FaceIcon />}
         label="Clickable deletable"
         onClick={() => alert('clicked')}
@@ -65,7 +62,6 @@ export const OutlinedCustomIconChip = (props) => {
   return(
     <>
       <Chip
-        variant="outlined"
         label="Custom delete icon"
         onClick={() => alert('clicked')}
         onDelete={() => alert('deleted')}
@@ -79,7 +75,6 @@ export const OutlinedClickableChipComp = (props) => {
   return(
     <>
       <Chip 
-        variant="outlined" 
         label="Clickable Link" 
         component="a" 
         href="#chip" 
@@ -93,7 +88,6 @@ export const OutlinedPrimaryChip = (props) => {
   return(
     <>
        <Chip
-        variant="outlined"
         avatar={<Avatar>M</Avatar>}
         label="Primary clickable"
         clickable
@@ -109,7 +103,6 @@ export const OutlinedPrimaryDeleteAble = (props) => {
   return(
   <>
     <Chip
-        variant="outlined"
         icon={<FaceIcon />}
         label="Primary clickable"
         clickable
@@ -125,7 +118,6 @@ export const OutlinedPrimaryDelete = (props) => {
   return(
     <>
      <Chip 
-        variant="outlined" 
         label="Deletable primary" 
         onDelete={() => alert('deleted')} 
         color="primary"
@@ -138,7 +130,6 @@ export const OutlinedChipSecondary = (props) => {
   return(
     <>
       <Chip
-        variant="outlined"
         icon={<FaceIcon />}
         label="Deletable secondary"
         onDelete={() => alert('deleted')}
