@@ -1,0 +1,38 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { TabsState } from '@storybook/components';
+
+<Meta title="Getting Started/Intro" 
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Quick Start</Title>
+<Subtitle>To install and save in your package.json dependencies, run:</Subtitle>
+
+<TabsState initial="yarn">
+  <div id="yarn" title="Yarn"><div>
+
+```sh
+yarn add qasir-ui
+```
+
+  </div></div>
+  <div id="npm" title="NPM"><div>
+
+```sh
+npm i qasir-ui
+```
+
+  </div></div>
+</TabsState>
+
+<Title>Montserrat Font</Title>
+<Subtitle>Qasir-UI was designed with the <a target="_blank" href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> font in mind. So be sure to follow these instructions. For instance, via Google Web Fonts:</Subtitle>
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
+```

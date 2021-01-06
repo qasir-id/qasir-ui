@@ -20,6 +20,7 @@ import MuiTabsStyled from '../navigation/Tabs/style';
 // Data display
 import MuiTypographyStyled from '../data-display/Typography/style';
 import MuiChipStyled from '../data-display/Chip/style';
+import MuiIconsStyled from '../data-display/Icons/style';
 
 // Lab
 import MuiPaginationStyled from '../lab/Pagination/style';
@@ -93,7 +94,11 @@ const theme = createMuiTheme({
 
     // Lab
     MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
-    MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme)
+    MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme),
+    
+    // Icon
+    MuiSvgIcon: MuiIconsStyled(defaultTheme, modifyTheme),
+
   },
 });
 
