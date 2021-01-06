@@ -1,0 +1,79 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import {
+    StandardOutlinedPagination,
+    PrimaryOutlinedPagination,
+    SecondaryOutlinedPagination,
+    DisabledOutlinedPagination,
+    StandardRoundedPagination,
+    OutlinedRoundedPagination,
+    PrimaryOutlinedRoundedPagination,
+    SecondaryOutlinedRoundedPagination,
+    DisabledOutlinedRoundedPagination
+} from './index';
+
+<Title>Pagination Props</Title>
+
+<Subtitle>
+Another Pagination based on MUI with different <code>variant</code>, and or <code>shape</code> 
+</Subtitle>
+
+### Import
+
+```js
+import Pagination from 'qasir-ui/lab/Pagination';
+```
+
+### Usage
+<StandardOutlinedPagination />
+
+```jsx
+<Pagination count={10} color="standard" variant="outlined" />
+```
+
+<PrimaryOutlinedPagination />
+
+```jsx
+<Pagination count={10} color="primary" variant="outlined" />
+```
+
+<SecondaryOutlinedPagination />
+
+```jsx
+<Pagination count={10} color="secondary" variant="outlined" />
+```
+
+<DisabledOutlinedPagination />
+
+```jsx
+<Pagination count={10} variant="outlined" disabled />
+```
+
+<StandardRoundedPagination />
+
+```jsx
+<Pagination count={10} shape="rounded" />
+```
+
+<OutlinedRoundedPagination />
+
+```jsx
+<Pagination count={10} shape="rounded" variant="outlined" />
+```
+
+<PrimaryOutlinedRoundedPagination />
+
+```jsx
+<Pagination count={10} shape="rounded" variant="outlined" color="primary" />
+```
+
+<SecondaryOutlinedRoundedPagination />
+
+```jsx
+<Pagination count={10} shape="rounded" variant="outlined" color="secondary" />
+```
+
+<DisabledOutlinedRoundedPagination />
+
+```jsx
+<Pagination count={10} shape="rounded" disabled />
+```
