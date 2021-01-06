@@ -20,6 +20,7 @@ import MuiTabsStyled from '../navigation/Tabs/style';
 // Data display
 import MuiTypographyStyled from '../data-display/Typography/style';
 import MuiChipStyled from '../data-display/Chip/style';
+import MuiIconsStyled from '../data-display/Icons/style';
 
 const defaultTheme = createMuiTheme();
 
@@ -86,6 +87,7 @@ const theme = createMuiTheme({
     // Data display
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
     MuiChip: MuiChipStyled(defaultTheme, modifyTheme),
+    MuiSvgIcon: MuiIconsStyled(defaultTheme, modifyTheme),
   },
 });
 
