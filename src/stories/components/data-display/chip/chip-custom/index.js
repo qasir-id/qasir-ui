@@ -12,7 +12,7 @@ const CustomChip = (props) => {
             <Chip 
                 customBackground={customBackground} 
                 customFont={customFont} 
-                label="Custom Color" 
+                label="Custom Color"
                 {...props}
             />
         </>
