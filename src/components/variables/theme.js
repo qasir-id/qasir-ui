@@ -22,6 +22,10 @@ import MuiTypographyStyled from '../data-display/Typography/style';
 import MuiChipStyled from '../data-display/Chip/style';
 import MuiIconsStyled from '../data-display/Icons/style';
 
+// Lab
+import MuiPaginationStyled from '../lab/Pagination/style';
+import MuiTablePaginationStyled from '../lab/TablePagination/style';
+
 const defaultTheme = createMuiTheme();
 
 // A custom theme for this app
@@ -87,7 +91,14 @@ const theme = createMuiTheme({
     // Data display
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
     MuiChip: MuiChipStyled(defaultTheme, modifyTheme),
+
+    // Lab
+    MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
+    MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme),
+    
+    // Icon
     MuiSvgIcon: MuiIconsStyled(defaultTheme, modifyTheme),
+
   },
 });
 

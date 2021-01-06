@@ -1,0 +1,45 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import {
+      StandardPagination,
+      PrimaryPagination,
+      SecondaryPagination,
+      DisabledPagination
+} from './index';
+
+<Title>Basic Pagination</Title>
+
+<Subtitle>
+Pagination based on MUI with different color eg: <code>primary</code>, <code>secondary</code> with default color props <code>standard</code>
+</Subtitle>
+
+### Import
+
+```js
+import Pagination from 'qasir-ui/lab/Pagination';
+```
+
+### Usage
+
+<StandardPagination />
+
+```jsx
+<Pagination count={10} color="standard" />
+```
+
+<PrimaryPagination />
+
+```jsx
+<Pagination count={10} color="primary" />
+```
+
+<SecondaryPagination />
+
+```jsx
+<Pagination count={10} color="secondary" />
+```
+
+<DisabledPagination />
+
+```jsx
+<Pagination count={10} disabled />
+```
