@@ -5,8 +5,8 @@ export default create({
   base: 'light',
 
   // Colours
-  // colorPrimary: colors.red50,
-  // colorSecondary: colors.grey50,
+  // colorPrimary: 'hotpink',
+  // colorSecondary: 'deepskyblue',
 
   // UI
   // appBg: 'white',
