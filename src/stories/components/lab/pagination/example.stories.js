@@ -15,6 +15,9 @@ import PaginationPropsDocs from './pagination-props/docs.mdx';
 import PaginationControlled from './pagination-controlled';
 import PaginationControlledDocs from './pagination-controlled/docs.mdx';
 
+import TablePaginationComponent from './pagination-table';
+import TablePaginationComponentDocs from './pagination-table/docs.mdx';
+
 import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -57,6 +60,20 @@ const useStyles = makeStyles((theme) => ({
       </Wrapper>
   )
 
+  export const paginationTable = () => (
+      <Wrapper>
+          <TablePaginationComponent/>
+      </Wrapper>
+  )
+
+  paginationTable.story = {
+      parameters: {
+        status: 'Development', // Stabled | Development | Deprecated,
+        docs: {
+            page: TablePaginationComponentDocs
+        }
+      }
+  }
 
   paginationProps.story = {
       parameters: {
