@@ -21,7 +21,14 @@ import TablePagination from 'qasir-ui/lab/TablePagination';
 <TablePaginationComponent />
 
 ```jsx
-<TablePagination count={100} />
+<TablePagination
+  component="div"
+  count={100}
+  page={page}
+  onChangePage={handleChangePage}
+  rowsPerPage={rowsPerPage}
+  onChangeRowsPerPage={handleChangeRowsPerPage}
+/>
 ```
 
 ### Props
