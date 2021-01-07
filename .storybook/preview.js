@@ -26,7 +26,30 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Getting Started', 'Documentation', 'Components'],
+      order: [
+        'Getting Started',
+        [
+          'Intro',
+          'Installing Qasir UI',
+          'Using Qasir UI',
+          'Design Concepts',
+          'Platforms Support',
+          `What's New`,
+          'Support and Feedback',
+          'Credits',
+        ],
+        'Documentation',
+        [
+          'Guidelines',
+          ['Recommended Libraries', 'Design Resources', 'Page Speed'],
+          'Core',
+          ['Colours', 'Typography', 'Grid'],
+        ],
+        'Components',
+        ['Layout', 'Inputs', 'Navigation', 'Data Display', 'Utils', 'Lab'],
+        'Templates',
+        ['Login', 'Emails Template', 'Errors Page'],
+      ],
     },
   },
 };
