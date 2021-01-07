@@ -2,7 +2,14 @@ import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
 import { TabsState } from '@storybook/components';
 import colors from '../../components/variables/colors';
 
-<Meta title="Getting Started/Platforms Support" />
+<Meta title="Getting Started/Platforms Support" 
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
 
 <Title>Platforms Support</Title>
 <Subtitle>Learn about the platforms, from modern to old, that are supported by Qasir-UI.</Subtitle>
