@@ -1,5 +1,6 @@
 import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
 import ChipsArray from './index';
+import dedent from 'ts-dedent';
 
 <Title>Chips Array</Title>
 
@@ -30,9 +31,11 @@ export default function ChipsArray() {
       { key: 5, label: 'Ridho' },
   ]);
 
+
   const handleDelete = (chipToDelete) => () => {
     setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
   };
+
 
   return (
     <>
@@ -49,5 +52,5 @@ export default function ChipsArray() {
       })}
     </>
   );
-}
+};
 ```
