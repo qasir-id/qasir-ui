@@ -68,8 +68,7 @@
     "react-is": "^16.13.1",
     "storybook-addon-designs": "^5.4.0",
     "storybook-addon-performance": "^0.13.0",
-    "ts-loader": "^8.0.0",
-    "webpack": "^5.11.1"
+    "ts-loader": "^8.0.0"
   },
   "babel": {
     "presets": [

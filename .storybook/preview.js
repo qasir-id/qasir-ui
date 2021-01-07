@@ -16,6 +16,7 @@ addDecorator(withPerformance);
 
 // or global addParameters
 export const parameters = {
+  layout: 'padded',
   previewTabs: {
     'storybook/docs/panel': {
       index: 1,
@@ -26,21 +27,28 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Getting started',
+        'Getting Started',
         [
           'Intro',
           'Installing Qasir UI',
           'Using Qasir UI',
-          'Recommended libraries',
-          'Design resources',
-          'Browser support',
-          "What's new",
+          'Design Concepts',
+          'Platforms Support',
+          `What's New`,
           'Support and Feedback',
           'Credits',
         ],
         'Documentation',
-        // 'Templates',
-        // 'Components',
+        [
+          'Guidelines',
+          ['Recommended Libraries', 'Design Resources', 'Page Speed'],
+          'Core',
+          ['Colours', 'Typography', 'Grid'],
+        ],
+        'Components',
+        ['Layout', 'Inputs', 'Navigation', 'Data Display', 'Utils', 'Lab'],
+        'Templates',
+        ['Login', 'Emails Template', 'Errors Page'],
       ],
     },
   },
