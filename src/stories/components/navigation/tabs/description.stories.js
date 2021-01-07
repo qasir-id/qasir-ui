@@ -1,8 +1,6 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 import { action } from '@storybook/addon-actions';
-
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,24 +26,23 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Navigation/Tabs',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
-    options: {showPanel: true}
+    options: { showPanel: true },
   },
   argTypes: {
     fullWidth: {
       name: 'Full Width',
       control: {
         type: 'select',
-        options: ['standard', 'scrollable', 'fullWidth']
-      }
-    }
-  }
+        options: ['standard', 'scrollable', 'fullWidth'],
+      },
+    },
+  },
 };
-export const description = ({fullWidth}) => (
+export const description = ({ fullWidth }) => (
   <Wrapper>
-    <SimpleTabs 
+    <SimpleTabs
       variant={fullWidth}
       onClick={action('onClick')}
       onMouseEnter={action('onMouseEnter')}

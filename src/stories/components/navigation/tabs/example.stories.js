@@ -1,6 +1,5 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,10 +25,9 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Navigation/Tabs/Example',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
-    options: {showPanel: false}
+    options: { showPanel: false },
   },
 };
 export const simpleTabs = () => (
