@@ -15,8 +15,8 @@ import PaginationPropsDocs from './pagination-props/docs.mdx';
 import PaginationControlled from './pagination-controlled';
 import PaginationControlledDocs from './pagination-controlled/docs.mdx';
 
-import TablePaginationComponent from './table-pagination';
-import TablePaginationComponentDocs from './table-pagination/docs.mdx';
+import TablePaginationComponent from './pagination-table';
+import TablePaginationComponentDocs from './pagination-table/docs.mdx';
 
 import 'font-family.css';
 
