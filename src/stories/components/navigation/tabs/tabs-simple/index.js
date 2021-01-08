@@ -52,7 +52,7 @@ export default function SimpleTabs(props) {
   };
 
   return (
-    <div>
+    <div style={{marginBottom: 20}}>
       <div>
         <Tabs 
         value={value} 
@@ -63,8 +63,8 @@ export default function SimpleTabs(props) {
         TabIndicatorProps={{children: <div />}}
         {...props}
         >
-          <Tab label="Semua Produk" {...a11yProps(0)} {...props} />
-          <Tab label="Kategori" {...a11yProps(1)} {...props}/>
+          <Tab label="All Products" {...a11yProps(0)} {...props} />
+          <Tab label="Categories" {...a11yProps(1)} {...props}/>
         </Tabs>
       </div>
     </div>
