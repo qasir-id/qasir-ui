@@ -11,8 +11,6 @@ import HiddenBreakpointOnly from './hidden-breakpoint-only';
 
 import HiddenDescriptionDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

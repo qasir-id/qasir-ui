@@ -8,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import ChipComponent from 'components/data-display/Chip';
 import ChipDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

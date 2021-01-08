@@ -20,8 +20,6 @@ import TypographyCaptionDocs from './typography-caption/docs.mdx';
 import TypographyOverline from './typography-overline';
 import TypographyOverlineDocs from './typography-overline/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

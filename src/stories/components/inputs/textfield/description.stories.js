@@ -10,8 +10,6 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from 'components/inputs/TextField';
 import TextFieldDescriptionDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

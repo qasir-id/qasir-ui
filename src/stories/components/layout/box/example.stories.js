@@ -32,8 +32,6 @@ import BoxSpacingDocs from './box-spacing/docs.mdx';
 import BoxTypography from './box-typography';
 import BoxTypographyDocs from './box-typography/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

@@ -8,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import PaginationComponent from 'components/lab/Pagination';
 import PaginationDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

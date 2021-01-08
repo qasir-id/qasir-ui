@@ -8,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from 'components/layout/Box';
 import BoxDescriptionDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

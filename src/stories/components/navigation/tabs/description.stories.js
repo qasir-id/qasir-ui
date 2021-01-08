@@ -9,8 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import SimpleTabs from './tabs-simple';
 import SimpleTabsDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

@@ -17,8 +17,6 @@ import PaginationControlledDocs from './pagination-controlled/docs.mdx';
 import TablePaginationComponent from './pagination-table';
 import TablePaginationComponentDocs from './pagination-table/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

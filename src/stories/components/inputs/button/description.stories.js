@@ -9,8 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from 'components/inputs/Button';
 import ButtonDescriptionDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

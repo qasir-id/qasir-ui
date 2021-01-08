@@ -17,8 +17,6 @@ import OutlinedChipDocs from './chip-props/docs.mdx';
 import ArrayChip from './chip-array';
 import ArrayChipDocs from './chip-array/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

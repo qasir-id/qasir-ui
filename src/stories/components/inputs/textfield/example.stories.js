@@ -20,8 +20,6 @@ import TextFieldMultilineDocs from './textfield-multiline/docs.mdx';
 import TextFieldIcons from './textfield-icons';
 import TextFieldIconsDocs from './textfield-icons/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

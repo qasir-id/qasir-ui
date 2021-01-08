@@ -8,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from 'components/data-display/Typography';
 import TypographyDescriptionDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

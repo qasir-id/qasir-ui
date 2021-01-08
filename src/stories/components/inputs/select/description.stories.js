@@ -11,8 +11,6 @@ import InputLabel from 'components/inputs/InputLabel';
 import Select from 'components/inputs/Select';
 import SelectDescriptionDocs from './description.docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

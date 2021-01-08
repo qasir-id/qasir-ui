@@ -11,8 +11,6 @@ import ContainerTypesDocs from './container-types/docs.mdx';
 import ContainerSizes from './container-sizes';
 import ContainerSizesDocs from './container-sizes/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {

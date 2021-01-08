@@ -17,8 +17,6 @@ import ButtonIconsLabelDocs from './button-icons-label/docs.mdx';
 import ButtonFullWidth from './button-full-width';
 import ButtonFullWidthDocs from './button-full-width/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
