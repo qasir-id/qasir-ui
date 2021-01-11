@@ -1,39 +1,41 @@
+import colors from '../../variables/colors';
+
 const MuiChipStyled = (defaultTheme, modifyTheme) => ({
     root: {
-        '&.MuiChip': {
-            '&-discount': {
-                backgroundColor: '#FFA001',
-                color: 'white',
-                fontSize: '12px',
-                height: '18px',
-                minWidth: '20px',
-                lineHeight: '20px'
-            },
-            '&-warning': {
-                backgroundColor: '#F0E936',
-                color: 'black',
-                fontSize: '12px',
-                height: '20px',
-                minWidth: '20px',
-                lineHeight: '20px'
-            },
-            '&-positive': {
-                backgroundColor: '#33CC59',
-                color: 'white',
-                fontSize: '12px',
-                height: '20px',
-                minWidth: '20px',
-                lineHeight: '20px'
-            },
-            '&-alert':{
-                backgroundColor: '#F04B32',
-                color: 'white',
-                fontSize: '12px',
-                height: '20px',
-                minWidth: '20px',
-                lineHeight: '20px'
-            }
-        }
+       height: '32px',
+       maxWidth: '100%',
+       borderRadius: '4px',
+       border: `1px solid ${colors.grey70}`
+    },
+    label: {
+        fontSize: '12px',
+        lineHeight: '18px',
+        color: colors.black90,
+        fontWeight: 500,
+        padding: '7px 0px 7px 12px',
+        marginRight: '3px'
+    },
+    colorPrimary: {
+        backgroundColor: colors.red10,
+    },
+    deleteIcon: {
+        color: colors.black50,
+        width: '18px',
+        height: '18px',
+    },
+    deleteIconColorPrimary: {
+        color: colors.black50,
+        width: '18px',
+        height: '18px',
+    },
+    deleteIconColorSecondary: {
+        color: colors.black50,
+        width: '18px',
+        height: '18px',
+    },
+    avatar: {
+        width: '18px',
+        height: '18px',
     }
   }); 
 export default MuiChipStyled; 

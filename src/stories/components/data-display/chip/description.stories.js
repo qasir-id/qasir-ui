@@ -76,6 +76,7 @@ export const description = ({ label, variant, disabled, color, size, customFont,
       size={size}
       customFont={customFont}
       customBackground={customBackground}
+      onDelete={() => alert('delete')}
     />
   </Wrapper>
 );
