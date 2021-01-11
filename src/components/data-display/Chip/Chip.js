@@ -11,12 +11,12 @@ import theme from '../../variables/theme';
 
 
 export default (props) => {
-    const { customBackground, customFont } = props
-    
     const useStyle = makeStyles({
         custom: {
-            backgroundColor: customBackground,
-            color: customFont
+            backgroundColor: `${props.customBackground} !important`,
+            '& .MuiChip-label': {
+                color: `${props.customFont} !important` 
+            }
         }
     })
     const classes = useStyle();
