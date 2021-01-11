@@ -29,8 +29,8 @@ export default {
     options: { showPanel: true },
   },
   argTypes: {
-    fullWidth: {
-      name: 'Full Width',
+    variant: {
+      name: 'Variant',
       control: {
         type: 'select',
         options: ['standard', 'scrollable', 'fullWidth'],
@@ -38,10 +38,12 @@ export default {
     },
   },
 };
-export const description = ({ fullWidth }) => (
+
+export const description = ({variant}) => (
+  
   <Wrapper>
-    <SimpleTabs
-      variant={fullWidth}
+    <SimpleTabs 
+      variant={variant}
       onClick={action('onClick')}
       onMouseEnter={action('onMouseEnter')}
       onMouseLeave={action('onMouseLeave')}
@@ -57,3 +59,7 @@ description.story = {
     },
   },
 };
+
+description.args = {
+  variant: 'standard'
+}

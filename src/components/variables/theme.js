@@ -16,6 +16,7 @@ import MuiInputLabelStyled from '../inputs/InputLabel/style';
 
 // Navigation
 import MuiTabsStyled from '../navigation/Tabs/style';
+import MuiTabStyled from '../navigation/Tab/style';
 
 // Data display
 import MuiTypographyStyled from '../data-display/Typography/style';
@@ -87,6 +88,7 @@ const theme = createMuiTheme({
 
     // Navigation
     MuiTabs: MuiTabsStyled(defaultTheme, modifyTheme),
+    MuiTab: MuiTabStyled(defaultTheme, modifyTheme),
 
     // Data display
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
