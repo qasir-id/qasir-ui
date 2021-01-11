@@ -11,7 +11,6 @@ import theme from '../../variables/theme';
 
 
 export default (props) => {
-    console.log(props)
     const useStyle = makeStyles({
         custom: {
             backgroundColor: `${props.customBackground} !important`,

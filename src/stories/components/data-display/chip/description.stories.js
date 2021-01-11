@@ -64,9 +64,27 @@ export default {
       name: 'Custom Background Color - hex',
       control: 'color',
     },
+    clickable: {
+      name: 'Clickable',
+      control: 'boolean'
+    },
+    onDelete: {
+      name: 'Deletable',
+      control: 'boolean'
+    }
   },
 };
-export const description = ({ label, variant, disabled, color, size, customFont, customBackground }) => (
+export const description = ({ 
+  label, 
+  variant, 
+  disabled, 
+  color, 
+  size, 
+  customFont, 
+  customBackground, 
+  clickable,
+  onDelete 
+}) => (
   <Wrapper>
     <ChipComponent
       label={label}
@@ -76,7 +94,8 @@ export const description = ({ label, variant, disabled, color, size, customFont,
       size={size}
       customFont={customFont}
       customBackground={customBackground}
-      onDelete={() => alert('delete')}
+      clickable={clickable}
+      onDelete={onDelete ? () => alert('deleted'): null}
     />
   </Wrapper>
 );
@@ -98,4 +117,6 @@ description.args = {
   size: 'medium',
   customFont: '',
   customBackground: '',
+  clickable: true,
+  onDelete: false
 };
