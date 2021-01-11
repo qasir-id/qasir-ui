@@ -13,6 +13,7 @@ import MuiButtonStyled from '../inputs/Button/style';
 import MuiTextFieldStyled from '../inputs/TextField/style';
 import MuiSelectStyled from '../inputs/Select/style';
 import MuiInputLabelStyled from '../inputs/InputLabel/style';
+import MuiCheckboxStyled from '../inputs/Checkbox/style';
 
 // Navigation
 import MuiTabsStyled from '../navigation/Tabs/style';
@@ -85,6 +86,7 @@ const theme = createMuiTheme({
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
     MuiTextField: MuiTextFieldStyled(defaultTheme, modifyTheme),
     MuiSelect: MuiSelectStyled(defaultTheme, modifyTheme),
+    MuiCheckbox: MuiCheckboxStyled(defaultTheme, modifyTheme),
 
     // Navigation
     MuiTabs: MuiTabsStyled(defaultTheme, modifyTheme),

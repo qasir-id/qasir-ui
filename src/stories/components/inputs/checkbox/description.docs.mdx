@@ -1,0 +1,35 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Inputs/Checkbox/README" />
+
+<Title>Checkbox</Title>
+<Subtitle>Checkboxes allow the user to select one or more items from a set.</Subtitle>
+
+### Import
+```jsx
+import Checkbox from 'qasir-ui/inputs/Checkbox';
+```
+
+### Usage
+```jsx
+<Checkbox
+    checked={checked}
+    onChange={handleChange}
+    inputProps={{ 'aria-label': 'primary checkbox' }}
+/>
+
+```
+
+### Props
+
+<IFrame url="https://material-ui.com/api/checkbox/#props" height="80%" defaultCollapsed />
+
+### Design
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
+  height="50%"
+  defaultCollapsed
+/>
