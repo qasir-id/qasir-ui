@@ -48,7 +48,7 @@ export const parameters = {
         'Components',
         ['Layout', 'Inputs', 'Navigation', 'Data Display', 'Utils', 'Lab'],
         'Templates',
-        ['Login', 'Emails Template', 'Errors Page'],
+        ['Login', 'Emails Template', 'Errors Page', 'Under Construction'],
       ],
     },
   },
