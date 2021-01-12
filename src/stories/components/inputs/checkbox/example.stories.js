@@ -5,9 +5,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import CheckboxPartial from "./checkbox-partial";
+import CheckboxPartialDocs from "./checkbox-partial/docs.mdx";
 
 import CheckboxProps from "./checkbox-props/";
 import CheckboxPropsDocs from "./checkbox-props/docs.mdx";
+
+import CheckboxWithForm from "./checkbox-form";
+import CheckboxWithFormDocs from "./checkbox-form/docs.mdx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,11 +46,35 @@ export const checkboxProps = () => (
   </Wrapper>
 );
 
+export const checkboxWithForm = () => (
+  <Wrapper>
+    <CheckboxWithForm />
+  </Wrapper>
+);
+
+checkboxPartial.story = {
+  parameters: {
+    status: "Development",
+    docs: {
+      page: CheckboxPartialDocs,
+    },
+  },
+};
+
 checkboxProps.story = {
   parameters: {
     status: "Development", // Stable | Development | Deprecated,
     docs: {
       page: CheckboxPropsDocs,
+    },
+  },
+};
+
+checkboxWithForm.story = {
+  parameters: {
+    status: "Development", // Stable | Development | Deprecated,
+    docs: {
+      page: CheckboxWithFormDocs,
     },
   },
 };
