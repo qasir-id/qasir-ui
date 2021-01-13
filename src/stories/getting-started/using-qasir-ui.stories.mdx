@@ -18,13 +18,20 @@ import dedent from 'ts-dedent';
 <p>Default and recommended usage on demand component. All components are available as modules and you can use them as any other React component.</p>
 
 ```jsx
+// Import vendors
+import React from 'react';
+
 // Import the Button component
 import Button from 'qasir-ui/inputs/Button';
 
-// Use the Button component
-<Button variant="contained" color="primary">
-  Simple button
-</Button>
+const exampleApp = () => (
+  // Use the Button component
+  <Button variant="contained" color="primary">
+    Simple button
+  </Button>
+);
+
+export default exampleApp;
 ```
 
 ### Usage with vanilla JS
