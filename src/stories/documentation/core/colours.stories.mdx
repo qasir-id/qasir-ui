@@ -1,16 +1,21 @@
 import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
 import colors from 'components/variables/colors';
 
-<Meta title="Documentation/Core/Colours" />
+<Meta title="Documentation/Core/Colours" 
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
 
 <Title>Colours</Title>
-
 <Subtitle>At Qasir, colors play an important role when we are working with a product, a service or a space. The right combination of colors can influence how users feel, think, and behave.</Subtitle>
 
 ### Primary Color
 
-<Subtitle>Qasir color palette has been created to reflect the spirit of our brand. Red is used across all our communication as an essential element of branding.</Subtitle>
-<Subtitle>Black is used primarily for body text and headings, and White & Grey is used for screen backgrounds and negative space.</Subtitle>
+<p>Qasir color palette has been created to reflect the spirit of our brand. Red is used across all our communication as an essential element of branding. Black is used primarily for body text and headings, and White & Grey is used for screen backgrounds and negative space.</p>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red50}}>
@@ -35,7 +40,7 @@ import colors from 'components/variables/colors';
 
 ### Secondary Color
 
-<Subtitle>Secondary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </Subtitle>
+<p>Secondary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </p>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black50}}>
@@ -72,7 +77,7 @@ import colors from 'components/variables/colors';
 
 ### Tertiary Color
 
-<Subtitle>Tertiary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </Subtitle>
+<p>Tertiary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </p>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange50}}>
@@ -97,7 +102,7 @@ import colors from 'components/variables/colors';
 
 ### Shades & Tint
 
-<Subtitle>We intend for tints and shades to be ever evolving, offering an endless palette to choose from. Usage of these colors varies depending on scenarios, but they come in handy for components in our products.</Subtitle>
+<p>We intend for tints and shades to be ever evolving, offering an endless palette to choose from. Usage of these colors varies depending on scenarios, but they come in handy for components in our products.</p>
 
 <div style={{display: 'flex'}}>
     <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red90}}>
@@ -299,8 +304,7 @@ import colors from 'components/variables/colors';
 
 ### Color Usage
 
-<Subtitle>Colors in Qasirapp are used sparingly to draw attention to important elements and those that we want the user to take action on, this maintains visual hierarchy. Also certain colors have inherent meaning for a large majority of users. For example, we use shade of red to communicate an error, this helps to communicate visually.</Subtitle>
-<Subtitle>Following is a set of specific guidelines for when and how to use each color in our palette.</Subtitle>
+<p>Colors in Qasirapp are used sparingly to draw attention to important elements and those that we want the user to take action on, this maintains visual hierarchy. Also certain colors have inherent meaning for a large majority of users. For example, we use shade of red to communicate an error, this helps to communicate visually. Following is a set of specific guidelines for when and how to use each color in our palette.</p>
 
 <h4 style={{marginTop: 20}}>Divider</h4>
 <table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>

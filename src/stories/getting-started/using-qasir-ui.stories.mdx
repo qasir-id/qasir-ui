@@ -1,4 +1,5 @@
 import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
 
 <Meta title="Getting Started/Using Qasir UI" 
   parameters={{  
@@ -9,4 +10,50 @@ import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
   }} 
 />
 
-<h1 style={{textAlign: 'center'}}>Under Construction</h1>
+<Title>Using Qasir UI</Title>
+<Subtitle>There are different ways you can use the Kit in your applications.</Subtitle>
+
+### Usage with React
+
+<p>Default and recommended usage on demand component. All components are available as modules and you can use them as any other React component.</p>
+
+```jsx
+// Import the Button component
+import Button from 'qasir-ui/inputs/Button';
+
+// Use the Button component
+<Button variant="contained" color="primary">
+  Simple button
+</Button>
+```
+
+### Usage with vanilla JS
+
+<p>The JS components are built using React, but that does not limit their usage to just React applications. You can render any component in any JavaScript application with <code>ReactDOM.render</code>. Think of it like using a jQuery plugin. Make sure you have embedded the CSS of the UI Kit in your project.</p>
+
+```jsx
+import ReactDOM from 'react-dom';
+import Button from 'qasir-ui/inputs/Button';
+
+const myContainerElement = document.getElementById('container');
+
+// with JSX
+ReactDOM.render(<Button>Simple Button</Button>, myContainerElement);
+
+// with vanilla JS, use React.createElement
+ReactDOM.render(
+  React.createElement(Button, {
+    className: Classes.SMALL,
+    children: 'Simple button',
+  }),
+  myContainerElement
+);
+```
+
+<p style={{margin: 0}}>To remove the component from the DOM and clean up, unmount it:</p>
+
+```jsx
+ReactDOM.unmountComponentAtNode(myContainerElement);
+```
+
+<p>Check out the <a target="_blank" href="https://reactjs.org/docs/react-api.html">React API docs</a> for more details.</p>
