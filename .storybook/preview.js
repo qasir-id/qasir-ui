@@ -30,8 +30,8 @@ export const parameters = {
         'Getting Started',
         [
           'Intro',
-          'Installing Qasir UI',
-          'Using Qasir UI',
+          'Installing Qasir-UI',
+          'Using Qasir-UI',
           'Design Concepts',
           'Platforms Support',
           `What's New`,
