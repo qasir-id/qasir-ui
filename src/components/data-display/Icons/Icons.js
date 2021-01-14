@@ -10,7 +10,7 @@ import theme from '../../variables/theme';
 export default (props) => {
   return (
     <ThemeProvider theme={theme}>
-      <Chip style={props.style} className={classes.custom} {...props} />
+      <SvgIcon {...props} />
     </ThemeProvider>
   );
 };

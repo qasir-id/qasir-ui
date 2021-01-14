@@ -46,7 +46,24 @@ export const parameters = {
           ['Colours', 'Typography', 'Grid'],
         ],
         'Components',
-        ['Layout', 'Inputs', 'Navigation', 'Data Display', 'Utils', 'Lab'],
+        [
+          'Layout',
+          ['Box', 'Container', 'Hidden'],
+
+          'Inputs',
+          ['Button', 'Checkbox', 'Select', 'TextField'],
+
+          'Navigation',
+          ['Tabs'],
+
+          'Data Display',
+          ['Chip', 'Icons', 'Typography'],
+
+          'Utils',
+
+          'Lab',
+          ['Pagination'],
+        ],
         'Templates',
         ['Login', 'Emails Template', 'Errors Page', 'Under Construction'],
       ],

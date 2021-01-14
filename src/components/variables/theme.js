@@ -99,10 +99,9 @@ const theme = createMuiTheme({
     // Lab
     MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
     MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme),
-    
+
     // Icon
     MuiSvgIcon: MuiIconsStyled(defaultTheme, modifyTheme),
-
   },
 });
 
