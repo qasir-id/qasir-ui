@@ -1,10 +1,10 @@
 // Vendors
 import React from 'react';
 
-import Icons from './index';
+import Icon from './index';
 
 const IconInfo = (props) => (
-  <Icons {...props}>
+  <Icon {...props}>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -14,7 +14,7 @@ const IconInfo = (props) => (
     />
     <path fill-rule="evenodd" clip-rule="evenodd" d="M13 9H11V7H13V9Z" fill="white" />
     <path fill-rule="evenodd" clip-rule="evenodd" d="M13 17H11V11H13V17Z" fill="white" />
-  </Icons>
+  </Icon>
 );
 
 export default IconInfo;

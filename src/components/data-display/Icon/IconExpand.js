@@ -1,10 +1,10 @@
 // Vendors
 import React from 'react';
 
-import Icons from './index';
+import Icon from './index';
 
 const IconExpand = (props) => (
-  <Icons {...props}>
+  <Icon {...props}>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -15,7 +15,7 @@ const IconExpand = (props) => (
       clip-rule="evenodd"
       d="M4.8772 6.27723V9.00011C4.8772 9.55239 4.55235 10.0001 4.00006 10.0001C3.44778 10.0001 3.00007 9.55238 3.00007 9.00009L3.00009 8.0001L3 3.60001C2.99999 3.26864 3.26862 3.00001 3.59999 3L3.60001 3L8.00009 3.00009L9.00009 3.00007C9.55238 3.00007 10.0001 3.44778 10.0001 4.00007C10.0001 4.55235 9.55239 4.8772 9.00011 4.8772H6.27711L10.7073 9.28718C11.0978 9.67771 11.0978 10.3167 10.7073 10.7072C10.3168 11.0978 9.67765 11.0978 9.28712 10.7072L4.8772 6.27723Z"
     />
-  </Icons>
+  </Icon>
 );
 
 export default IconExpand;

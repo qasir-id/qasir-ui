@@ -1,16 +1,16 @@
 // Vendors
 import React from 'react';
 
-import Icons from './index';
+import Icon from './index';
 
 const IconBack = (props) => (
-  <Icons {...props}>
+  <Icon {...props}>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
       d="M22 12C22 11.4477 21.5523 11 21 11H5.83L12.7104 4.11961C13.1019 3.72811 13.1004 3.09262 12.7075 2.70251C12.3166 2.31434 11.6849 2.31506 11.2954 2.70461L2.70711 11.2929C2.31658 11.6834 2.31658 12.3166 2.70711 12.7071L11.2948 21.2948C11.6843 21.6843 12.3157 21.6843 12.7052 21.2948C13.0945 20.9055 13.0947 20.2743 12.7057 19.8848L5.83 13H21C21.5523 13 22 12.5523 22 12Z"
     />
-  </Icons>
+  </Icon>
 );
 
 export default IconBack;

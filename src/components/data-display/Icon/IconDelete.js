@@ -1,10 +1,10 @@
 // Vendors
 import React from 'react';
 
-import Icons from './index';
+import Icon from './index';
 
 const IconDelete = (props) => (
-  <Icons {...props}>
+  <Icon {...props}>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -15,7 +15,7 @@ const IconDelete = (props) => (
       clip-rule="evenodd"
       d="M7.6 2C7.26863 2 7 2.26863 7 2.6C7 2.82091 6.82091 3 6.6 3H5C4.44772 3 4 3.44772 4 4C4 4.55228 4.44772 5 5 5H19C19.5523 5 20 4.55228 20 4C20 3.44772 19.5523 3 19 3H17.4C17.1791 3 17 2.82091 17 2.6C17 2.26863 16.7314 2 16.4 2H7.6ZM18.6 6H5.4C5.17909 6 5 6.17909 5 6.4V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V6.4C19 6.17909 18.8209 6 18.6 6ZM7 8.8C7 8.35817 7.35817 8 7.8 8H16.2C16.6418 8 17 8.35817 17 8.8V19.2C17 19.6418 16.6418 20 16.2 20H7.8C7.35817 20 7 19.6418 7 19.2V8.8Z"
     />
-  </Icons>
+  </Icon>
 );
 
 export default IconDelete;
