@@ -8,9 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconQasir from './icon-qasir';
 import IconQasirDocs from './icon-qasir/docs.mdx';
 
-// import IconMaterialDesign from './icon-material-design';
-// import IconMaterialDesignDocs from './icon-material-design/docs.mdx';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -32,16 +29,39 @@ export default {
   },
 };
 
-export const heading = () => (
+export const qasir = () => (
   <Wrapper>
     <IconQasir />
   </Wrapper>
 );
-heading.story = {
+qasir.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: IconQasirDocs,
+    },
+  },
+};
+
+export const materialDesign = () => {
+  window.open('https://material-ui.com/components/material-icons', '_blank');
+  return (
+    <Wrapper>
+      <h3>
+        Please check on{' '}
+        <a className="link" target="_blank" href="https://material-ui.com/components/material-icons">
+          https://material-ui.com/components/material-icons
+        </a>
+      </h3>
+    </Wrapper>
+  );
+};
+materialDesign.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
     },
   },
 };

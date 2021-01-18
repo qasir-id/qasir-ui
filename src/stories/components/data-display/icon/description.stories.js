@@ -25,16 +25,7 @@ export default {
   title: 'Components/Data Display/Icons',
   parameters: {
     design: { disabled: true },
-    options: { showPanel: true },
-  },
-  argTypes: {
-    icons: {
-      name: 'Icons',
-      control: {
-        type: 'select',
-        options: ['Qasir', 'Material Design'],
-      },
-    },
+    options: { showPanel: false },
   },
 };
 
@@ -49,13 +40,9 @@ export const description = () => (
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: IconDescriptionDocs,
     },
   },
-};
-
-description.args = {
-  icons: 'Qasir',
 };
