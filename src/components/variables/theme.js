@@ -28,6 +28,12 @@ import MuiIconStyled from '../data-display/Icon/style';
 import MuiPaginationStyled from '../lab/Pagination/style';
 import MuiTablePaginationStyled from '../lab/TablePagination/style';
 
+// Feedback
+import MuiDialogStyled from '../feedback/Dialog/style';
+import MuiDialogTitleStyled from '../feedback/DialogTitle/style';
+import MuiDialogContentStyled from '../feedback/DialogContent/style';
+import MuiDialogActionseStyled from '../feedback/DialogActions/style';
+
 const defaultTheme = createMuiTheme();
 
 // A custom theme for this app
@@ -96,6 +102,12 @@ const theme = createMuiTheme({
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
     MuiChip: MuiChipStyled(defaultTheme, modifyTheme),
 
+    // Feedback
+    MuiDialog: MuiDialogStyled(defaultTheme, modifyTheme),
+    MuiDialogTitle: MuiDialogTitleStyled(defaultTheme, modifyTheme),
+    MuiDialogContent: MuiDialogContentStyled(defaultTheme, modifyTheme),
+    MuiDialogActions: MuiDialogActionseStyled(defaultTheme, modifyTheme),
+    
     // Lab
     MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
     MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme),
