@@ -9,8 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import DialogSimple from './dialog-simple';
 import DialogSimpleDocs from './dialog-simple/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
