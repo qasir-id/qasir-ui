@@ -1,0 +1,100 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+import {
+    PrimaryCheckbox,
+    SecondaryCheckbox,
+    UncontrollableCheckbox,
+    DisabledCheckbox,
+    DisabledCheckedCheckbox,
+    IndeterminateCheckbox,
+    DefaultCheckbox,
+    CheckboxSmall,
+} from './index.js';
+
+<Title>Checkbox Props</Title>
+<Subtitle>If you have multiple options appearing in a list, you can preserve space by using checkboxes instead of on/off switches.
+you can see below, size and type of Checkbox
+</Subtitle>
+
+### Import
+
+```js
+import Checkbox from 'qasir-ui/inputs/Checkbox';
+```
+
+### Usage
+
+<PrimaryCheckbox />
+
+```jsx
+const [checked, setChecked] = React.useState(false);
+const handleChange = (event) => setChecked(event.target.checked);
+
+<Checkbox 
+    checked={checked}
+    onChange={handleChange}
+    inputProps={{ "aria-label": "primary checkbox" }}
+/>
+```
+
+<SecondaryCheckbox />
+
+```jsx
+<Checkbox
+    defaultChecked
+    color="primary"
+    inputProps={{ "aria-label": "secondary checkbox" }}
+/>
+```
+
+<UncontrollableCheckbox />
+
+```jsx
+<Checkbox inputProps={{ "aria-label": "uncontrolled-checkbox" }} />
+```
+
+<DisabledCheckbox />
+
+```jsx
+<Checkbox disabled inputProps={{ "aria-label": "disabled checkbox" }} />
+```
+
+<DisabledCheckedCheckbox />
+
+```jsx
+ <Checkbox
+    disabled
+    checked
+    inputProps={{ "aria-label": "disabled checked checkbox" }}
+/>
+```
+
+<IndeterminateCheckbox />
+
+```jsx
+<Checkbox
+    defaultChecked
+    indeterminate
+    inputProps={{ "aria-label": "indeterminate checkbox" }}
+/>
+```
+
+<DefaultCheckbox />
+
+```jsx
+<Checkbox
+    defaultChecked
+    color="default"
+    inputProps={{ "aria-label": "checkbox with default color" }}
+/>
+```
+
+<CheckboxSmall />
+
+```jsx
+<Checkbox
+    defaultChecked
+    size="small"
+    inputProps={{ "aria-label": "checkbox with small size" }}
+/>
+```

@@ -13,13 +13,20 @@ import MuiButtonStyled from '../inputs/Button/style';
 import MuiTextFieldStyled from '../inputs/TextField/style';
 import MuiSelectStyled from '../inputs/Select/style';
 import MuiInputLabelStyled from '../inputs/InputLabel/style';
+import MuiCheckboxStyled from '../inputs/Checkbox/style';
 
 // Navigation
 import MuiTabsStyled from '../navigation/Tabs/style';
+import MuiTabStyled from '../navigation/Tab/style';
 
 // Data display
 import MuiTypographyStyled from '../data-display/Typography/style';
 import MuiChipStyled from '../data-display/Chip/style';
+import MuiIconStyled from '../data-display/Icon/style';
+
+// Lab
+import MuiPaginationStyled from '../lab/Pagination/style';
+import MuiTablePaginationStyled from '../lab/TablePagination/style';
 
 // Feedback
 import MuiDialogStyled from '../feedback/Dialog/style';
@@ -85,9 +92,11 @@ const theme = createMuiTheme({
     MuiButton: MuiButtonStyled(defaultTheme, modifyTheme),
     MuiTextField: MuiTextFieldStyled(defaultTheme, modifyTheme),
     MuiSelect: MuiSelectStyled(defaultTheme, modifyTheme),
+    MuiCheckbox: MuiCheckboxStyled(defaultTheme, modifyTheme),
 
     // Navigation
     MuiTabs: MuiTabsStyled(defaultTheme, modifyTheme),
+    MuiTab: MuiTabStyled(defaultTheme, modifyTheme),
 
     // Data display
     MuiTypography: MuiTypographyStyled(defaultTheme, modifyTheme),
@@ -98,6 +107,13 @@ const theme = createMuiTheme({
     MuiDialogTitle: MuiDialogTitleStyled(defaultTheme, modifyTheme),
     MuiDialogContent: MuiDialogContentStyled(defaultTheme, modifyTheme),
     MuiDialogActions: MuiDialogActionseStyled(defaultTheme, modifyTheme),
+    
+    // Lab
+    MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
+    MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme),
+
+    // Icon
+    MuiSvgIcon: MuiIconStyled(defaultTheme, modifyTheme),
   },
 });
 

@@ -1,0 +1,38 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import ControlledPagination from './index';
+
+<Title> Controlled Pagination </Title>
+
+<Subtitle>
+A pagination control consists of the page content and the page navigation areas.You can navigate through the pages by clicking a particular page indicator or by clicking the Next page and Previous page buttons.
+</Subtitle>
+
+### Import
+
+```js
+import Pagination from 'qasir-ui/lab/Pagination';
+```
+
+### Usage
+<ControlledPagination />
+
+```jsx
+const ControlledPagination = (props) => {
+    const [page, setPage] = React.useState(1);
+    const handleChange = (event, value) => {
+        setPage(value)
+    };
+
+return(
+ <>
+    <p>Page : {page} </p>
+    <Pagination 
+        count={10} 
+        page={page} 
+        onChange={handleChange} 
+        {...props}
+    />
+ </>
+);
+};
+```

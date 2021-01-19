@@ -1,6 +1,5 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,8 +17,6 @@ import OutlinedChipDocs from './chip-props/docs.mdx';
 import ArrayChip from './chip-array';
 import ArrayChipDocs from './chip-array/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -35,11 +32,10 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Data Display/Chip/Example',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
-    options: {showPanel: false}
-  }
+    options: { showPanel: false },
+  },
 };
 export const Types = () => (
   <Wrapper>
@@ -48,10 +44,10 @@ export const Types = () => (
 );
 
 export const chipProps = () => (
-    <Wrapper>
-        <ChipProps/>
-    </Wrapper>
-)
+  <Wrapper>
+    <ChipProps />
+  </Wrapper>
+);
 
 export const Custom = () => (
   <Wrapper>
@@ -60,40 +56,37 @@ export const Custom = () => (
 );
 
 export const ChipArray = () => (
-    <Wrapper>
-      <ArrayChip/>
-    </Wrapper>
-)
-
-
+  <Wrapper>
+    <ArrayChip />
+  </Wrapper>
+);
 
 ChipArray.story = {
-    parameters: {
-        status: 'Development', // Stable | Development | Deprecated,
-        docs: {
-            page: ArrayChipDocs
-        }
-    }
-}
+  parameters: {
+    status: 'Development', // Stable | Development | Deprecated,
+    docs: {
+      page: ArrayChipDocs,
+    },
+  },
+};
 
 chipProps.story = {
-    parameters: {
-        status: 'Development', // Stable | Development | Deprecated,
-        docs: {
-            page: OutlinedChipDocs
-        }
-    }
-}
+  parameters: {
+    status: 'Development', // Stable | Development | Deprecated,
+    docs: {
+      page: OutlinedChipDocs,
+    },
+  },
+};
 
 Custom.story = {
   parameters: {
     status: 'Development', // Stable | Development | Deprecated,
     docs: {
-      page: CustomChipDocs
-    }
-  }
-}
-
+      page: CustomChipDocs,
+    },
+  },
+};
 
 Types.story = {
   parameters: {

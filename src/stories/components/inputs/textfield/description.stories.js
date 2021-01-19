@@ -1,6 +1,5 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 import { action } from '@storybook/addon-actions';
 
 // Material UI
@@ -10,8 +9,6 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 // Components
 import TextField from 'components/inputs/TextField';
 import TextFieldDescriptionDocs from './description.docs.mdx';
-
-import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +25,6 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Inputs/TextField',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
     options: { showPanel: true },

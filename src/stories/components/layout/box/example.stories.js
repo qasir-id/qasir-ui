@@ -1,6 +1,5 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -33,8 +32,6 @@ import BoxSpacingDocs from './box-spacing/docs.mdx';
 import BoxTypography from './box-typography';
 import BoxTypographyDocs from './box-typography/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -50,7 +47,6 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Layout/Box/Example',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
     options: { showPanel: false },

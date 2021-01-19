@@ -1,6 +1,5 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,8 +17,6 @@ import ButtonIconsLabelDocs from './button-icons-label/docs.mdx';
 import ButtonFullWidth from './button-full-width';
 import ButtonFullWidthDocs from './button-full-width/docs.mdx';
 
-import 'font-family.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -35,7 +32,6 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Inputs/Button/Example',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
     options: { showPanel: false },

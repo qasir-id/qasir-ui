@@ -1,0 +1,38 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+import CheckboxPartial from './index';
+
+<Title>Checkbox Partial</Title>
+<Subtitle>
+Another custom qasir checkbox style, If the set contains both some checked and unchecked checkboxes, the mixed state checkbox is partially checked.
+</Subtitle>
+
+### Import
+
+```js
+import Checkbox from 'qasir-ui/inputs/Checkbox';
+import StopIcon from '@material-ui/icons/Stop';
+
+```
+
+### Usage
+<CheckboxPartial />
+
+
+```jsx
+const styles = {
+iconStyle: {
+    fill: '#f04b32',
+    border: '2px solid #DADCE5',
+    borderRadius: '2px',
+  }
+}
+return(
+    <>
+        <CheckBox
+            checkedIcon={<StopIcon fontSize="small" style={styles.iconStyle} />}
+            inputProps={{ 'aria-label': 'decorative checkbox' }}
+        />
+    </>
+)
+```

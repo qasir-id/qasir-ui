@@ -1,8 +1,6 @@
 // Vendors
 import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
 import { action } from '@storybook/addon-actions';
-
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 // Components
 import SimpleTabs from './tabs-simple';
 import SimpleTabsDocs from './description.docs.mdx';
-
-import 'font-family.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,25 +24,26 @@ const Wrapper = ({ children }) => {
 
 export default {
   title: 'Components/Navigation/Tabs',
-  decorators: [withDesign],
   parameters: {
     design: { disabled: true },
-    options: {showPanel: true}
+    options: { showPanel: true },
   },
   argTypes: {
-    fullWidth: {
-      name: 'Full Width',
+    variant: {
+      name: 'Variant',
       control: {
         type: 'select',
-        options: ['standard', 'scrollable', 'fullWidth']
-      }
-    }
-  }
+        options: ['standard', 'scrollable', 'fullWidth'],
+      },
+    },
+  },
 };
-export const description = ({fullWidth}) => (
+
+export const description = ({variant}) => (
+  
   <Wrapper>
     <SimpleTabs 
-      variant={fullWidth}
+      variant={variant}
       onClick={action('onClick')}
       onMouseEnter={action('onMouseEnter')}
       onMouseLeave={action('onMouseLeave')}
@@ -62,3 +59,7 @@ description.story = {
     },
   },
 };
+
+description.args = {
+  variant: 'standard'
+}
