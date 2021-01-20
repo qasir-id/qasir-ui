@@ -1,32 +1,19 @@
-import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
-import Dialog from './index';
+// Vendors
+import React from 'react';
 
-<Title>Dialog</Title>
-
-<Subtitle>
-Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
-</Subtitle>
-
-### Import
-```js
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import Button from 'qasir-ui/inputs/Button';
-import colors from 'qasir-ui/variables/colors';
 
-import Dialog from 'qasir-ui/feedback/Dialog';
-import MuiDialogTitle from 'qasir-ui/feedback/DialogTitle';
-import DialogContent from 'qasir-ui/feedback/DialogContent';
-import DialogActions from 'qasir-ui/feedback/DialogActions';
-```
+// Components
+import Button from 'components/inputs/Button';
+import colors from 'components/variables/colors';
+import Dialog from 'components/feedback/Dialog';
+import MuiDialogTitle from 'components/feedback/DialogTitle';
+import DialogContent from 'components/feedback/DialogContent';
+import DialogActions from 'components/feedback/DialogActions';
 
-### Usage
-
-<Dialog/>
-
-```jsx
 const styles = (theme) => ({
   title: {
     fontSize: 14,
@@ -55,9 +42,8 @@ const DialogTitle = withStyles(styles)((props) => {
   );
 });
 
-const DialogDemo = () => {
+const DialogDisableEscapeKeyDown = () => {
   const [open, setOpen] = React.useState(false);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -70,7 +56,7 @@ const DialogDemo = () => {
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Open dialog
       </Button>
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open} disableEscapeKeyDown="true">
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           Modal title
         </DialogTitle>
@@ -99,5 +85,4 @@ const DialogDemo = () => {
   );
 }
 
-export default DialogDemo;   
-```
+export default DialogDisableEscapeKeyDown;
