@@ -6,7 +6,7 @@ const MuiButtonStyled = (defaultTheme, modifyTheme) => ({
   },
   label: {
     fontSize: 12,
-    fontWeight: 600,
+    fontWeight: 500,
   },
 
   sizeSmall: {
@@ -15,7 +15,10 @@ const MuiButtonStyled = (defaultTheme, modifyTheme) => ({
   },
   sizeLarge: {
     height: 48,
-    fontSize: 14,
+    '& .MuiButton-label': {
+      fontSize: 14,
+      fontWeight: 700,
+    },
   },
 
   contained: {
