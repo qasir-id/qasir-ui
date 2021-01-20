@@ -1,10 +1,10 @@
 import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
-import Dialog from './index';
+import DialogDisableBackdropClick from './index';
 
-<Title>Dialog</Title>
+<Title>Dialog Disable Backdrop Click</Title>
 
 <Subtitle>
-Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
+If true, clicking the backdrop dialog will not fire the onClose callback.
 </Subtitle>
 
 ### Import
@@ -24,7 +24,7 @@ import DialogActions from 'qasir-ui/feedback/DialogActions';
 
 ### Usage
 
-<Dialog/>
+<DialogDisableBackdropClick />
 
 ```jsx
 const styles = (theme) => ({
@@ -70,7 +70,7 @@ const DialogDemo = () => {
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Open dialog
       </Button>
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open} disableBackdropClick="true">
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           Modal title
         </DialogTitle>

@@ -79,7 +79,7 @@ export const description = ({ maxWidth, fullScreen, fullWidth, disableBackdropCl
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: DialogSimpleDocs,
     },
