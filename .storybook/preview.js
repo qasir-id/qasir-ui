@@ -48,21 +48,39 @@ export const parameters = {
         'Components',
         [
           'Layout',
-          ['Box', 'Container', 'Hidden'],
+          ['Box', 'Container', 'Grid', 'Hidden'],
 
           'Inputs',
-          ['Button', 'Checkbox', 'Select', 'TextField'],
+          ['Button', 'Checkbox', 'Datetime', 'Radio', 'Select', 'Slider', 'Switch', 'TextField'],
 
           'Navigation',
-          ['Tabs'],
+          ['Bottom Navigation', 'Breadcrumbs', 'Drawer', 'Menu', 'Stepper', 'Tabs'],
+
+          'Surfaces',
+          ['Accordion', 'Card', 'Paper'],
+
+          'Feedback',
+          ['Backdrop', 'Dialog', 'Progress', 'Snackbar'],
 
           'Data Display',
-          ['Chip', 'Icons', 'Typography'],
+          [
+            'Avatar',
+            'Badge',
+            'Chip',
+            'Empty State',
+            'Error',
+            'Icons',
+            'List',
+            'Table',
+            'Tooltip',
+            'Typography',
+          ],
 
           'Utils',
+          ['No SSR', 'Popover'],
 
           'Lab',
-          ['Pagination'],
+          ['Alert', 'Autocomplete', 'Skeleton', 'Pagination'],
         ],
         'Templates',
         ['Login', 'Emails Template', 'Errors Page', 'Under Construction'],

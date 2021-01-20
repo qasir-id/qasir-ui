@@ -10,7 +10,7 @@ import theme from '../../variables/theme';
 export default (props) => {
   return (
     <ThemeProvider theme={theme}>
-      <Box {...props} style={{ fontFamily: ['"Montserrat"', 'sans-serif'].join(',') }} />
+      <Box {...props} />
     </ThemeProvider>
   );
 };
