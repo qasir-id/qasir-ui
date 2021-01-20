@@ -6,7 +6,7 @@ import Container from 'components/layout/Container';
 
 export const ContainerSizeXL = () => (
   <>
-    <h3 style={{ marginTop: 30 }}>Extra Large</h3>
+    <h3>Extra Large</h3>
     <Container maxWidth="xl" disableGutters>
       <div style={{ backgroundColor: '#cfe8fc', height: '30vh' }}></div>
     </Container>
@@ -15,7 +15,7 @@ export const ContainerSizeXL = () => (
 
 export const ContainerSizeLG = () => (
   <>
-    <h3>Large</h3>
+    <h3 style={{ marginTop: 30 }}>Large</h3>
     <Container disableGutters>
       <div style={{ backgroundColor: '#cfe8fc', height: '30vh' }}></div>
     </Container>

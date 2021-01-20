@@ -10,7 +10,6 @@ const defaultProps = {
   bgcolor: '#cfe8fc',
   p: 2,
   mb: 2,
-  style: { width: '5rem', height: '5rem' },
 };
 
 const HiddenBreakpointUp = (props) => {
