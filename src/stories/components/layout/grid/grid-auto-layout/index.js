@@ -18,36 +18,35 @@ const defaultProps = {
   textAlign: 'center',
 };
 
-const GridFluidBasic = () => {
+const GridAutoLayout = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Box {...defaultProps}>xs=12</Box>
+        <Grid item xs>
+          <Box {...defaultProps}>xs</Box>
+        </Grid>
+        <Grid item xs>
+          <Box {...defaultProps}>xs</Box>
+        </Grid>
+        <Grid item xs>
+          <Box {...defaultProps}>xs</Box>
+        </Grid>
+      </Grid>
+      <Grid container spacing={3}>
+        <Grid item xs>
+          <Box {...defaultProps}>xs</Box>
         </Grid>
         <Grid item xs={6}>
           <Box {...defaultProps}>xs=6</Box>
         </Grid>
-        <Grid item xs={6}>
-          <Box {...defaultProps}>xs=6</Box>
-        </Grid>
-        <Grid item xs={3}>
-          <Box {...defaultProps}>xs=3</Box>
-        </Grid>
-        <Grid item xs={3}>
-          <Box {...defaultProps}>xs=3</Box>
-        </Grid>
-        <Grid item xs={3}>
-          <Box {...defaultProps}>xs=3</Box>
-        </Grid>
-        <Grid item xs={3}>
-          <Box {...defaultProps}>xs=3</Box>
+        <Grid item xs>
+          <Box {...defaultProps}>xs</Box>
         </Grid>
       </Grid>
     </div>
   );
 };
 
-export default GridFluidBasic;
+export default GridAutoLayout;

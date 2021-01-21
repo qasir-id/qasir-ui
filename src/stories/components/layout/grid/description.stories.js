@@ -5,6 +5,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
+import GridSpacing from './grid-spacing';
+import GridFluidBasic from './grid-fluid-basic';
+import GridFluidBreakpoints from './grid-fluid-breakpoints';
+import GridInteractive from './grid-interactive';
+import GridAutoLayout from './grid-auto-layout';
+import GridNested from './grid-nested';
 import GridDescriptionDocs from './description.docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,19 +32,37 @@ export default {
     design: { disabled: true },
     options: { showPanel: true },
   },
+  argTypes: {
+    type: {
+      name: 'Example',
+      control: {
+        type: 'select',
+        options: ['spacing', 'fluid basic', 'fluid breakpoints', 'interactive', 'auto layout', 'nested grid'],
+      },
+    },
+  },
 };
 
 export const description = ({ type }) => (
   <Wrapper>
-    <h3 style={{ textAlign: 'center' }}>Under Construction</h3>
+    {type == 'spacing' && <GridSpacing />}
+    {type == 'fluid basic' && <GridFluidBasic />}
+    {type == 'fluid breakpoints' && <GridFluidBreakpoints />}
+    {type == 'interactive' && <GridInteractive />}
+    {type == 'auto layout' && <GridAutoLayout />}
+    {type == 'nested grid' && <GridNested />}
   </Wrapper>
 );
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: GridDescriptionDocs,
     },
   },
+};
+
+description.args = {
+  type: 'spacing',
 };

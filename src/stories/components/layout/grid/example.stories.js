@@ -14,6 +14,15 @@ import GridFluidBasicDocs from './grid-fluid-basic/docs.mdx';
 import GridFluidBreakpoints from './grid-fluid-breakpoints';
 import GridFluidBreakpointsDocs from './grid-fluid-breakpoints/docs.mdx';
 
+import GridInteractive from './grid-interactive';
+import GridInteractiveDocs from './grid-interactive/docs.mdx';
+
+import GridAutoLayout from './grid-auto-layout';
+import GridAutoLayoutDocs from './grid-auto-layout/docs.mdx';
+
+import GridNested from './grid-nested';
+import GridNestedDocs from './grid-nested/docs.mdx';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -73,6 +82,48 @@ fluidBreakpoints.story = {
     status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: GridFluidBreakpointsDocs,
+    },
+  },
+};
+
+export const interactive = () => (
+  <Wrapper>
+    <GridInteractive />
+  </Wrapper>
+);
+interactive.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: GridInteractiveDocs,
+    },
+  },
+};
+
+export const autoLayout = () => (
+  <Wrapper>
+    <GridAutoLayout />
+  </Wrapper>
+);
+autoLayout.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: GridAutoLayoutDocs,
+    },
+  },
+};
+
+export const nestedGrid = () => (
+  <Wrapper>
+    <GridNested />
+  </Wrapper>
+);
+nestedGrid.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: GridNestedDocs,
     },
   },
 };

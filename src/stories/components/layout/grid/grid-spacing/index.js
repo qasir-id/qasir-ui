@@ -1,14 +1,14 @@
 // Vendors
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
 
 // Components
 import Box from 'components/layout/Box';
 import Grid from 'components/layout/Grid';
+import FormLabel from 'components/inputs/FormLabel';
+import FormControlLabel from 'components/inputs/FormControlLabel';
+import RadioGroup from 'components/inputs/RadioGroup';
+import Radio from 'components/inputs/Radio';
 
 const useStyles = makeStyles((theme) => ({
   root: {
