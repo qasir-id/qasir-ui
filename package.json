@@ -25,8 +25,12 @@
     "build:layout": "rm -rf layout && mkdir layout && babel src/components/layout -d layout --copy-files",
     "build:inputs": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files",
     "build:navigation": "rm -rf navigation && mkdir navigation && babel src/components/navigation -d navigation --copy-files",
+    "build:surfaces": "rm -rf surfaces && mkdir surfaces && babel src/components/surfaces -d surfaces --copy-files",
+    "build:feedback": "rm -rf feedback && mkdir feedback && babel src/components/feedback -d feedback --copy-files",
     "build:data-display": "rm -rf data-display && mkdir data-display && babel src/components/data-display -d data-display --copy-files",
-    "build": "npm-run-all build:variables build:layout build:inputs build:navigation build:data-display"
+    "build:utils": "rm -rf utils && mkdir utils && babel src/components/utils -d utils --copy-files",
+    "build:lab": "rm -rf lab && mkdir lab && babel src/components/lab -d lab --copy-files",
+    "build": "npm-run-all build:variables build:layout build:inputs build:navigation build:surfaces build:feedback build:data-display build:utils build:lab"
   },
   "eslintConfig": {
     "extends": "react-app"

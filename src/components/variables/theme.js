@@ -107,7 +107,7 @@ const theme = createMuiTheme({
     MuiDialogTitle: MuiDialogTitleStyled(defaultTheme, modifyTheme),
     MuiDialogContent: MuiDialogContentStyled(defaultTheme, modifyTheme),
     MuiDialogActions: MuiDialogActionseStyled(defaultTheme, modifyTheme),
-    
+
     // Lab
     MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
     MuiTablePagination: MuiTablePaginationStyled(defaultTheme, modifyTheme),

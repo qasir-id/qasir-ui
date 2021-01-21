@@ -11,8 +11,12 @@ node_modules
 /variables
 /layout
 /inputs
-/data-display
 /navigation
+/surfaces
+/feedback
+/data-display
+/utils
+/lab
 
 # storybook
 build-storybook.log
