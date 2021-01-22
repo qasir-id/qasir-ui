@@ -1,0 +1,77 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import SnackbarCustomized from './index';
+
+<Title>Customized snackbars</Title>
+
+<Subtitle>
+Here are some examples of customizing the component.
+</Subtitle>
+
+### Import
+```js
+// Vendors
+import React from 'react';
+
+// Material UI
+import { makeStyles } from '@material-ui/core/styles';
+
+// Qasir UI
+import Button from 'qasir-ui/inputs/Button';
+import Snackbar from 'qasir-ui/feedback/Snackbar';
+import MuiAlert from 'qasir-ui/lab/Alert';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<SnackbarCustomized/>
+
+```jsx
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
+
+const SnackbarCustomized = (props) => {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  return (
+    <div className={classes.root}>
+      <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          This is a success message!
+        </Alert>
+      </Snackbar>
+      <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert>
+      <Alert severity="success">This is a success message!</Alert>
+    </div>
+  );
+};
+
+export default SnackbarCustomized;
+```

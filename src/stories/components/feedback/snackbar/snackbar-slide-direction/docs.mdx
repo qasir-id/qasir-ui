@@ -1,0 +1,73 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import SnackbarSlideDirection from './index';
+
+<Title>Control Slide direction</Title>
+
+<Subtitle>
+You can change the direction of the Slide transition.
+</Subtitle>
+
+### Import
+```js
+// Vendors
+import React from 'react';
+
+// Qasir UI
+import Button from 'qasir-ui/inputs/Button';
+import Snackbar from 'qasir-ui/feedback/Snackbar';
+import Slide from 'qasir-ui/utils/Slide';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<SnackbarSlideDirection/>
+
+```jsx
+function TransitionLeft(props) {
+  return <Slide {...props} direction="left" />;
+}
+
+function TransitionUp(props) {
+  return <Slide {...props} direction="up" />;
+}
+
+function TransitionRight(props) {
+  return <Slide {...props} direction="right" />;
+}
+
+function TransitionDown(props) {
+  return <Slide {...props} direction="down" />;
+}
+
+const SnackbarSlideDirection = (props) => {
+  const [open, setOpen] = React.useState(false);
+  const [transition, setTransition] = React.useState(undefined);
+
+  const handleClick = (Transition) => () => {
+    setTransition(() => Transition);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <Button onClick={handleClick(TransitionLeft)} variant="outlined">Right</Button>
+      <Button onClick={handleClick(TransitionUp)} variant="outlined">Up</Button>
+      <Button onClick={handleClick(TransitionRight)} variant="outlined">Left</Button>
+      <Button onClick={handleClick(TransitionDown)} variant="outlined">Down</Button>
+      <Snackbar
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={transition}
+        message="I love snacks"
+        key={transition ? transition.name : ''}
+      />
+    </div>
+  );
+};
+
+export default SnackbarSlideDirection;
+```

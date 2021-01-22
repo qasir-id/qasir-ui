@@ -33,7 +33,8 @@ import MuiTablePaginationStyled from '../lab/TablePagination/style';
 import MuiDialogStyled from '../feedback/Dialog/style';
 import MuiDialogTitleStyled from '../feedback/DialogTitle/style';
 import MuiDialogContentStyled from '../feedback/DialogContent/style';
-import MuiDialogActionseStyled from '../feedback/DialogActions/style';
+import MuiDialogActionsStyled from '../feedback/DialogActions/style';
+import MuiSnackbarStyled from '../feedback/Snackbar/style';
 
 const defaultTheme = createMuiTheme();
 
@@ -108,7 +109,8 @@ const theme = createMuiTheme({
     MuiDialog: MuiDialogStyled(defaultTheme, modifyTheme),
     MuiDialogTitle: MuiDialogTitleStyled(defaultTheme, modifyTheme),
     MuiDialogContent: MuiDialogContentStyled(defaultTheme, modifyTheme),
-    MuiDialogActions: MuiDialogActionseStyled(defaultTheme, modifyTheme),
+    MuiDialogActions: MuiDialogActionsStyled(defaultTheme, modifyTheme),
+    MuiSnackbar: MuiSnackbarStyled(defaultTheme, modifyTheme),
 
     // Lab
     MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),
