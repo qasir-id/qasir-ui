@@ -5,6 +5,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
+import SnackbarSimple from './snackbar-simple';
+import SnackbarCustomized from './snackbar-customized';
+import SnackbarPositioned from './snackbar-positioned';
+import SnackbarConsecutive from './snackbar-consecutive';
+import SnackbarTransition from './snackbar-transition';
+import SnackbarSlideDirection from './snackbar-slide-direction';
 import SnackbarDescriptionDocs from './description.docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,19 +32,37 @@ export default {
     design: { disabled: true },
     options: { showPanel: true },
   },
+  argTypes: {
+    type: {
+      name: 'Example',
+      control: {
+        type: 'select',
+        options: ['simple', 'customized', 'positioned', 'consecutive', 'transition', 'slide direction'],
+      },
+    },
+  },
 };
 
 export const description = ({ type }) => (
   <Wrapper>
-    <h3 style={{ textAlign: 'center' }}>Under Construction</h3>
+    {type == 'simple' && <SnackbarSimple />}
+    {type == 'customized' && <SnackbarCustomized />}
+    {type == 'positioned' && <SnackbarPositioned />}
+    {type == 'consecutive' && <SnackbarConsecutive />}
+    {type == 'transition' && <SnackbarTransition />}
+    {type == 'slide direction' && <SnackbarSlideDirection />}
   </Wrapper>
 );
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: SnackbarDescriptionDocs,
     },
   },
+};
+
+description.args = {
+  type: 'simple',
 };
