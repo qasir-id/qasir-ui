@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Material UI
-import IconButton from '@material-ui/core/IconButton';
+import Box from '@material-ui/core/Box';
 
 export default (props) => {
-  return <IconButton {...props} />;
+  return <Box {...props} />;
 };
