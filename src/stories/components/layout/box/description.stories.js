@@ -5,7 +5,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import Box from 'components/layout/Box';
 import BoxDescriptionDocs from './description.docs.mdx';
 
 import BoxBorders from './box-borders';

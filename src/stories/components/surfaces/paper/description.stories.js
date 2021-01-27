@@ -5,6 +5,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
+import Paper from 'components/surfaces/Paper';
 import PaperDescriptionDocs from './description.docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +13,11 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
+  },
+  paper: {
+    margin: theme.spacing(1),
+    width: theme.spacing(16),
+    height: theme.spacing(16),
   },
 }));
 
@@ -26,19 +32,50 @@ export default {
     design: { disabled: true },
     options: { showPanel: true },
   },
+  argTypes: {
+    elevation: {
+      name: 'Elevations',
+      control: {
+        type: 'select',
+        options: [...Array(25).keys()],
+      },
+    },
+    variant: {
+      name: 'Variants',
+      control: {
+        type: 'select',
+        options: ['elevation', 'outlined'],
+      },
+    },
+    square: {
+      name: 'Square',
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
 };
 
-export const description = ({ type }) => (
-  <Wrapper>
-    <h3 style={{ textAlign: 'center' }}>Under Construction</h3>
-  </Wrapper>
-);
+export const description = ({ elevation, variant, square }) => {
+  const classes = useStyles();
+  return (
+    <Wrapper>
+      <Paper className={classes.paper} elevation={elevation} variant={variant} square={square} />
+    </Wrapper>
+  );
+};
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: PaperDescriptionDocs,
     },
   },
+};
+
+description.args = {
+  elevation: 1,
+  variant: 'elevation',
+  square: false,
 };
