@@ -1,21 +1,21 @@
 // Vendors
-import React from "react";
+import React from 'react';
 
 // Material UI
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
-import CheckboxPartial from "./checkbox-partial";
-import CheckboxPartialDocs from "./checkbox-partial/docs.mdx";
+import CheckboxBasic from './checkbox-basic';
+import CheckboxBasicDocs from './checkbox-basic/docs.mdx';
 
-import CheckboxProps from "./checkbox-props/";
-import CheckboxPropsDocs from "./checkbox-props/docs.mdx";
+import CheckboxProps from './checkbox-props/';
+import CheckboxPropsDocs from './checkbox-props/docs.mdx';
 
-import CheckboxWithForm from "./checkbox-form";
-import CheckboxWithFormDocs from "./checkbox-form/docs.mdx";
+import CheckboxWithForm from './checkbox-form';
+import CheckboxWithFormDocs from './checkbox-form/docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    "& > *": {
+    '& > *': {
       margin: theme.spacing(1),
     },
   },
@@ -27,52 +27,52 @@ const Wrapper = ({ children }) => {
 };
 
 export default {
-  title: "Components/Inputs/Checkbox/Example",
+  title: 'Components/Inputs/Checkbox/Example',
   parameters: {
     design: { disabled: true },
     options: { showPanel: false },
   },
 };
 
-export const checkboxPartial = () => (
+export const basic = () => (
   <Wrapper>
-    <CheckboxPartial />
+    <CheckboxBasic />
   </Wrapper>
 );
 
-export const checkboxProps = () => (
+basic.story = {
+  parameters: {
+    status: 'Development', // Stable | Development | Deprecated,
+    docs: {
+      page: CheckboxBasicDocs,
+    },
+  },
+};
+
+export const props = () => (
   <Wrapper>
     <CheckboxProps />
   </Wrapper>
 );
 
-export const checkboxWithForm = () => (
-  <Wrapper>
-    <CheckboxWithForm />
-  </Wrapper>
-);
-
-checkboxPartial.story = {
+props.story = {
   parameters: {
-    status: "Development",
-    docs: {
-      page: CheckboxPartialDocs,
-    },
-  },
-};
-
-checkboxProps.story = {
-  parameters: {
-    status: "Development", // Stable | Development | Deprecated,
+    status: 'Development', // Stable | Development | Deprecated,
     docs: {
       page: CheckboxPropsDocs,
     },
   },
 };
 
-checkboxWithForm.story = {
+export const withForm = () => (
+  <Wrapper>
+    <CheckboxWithForm />
+  </Wrapper>
+);
+
+withForm.story = {
   parameters: {
-    status: "Development", // Stable | Development | Deprecated,
+    status: 'Development', // Stable | Development | Deprecated,
     docs: {
       page: CheckboxWithFormDocs,
     },

@@ -35,6 +35,9 @@ const MuiButtonStyled = (defaultTheme, modifyTheme) => ({
     '&:hover': {
       backgroundColor: modifyTheme.palette.primary.hover,
     },
+    '& .MuiSvgIcon-root': {
+      color: modifyTheme.palette.common.white,
+    },
   },
   containedSecondary: {
     color: modifyTheme.palette.secondary.text,
