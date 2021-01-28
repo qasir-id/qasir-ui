@@ -44,7 +44,6 @@ export const types = () => (
   </Wrapper>
 );
 types.story = {
-  title: 'Type Buttons',
   parameters: {
     status: 'Stable', // Stable | Development | Deprecated
     docs: {

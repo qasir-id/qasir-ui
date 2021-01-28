@@ -5,6 +5,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
+import Avatar from 'components/data-display/Avatar';
 import AvatarDescriptionDocs from './description.docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,19 +27,46 @@ export default {
     design: { disabled: true },
     options: { showPanel: true },
   },
+  argTypes: {
+    image: {
+      name: 'Image',
+      control: {
+        type: 'boolean',
+      },
+    },
+    variant: {
+      name: 'Variants',
+      control: {
+        type: 'select',
+        options: ['circle', 'rounded', 'square'],
+      },
+    },
+    size: { name: 'Size', control: 'range', min: 1, max: 100, step: 1 },
+  },
 };
 
-export const description = ({ type }) => (
+export const description = ({ image, size, variant }) => (
   <Wrapper>
-    <h3 style={{ textAlign: 'center' }}>Under Construction</h3>
+    <Avatar
+      alt="Remy Sharp"
+      src={image ? 'https://material-ui.com/static/images/avatar/1.jpg' : '/broken-image.jpg'}
+      variant={variant}
+      style={{ width: size, height: size }}
+    />
   </Wrapper>
 );
 
 description.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated
+    status: 'Stable', // Stable | Development | Deprecated
     docs: {
       page: AvatarDescriptionDocs,
     },
   },
+};
+
+description.args = {
+  image: true,
+  variant: 'circle',
+  size: 40,
 };

@@ -1,0 +1,27 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import AvatarFallbacks from './index';
+
+<Title>Fallbacks avatars</Title>
+<Subtitle>If there is an error loading the avatar image, the component falls back to an alternative in the following order:</Subtitle>
+
+<ul>
+<li>the provided children</li>
+<li>the first letter of the <code>alt</code> text</li>
+<li>a generic avatar icon</li>
+</ul>
+
+### Import
+
+```jsx
+import Avatar from 'qasir-ui/data-display/Avatar';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<AvatarFallbacks />
+
+```jsx
+<Avatar alt="Remy Sharp" src="/broken-image.jpg">B</Avatar>
+<Avatar alt="Remy Sharp" src="/broken-image.jpg" />
+<Avatar src="/broken-image.jpg" />
+```
