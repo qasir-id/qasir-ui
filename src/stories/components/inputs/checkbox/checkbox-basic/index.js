@@ -11,7 +11,12 @@ const CheckboxBasic = () => {
     setChecked(event.target.checked);
   };
   return (
-    <Checkbox checked={checked} onChange={handleChange} inputProps={{ 'aria-label': 'primary checkbox' }} />
+    <Checkbox
+      checked={checked}
+      onChange={handleChange}
+      color="primary"
+      inputProps={{ 'aria-label': 'primary checkbox' }}
+    />
   );
 };
 

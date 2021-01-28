@@ -1,0 +1,74 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import CheckboxWithFormGroup from './index';
+
+<Title>Checkboxes with FormGroup</Title>
+<Subtitle><code>FormGroup</code> is a helpful wrapper used to group selection controls components that provides an easier API.</Subtitle>
+
+### Import
+```jsx
+// Vendors
+import React from 'react';
+
+// Material UI
+import { makeStyles } from '@material-ui/core/styles';
+
+// Qasir UI
+import FormLabel from 'qasir-ui/inputs/FormLabel';
+import FormControl from 'qasir-ui/inputs/FormControl';
+import FormGroup from 'qasir-ui/inputs/FormGroup';
+import FormControlLabel from 'qasir-ui/inputs/FormControlLabel';
+import FormHelperText from 'qasir-ui/inputs/FormHelperText';
+import Checkbox from 'qasir-ui/inputs/Checkbox';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+<CheckboxWithFormGroup />
+
+```jsx
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+}));
+
+const CheckboxWithFormGroup = (props) => {
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    gilad: true,
+    jason: false,
+    antoine: false,
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const { gilad, jason, antoine } = state;
+  const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
+
+  return (
+    <div className={classes.root}>
+      <FormControl required error={error} component="fieldset">
+        <FormLabel component="legend">Pick two</FormLabel>
+        <FormGroup>
+          <FormControlLabel
+            control={<Checkbox color="primary" checked={gilad} onChange={handleChange} name="gilad" />}
+            label="Gilad Gray"
+          />
+          <FormControlLabel
+            control={<Checkbox color="primary" checked={jason} onChange={handleChange} name="jason" />}
+            label="Jason Killian"
+          />
+          <FormControlLabel
+            control={<Checkbox color="primary" checked={antoine} onChange={handleChange} name="antoine" />}
+            label="Antoine Llorca"
+          />
+        </FormGroup>
+        <FormHelperText>You can display an error</FormHelperText>
+      </FormControl>
+    </div>
+  );
+};
+
+export default CheckboxWithFormGroup;
+```

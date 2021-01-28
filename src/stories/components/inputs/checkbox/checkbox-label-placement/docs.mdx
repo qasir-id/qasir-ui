@@ -1,0 +1,64 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {CheckboxLabelStart, CheckboxLabelEnd, CheckboxLabelTop, CheckboxLabelBottom} from './index';
+
+<Title>Label placement</Title>
+<Subtitle>
+You can change the placement of the label:
+</Subtitle>
+
+### Import
+
+```js
+import FormControlLabel from 'qasir-ui/inputs/FormControlLabel';
+import Checkbox from 'qasir-ui/inputs/Checkbox';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<CheckboxLabelStart />
+
+
+```jsx
+<FormControlLabel
+  value="start"
+  control={<Checkbox color="primary" />}
+  label="Start"
+  labelPlacement="start"
+/>
+```
+
+<CheckboxLabelEnd />
+
+
+```jsx
+<FormControlLabel
+  value="end"
+  control={<Checkbox color="primary" />}
+  label="End"
+  labelPlacement="end"
+/>
+```
+
+<CheckboxLabelTop />
+
+
+```jsx
+<FormControlLabel
+  value="top"
+  control={<Checkbox color="primary" />}
+  label="Top"
+  labelPlacement="Top"
+/>
+```
+
+<CheckboxLabelBottom />
+
+
+```jsx
+<FormControlLabel
+  value="bottom"
+  control={<Checkbox color="primary" />}
+  label="Bottom"
+  labelPlacement="Bottom"
+/>
+```

@@ -10,8 +10,11 @@ import CheckboxBasicDocs from './checkbox-basic/docs.mdx';
 import CheckboxProps from './checkbox-props/';
 import CheckboxPropsDocs from './checkbox-props/docs.mdx';
 
-import CheckboxWithForm from './checkbox-form';
-import CheckboxWithFormDocs from './checkbox-form/docs.mdx';
+import CheckboxWithFormGroup from './checkbox-form-group';
+import CheckboxWithFormGroupDocs from './checkbox-form-group/docs.mdx';
+
+import CheckboxLabelPlacement from './checkbox-label-placement';
+import CheckboxLabelPlacementDocs from './checkbox-label-placement/docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,7 +45,7 @@ export const basic = () => (
 
 basic.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated,
+    status: 'Stable', // Stable | Development | Deprecated,
     docs: {
       page: CheckboxBasicDocs,
     },
@@ -57,24 +60,39 @@ export const props = () => (
 
 props.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated,
+    status: 'Stable', // Stable | Development | Deprecated,
     docs: {
       page: CheckboxPropsDocs,
     },
   },
 };
 
-export const withForm = () => (
+export const withFormGroup = () => (
   <Wrapper>
-    <CheckboxWithForm />
+    <CheckboxWithFormGroup />
   </Wrapper>
 );
 
-withForm.story = {
+withFormGroup.story = {
   parameters: {
-    status: 'Development', // Stable | Development | Deprecated,
+    status: 'Stable', // Stable | Development | Deprecated,
     docs: {
-      page: CheckboxWithFormDocs,
+      page: CheckboxWithFormGroupDocs,
+    },
+  },
+};
+
+export const labelPlacement = () => (
+  <Wrapper>
+    <CheckboxLabelPlacement />
+  </Wrapper>
+);
+
+labelPlacement.story = {
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated,
+    docs: {
+      page: CheckboxLabelPlacementDocs,
     },
   },
 };

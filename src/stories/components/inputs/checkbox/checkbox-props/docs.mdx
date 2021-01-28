@@ -6,9 +6,8 @@ import {
     UncontrollableCheckbox,
     DisabledCheckbox,
     DisabledCheckedCheckbox,
-    IndeterminateCheckbox,
-    DefaultCheckbox,
-    CheckboxSmall,
+    IndeterminateCheckbox,    
+    CustomIconCheckbox
 } from './index.js';
 
 <Title>Checkbox Props</Title>
@@ -20,6 +19,7 @@ you can see below, size and type of Checkbox
 
 ```js
 import Checkbox from 'qasir-ui/inputs/Checkbox';
+import FormControlLabel from 'qasir-ui/inputs/FormControlLabel';
 ```
 
 ### Usage
@@ -27,74 +27,89 @@ import Checkbox from 'qasir-ui/inputs/Checkbox';
 <PrimaryCheckbox />
 
 ```jsx
-const [checked, setChecked] = React.useState(false);
-const handleChange = (event) => setChecked(event.target.checked);
+const PrimaryCheckbox = () => {
+    const [checked, setChecked] = React.useState(false);
+    const handleChange = (event) => setChecked(event.target.checked);
 
-<Checkbox 
-    checked={checked}
-    onChange={handleChange}
-    inputProps={{ "aria-label": "primary checkbox" }}
-/>
+    return (
+        <FormControlLabel
+        control={
+            <Checkbox
+            checked={checked}
+            onChange={handleChange}
+            color="primary"
+            inputProps={{ 'aria-label': 'primary checkbox' }}
+            />
+        }
+        label="Primary"
+        />
+    );
+};
 ```
 
 <SecondaryCheckbox />
 
 ```jsx
-<Checkbox
-    defaultChecked
-    color="primary"
-    inputProps={{ "aria-label": "secondary checkbox" }}
+<FormControlLabel
+    control={
+        <Checkbox defaultChecked color="secondary" inputProps={{ 'aria-label': 'secondary checkbox' }} />
+    }
+    label="Secondary"
 />
 ```
 
 <UncontrollableCheckbox />
 
 ```jsx
-<Checkbox inputProps={{ "aria-label": "uncontrolled-checkbox" }} />
+<FormControlLabel
+    control={<Checkbox inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} />}
+    label="Uncontrolled"
+/>
 ```
 
 <DisabledCheckbox />
 
 ```jsx
-<Checkbox disabled inputProps={{ "aria-label": "disabled checkbox" }} />
+<FormControlLabel
+    control={<Checkbox disabled inputProps={{ 'aria-label': 'disabled checkbox' }} />}
+    label="Disabled"
+/>
 ```
 
 <DisabledCheckedCheckbox />
 
 ```jsx
- <Checkbox
-    disabled
-    checked
-    inputProps={{ "aria-label": "disabled checked checkbox" }}
+ <FormControlLabel
+    control={<Checkbox disabled checked inputProps={{ 'aria-label': 'disabled checked checkbox' }} />}
+    label="Disabled checked"
 />
 ```
 
 <IndeterminateCheckbox />
 
 ```jsx
-<Checkbox
-    defaultChecked
-    indeterminate
-    inputProps={{ "aria-label": "indeterminate checkbox" }}
+<FormControlLabel
+    control={
+        <Checkbox defaultChecked indeterminate inputProps={{ 'aria-label': 'indeterminate checkbox' }} />
+    }
+    label="Indeterminate"
 />
 ```
 
-<DefaultCheckbox />
+<CustomIconCheckbox />
 
 ```jsx
-<Checkbox
-    defaultChecked
-    color="default"
-    inputProps={{ "aria-label": "checkbox with default color" }}
-/>
-```
+import Favorite from '@material-ui/icons/Favorite';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 
-<CheckboxSmall />
-
-```jsx
-<Checkbox
-    defaultChecked
-    size="small"
-    inputProps={{ "aria-label": "checkbox with small size" }}
+<FormControlLabel
+    control={
+        <Checkbox
+          icon={<FavoriteBorder />}
+          checkedIcon={<Favorite />}
+          inputProps={{ 'aria-label': 'custom icon' }}
+        />
+    }
+    label="Custom icon"
 />
 ```
