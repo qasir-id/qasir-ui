@@ -17,7 +17,7 @@ Quickly build beautiful [React](https://reactjs.org/) apps. Qasir User Interface
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/qasir-id/qasir-ui/blob/master/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/qasir-ui/latest.svg)](https://www.npmjs.com/package/qasir-ui)
-[![npm downloads](https://img.shields.io/npm/dm/qasir-ui/core.svg)](https://www.npmjs.com/package/qasir-ui)
+[![npm downloads](https://img.shields.io/npm/dm/qasir-ui)](https://www.npmjs.com/package/qasir-ui)
 
 </div>
 
