@@ -19,19 +19,17 @@ import dedent from 'ts-dedent';
 
 ```jsx
 // Import vendors
-import React from 'react';
+import * as React from 'react';
+import ReactDOM from 'react-dom';
 
 // Import the Button component
 import Button from 'qasir-ui/inputs/Button';
 
-const exampleApp = () => (
-  // Use the Button component
-  <Button variant="contained" color="primary">
-    Simple button
-  </Button>
-);
+function App() {
+  return <Button variant="contained">Hello World</Button>;
+}
 
-export default exampleApp;
+ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
 ### Usage with vanilla JS
