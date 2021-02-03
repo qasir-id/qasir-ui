@@ -21,7 +21,7 @@ const Wrapper = ({ children }) => {
 };
 
 export default {
-  title: 'Components/Feedback/Progress',
+  title: 'Components/Feedback/Progress/Linear',
   parameters: {
     design: { disabled: true },
     options: { showPanel: true },

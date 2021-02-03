@@ -1,0 +1,62 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import ProgressCircularIndeterminate from './index';
+
+<Title>Circular determinate</Title>
+
+<Subtitle>
+Determinate indicators display how long an operation will take.
+</Subtitle>
+
+### Import
+```js
+// Vendors
+import React from 'react';
+
+// Material UI
+import { makeStyles } from '@material-ui/core/styles';
+
+// Qasir UI
+import CircularProgress from 'qasir-ui/feedback/CircularProgress';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<ProgressCircularIndeterminate/>
+
+```jsx
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > * + *': {
+      marginLeft: theme.spacing(2),
+    },
+  },
+}));
+
+const ProgressCircularDeterminate = (props) => {
+  const classes = useStyles();
+  const [progress, setProgress] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+    }, 800);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  return (
+    <div className={classes.root}>
+      <CircularProgress variant="determinate" value={25} />
+      <CircularProgress variant="determinate" value={50} />
+      <CircularProgress variant="determinate" value={75} />
+      <CircularProgress variant="determinate" value={100} />
+      <CircularProgress variant="determinate" value={progress} />
+    </div>
+  );
+};
+
+export default ProgressCircularDeterminate;
+```

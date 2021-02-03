@@ -1,0 +1,44 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import ProgressLinearCustomized from './index';
+
+<Title>Customized progress</Title>
+
+<Subtitle>
+Here are some examples of customizing the component.
+</Subtitle>
+
+### Import
+```js
+// Vendors
+import React from 'react';
+
+// Material UI
+import { withStyles } from '@material-ui/core/styles';
+
+// Qasir UI
+import LinearProgress from 'qasir-ui/feedback/LinearProgress';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<ProgressLinearCustomized/>
+
+```jsx
+const BorderLinearProgress = withStyles((theme) => ({
+  root: {
+    height: 10,
+    borderRadius: 5,
+  },
+  colorPrimary: {
+    backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+  },
+  bar: {
+    borderRadius: 5,
+    backgroundColor: '#1a90ff',
+  },
+}))(LinearProgress);
+
+const ProgressLinearCustomized = (props) => <BorderLinearProgress variant="determinate" value={50} />;
+
+export default ProgressLinearCustomized;
+```
