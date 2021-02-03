@@ -7,10 +7,8 @@ import Dialog from '@material-ui/core/Dialog';
 
 import theme from '../../variables/theme';
 
-export default (props) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Dialog {...props} />
-    </ThemeProvider>
-  );
-};
+export default (props) => (
+  <ThemeProvider theme={theme}>
+    <Dialog {...props} />
+  </ThemeProvider>
+);

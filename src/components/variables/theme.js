@@ -35,6 +35,7 @@ import MuiDialogTitleStyled from '../feedback/DialogTitle/style';
 import MuiDialogContentStyled from '../feedback/DialogContent/style';
 import MuiDialogActionsStyled from '../feedback/DialogActions/style';
 import MuiSnackbarStyled from '../feedback/Snackbar/style';
+import MuiCircularProgressStyled from '../feedback/CircularProgress/style';
 
 const defaultTheme = createMuiTheme();
 
@@ -111,6 +112,7 @@ const theme = createMuiTheme({
     MuiDialogContent: MuiDialogContentStyled(defaultTheme, modifyTheme),
     MuiDialogActions: MuiDialogActionsStyled(defaultTheme, modifyTheme),
     MuiSnackbar: MuiSnackbarStyled(defaultTheme, modifyTheme),
+    MuiCircularProgress: MuiCircularProgressStyled(defaultTheme, modifyTheme),
 
     // Lab
     MuiPagination: MuiPaginationStyled(defaultTheme, modifyTheme),

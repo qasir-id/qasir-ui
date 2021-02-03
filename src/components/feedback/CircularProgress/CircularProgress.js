@@ -2,8 +2,13 @@
 import React from 'react';
 
 // Material UI
+import { ThemeProvider } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-export default (props) => {
-  return <CircularProgress {...props} />;
-};
+import theme from '../../variables/theme';
+
+export default (props) => (
+  <ThemeProvider theme={theme}>
+    <CircularProgress {...props} />
+  </ThemeProvider>
+);

@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Components
 import LinearProgress from 'components/feedback/LinearProgress';
+import colors from 'components/variables/colors';
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -17,7 +18,7 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
   bar: {
     borderRadius: 5,
-    backgroundColor: '#1a90ff',
+    backgroundColor: colors.red50,
   },
 }))(LinearProgress);
 

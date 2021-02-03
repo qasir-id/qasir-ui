@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import CircularProgress from 'components/feedback/CircularProgress';
+import colors from 'components/variables/colors';
 
 // Inspired by the former Facebook spinners.
 const useStylesFacebook = makeStyles((theme) => ({
@@ -16,7 +17,7 @@ const useStylesFacebook = makeStyles((theme) => ({
     color: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
   },
   top: {
-    color: '#1a90ff',
+    color: colors.red50,
     animationDuration: '550ms',
     position: 'absolute',
     left: 0,
