@@ -1,0 +1,98 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Core/Layout"
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Layout</Title>
+<Subtitle>Material Design layouts encourage consistency across platforms, environments, and screen sizes by using uniform elements and spacing.</Subtitle>
+
+### Principles
+
+<ul>
+    <li>
+        <b>Predictable</b>
+        <p>Use intuitive and predictable layouts with consistent UI regions and spatial organization.</p>
+    </li>
+    <li>
+        <b>Consistent</b>
+        <p>Layouts should be consistent in the use of grids, keylines, and padding.</p>
+    </li>
+    <li>
+        <b>Expressive</b>
+        <p>Show brand colors at memorable moments that reinforce your brand’s style.</p>
+    </li>
+</ul>
+
+### Responsive layout grid
+
+<p>The Material Design responsive layout grid is an overarching guide to the placement of components and elements. The responsive layout grid adapts to screen sizes and orientation, ensuring consistency across layouts.</p>
+
+<ul>
+    <li>
+        Columns
+    </li>
+    <li>
+        Gutters
+    </li>
+    <li>
+        Margins
+    </li>
+</ul>
+
+### Breakpoint system
+
+<p>Material Design provides responsive layouts based on the following column structures. Layouts using 4-column, 8-column, and 12-column grids are available for use across different screens, devices, and orientations. Each breakpoint range determines the number of columns, and recommended margins and gutters, for each display size.</p>
+
+<p>Each breakpoint (a key) matches with a fixed screen width (a value):</p>
+
+<ul>
+<li><strong>xs,</strong> extra-small: 0px</li>
+<li><strong>sm,</strong> small: 600px</li>
+<li><strong>md,</strong> medium: 960px</li>
+<li><strong>lg,</strong> large: 1280px</li>
+<li><strong>xl,</strong> extra-large: 1920px</li>
+</ul>
+
+<p>These breakpoint values are used to determine breakpoint ranges. A range starts from the breakpoint value inclusive, to the next breakpoint value exclusive:</p>
+
+```sh
+value         |0px     600px    960px    1280px   1920px
+key           |xs      sm       md       lg       xl
+screen width  |--------|--------|--------|--------|-------->
+range         |   xs   |   sm   |   md   |   lg   |   xl
+```
+
+### Grid system
+
+<p>The grid system is implemented with the <code>Grid</code> component:</p>
+
+<ul>
+<li>It uses <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" rel="noopener nofollow" class="link">CSS’s Flexible Box module</a> for high flexibility.</li>
+<li>There are two types of layout: <em>containers</em> and <em>items</em>.</li>
+<li>Item widths are set in percentages, so they’re always fluid and sized relative to their parent element.</li>
+<li>Items have padding to create the spacing between individual items.</li>
+<li>There are five grid breakpoints: xs, sm, md, lg, and xl.</li>
+</ul>
+
+### Grid behavior
+
+<ul>
+    <li>
+        <b>Fluid grids</b>
+        <p>Fluid grids use columns that scale and resize content. A fluid grid’s layout can use breakpoints to determine if the layout needs to change dramatically.</p>
+    </li>
+    <li>
+        <b>Fixed grids</b>
+        <p>Fixed grids use columns of a fixed size, with fluid margins to keep content unchanging within each breakpoint range. A fixed grid’s layout can only change at an assigned breakpoint.</p>
+    </li>    
+</ul>
+
+### Full documentation
+
+<a class="link" target="_blank" href="https://material.io/design/layout/understanding-layout.html">https://material.io/design/layout/understanding-layout.html</a>

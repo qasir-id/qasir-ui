@@ -43,7 +43,7 @@ export const parameters = {
           'Guidelines',
           ['Recommended Libraries', 'Design Resources', 'Page Speed'],
           'Core',
-          ['Colours', 'Typography', 'Grid'],
+          ['Layout', 'Navigation', 'Colours', 'Typography', 'Communication'],
         ],
         'Components',
         [

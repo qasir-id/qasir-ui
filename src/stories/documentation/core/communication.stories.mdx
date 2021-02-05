@@ -1,0 +1,76 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Core/Communication"
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Communication</Title>
+<Subtitle>Confirmation and acknowledgement communications ask for confirmation before taking an action and acknowledge successful actions.</Subtitle>
+
+### Types of actions
+<ul>
+<li><strong>Confirming actions</strong> ask the user to verify that they want to proceed with an action.</li>
+<li><strong>Acknowledging actions</strong> provide text to let the user know whether an action they chose has been completed.</li>
+</ul>
+
+### Acknowledgement components
+<p>
+  Acknowledgements can be delivered by a variety of components. Criteria for choosing the right acknowledgement component includes:
+</p>
+<ul>
+<li>Urgency level</li>
+<li>Inclusion of an action to correct a problem</li>
+<li>Duration on screen (transient, dismissable, or both)</li>
+</ul>
+<p>Acknowledgements that are transient mean the component will exit on its own within a few seconds of appearing. Dismissable acknowledgements can be dismissed by selecting an action to dismiss the component.</p>
+
+<table>
+<thead>
+<tr>
+<th className="mdc-data-table__header-cell">Component</th>
+<th className="mdc-data-table__header-cell">Urgency</th>
+<th className="mdc-data-table__header-cell">Content</th>
+<th className="mdc-data-table__header-cell">Behavior</th>
+<th className="mdc-data-table__header-cell">Number of actions to dismiss</th>
+</tr>
+</thead>
+<tbody className="mdc-data-table__content">
+<tr className="mdc-data-table__row">
+<td className="mdc-data-table__cell">Snackbar</td>
+<td className="mdc-data-table__cell">Low</td>
+<td className="mdc-data-table__cell">Informational</td>
+<td className="mdc-data-table__cell">Transient &amp; dismissable</td>
+<td className="mdc-data-table__cell">0-1</td>
+</tr>
+<tr className="mdc-data-table__row">
+<td className="mdc-data-table__cell">Alert</td>
+<td className="mdc-data-table__cell">Medium</td>
+<td className="mdc-data-table__cell">Correct a problem; <br/>Awareness of state</td>
+<td className="mdc-data-table__cell">Persistent, non-blocking, <br/>and dismissable</td>
+<td className="mdc-data-table__cell">1-2</td>
+</tr>
+<tr className="mdc-data-table__row">
+<td className="mdc-data-table__cell">Dialog</td>
+<td className="mdc-data-table__cell">High</td>
+<td className="mdc-data-table__cell">Require a choice; <br/>Acknowledge</td>
+<td className="mdc-data-table__cell">Persistent, blocking <br/>(interruptive)</td>
+<td className="mdc-data-table__cell">1-2</td>
+</tr>
+<tr className="mdc-data-table__row">
+<td className="mdc-data-table__cell">Empty State</td>
+<td className="mdc-data-table__cell">Medium</td>
+<td className="mdc-data-table__cell">Informational</td>
+<td className="mdc-data-table__cell">Persistent, blocking</td>
+<td className="mdc-data-table__cell">0-2</td>
+</tr>
+</tbody>
+</table>
+
+### Full documentation
+
+<a className="link" target="_blank" href="https://material.io/design/communication/confirmation-acknowledgement.html">https://material.io/design/communication/confirmation-acknowledgement.html</a>
