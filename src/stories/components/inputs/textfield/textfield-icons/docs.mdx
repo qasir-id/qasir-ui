@@ -1,0 +1,38 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {TextFieldIconsStart, TextFieldIconsEnd} from './index';
+
+<Title>Icons</Title>
+<Subtitle>There are multiple ways to display an icon with a text field.</Subtitle>
+
+### Import
+
+```jsx
+import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from 'qasir-ui/inputs/TextField';
+```
+
+### Usage
+
+<TextFieldIconsStart style={{marginTop: 20}} />
+
+```jsx
+<TextField
+  label="Label"
+  InputProps={{
+    startAdornment: <InputAdornment position="start">$</InputAdornment>,
+  }}
+  variant="outlined"
+/>
+```
+
+<TextFieldIconsEnd />
+
+```jsx
+<TextField
+  label="Label"
+  InputProps={{
+    endAdornment: <InputAdornment position="end">$</InputAdornment>,
+  }}
+  variant="outlined"
+/>
+```

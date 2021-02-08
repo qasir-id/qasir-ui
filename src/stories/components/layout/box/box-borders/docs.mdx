@@ -1,0 +1,35 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {BoxBorder, BoxBorderColor, BoxBorderRadius} from './index';
+
+<Title>Borders</Title>
+<Subtitle>Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</Subtitle>
+
+### Import
+
+```jsx
+import Box from 'qasir-ui/layout/Box';
+```
+
+### Usage
+
+<BoxBorder />
+
+```jsx
+<Box border={1} />
+<Box borderTop={1} />
+<Box borderRight={1} />
+<Box borderBottom={1} />
+<Box borderLeft={1} />
+```
+
+<BoxBorderColor />
+
+```jsx
+<Box borderColor="#F04B32" border={1} />
+```
+
+<BoxBorderRadius />
+
+```jsx
+<Box borderRadius="50%" />
+```

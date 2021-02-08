@@ -1,0 +1,39 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+import CheckboxBasic from './index';
+
+<Title>Basic checkboxes</Title>
+<Subtitle>
+Checkboxes can be used to turn an option on or off.
+</Subtitle>
+
+### Import
+
+```js
+import Checkbox from 'qasir-ui/inputs/Checkbox';
+```
+
+### Usage
+
+<CheckboxBasic />
+
+
+```jsx
+const CheckboxBasic = () => {
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
+  return (
+    <Checkbox
+      checked={checked}
+      onChange={handleChange}
+      color="primary"
+      inputProps={{ 'aria-label': 'primary checkbox' }}
+    />
+  );
+};
+
+export default CheckboxBasic;
+```

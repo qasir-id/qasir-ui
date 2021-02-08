@@ -1,44 +1,66 @@
-# Qasir UI
+<p align="center">
+  <a href="https://qasir-ui.qasir.xyz/" rel="noopener" target="_blank">
+  <span style="color: #F04B32;
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase; margin-right: 10px">Qasir</span>
+    <span style="color: #474955;
+    font-weight: 300; font-size: 4rem;">UI</span>
+  </a>
+</p>
 
-CRA, Material-UI & Qasir-UI based boilerplate with:
+<div align="center">
 
-- `@material-ui/core`
-- `react-scripts`
-- `@storybook/react`
-- `storybook-addon-material-ui`
+Quickly build beautiful [React](https://reactjs.org/) apps. Qasir User Interface Kit provides you with guidelines, components and templates to boost the user experience of your products. Start with [Qasir UI](https://qasir-ui.qasir.xyz/?path=/docs/getting-started-intro--page).
 
-## How to use
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/qasir-id/qasir-ui/blob/master/LICENSE)
+[![npm latest package](https://img.shields.io/npm/v/qasir-ui/latest.svg)](https://www.npmjs.com/package/qasir-ui)
+[![npm downloads](https://img.shields.io/npm/dm/qasir-ui)](https://www.npmjs.com/package/qasir-ui)
+
+</div>
+
+## Installation
+
+Qasir UI is available as an [npm package](https://www.npmjs.com/package/qasir-ui).
 
 ```sh
-git clone https://github.com/react-theming/create-material-ui-app.git
-cd create-material-ui-app
-yarn # select @storybook/react version when prompted
-yarn storybook
+// with npm
+npm install qasir-ui
+
+// with yarn
+yarn add qasir-ui
 ```
 
-open http://localhost:9009 in your browser
+## Usage
 
-it's your Storybook with Material-UI components
+Here is a quick example to get you started, **it's all you need**:
 
-Start writing new stories from `src/stories/index.js` file.
-Create your app as an usual CRA app.
+```jsx
+// Import vendors
+import * as React from 'react';
+import ReactDOM from 'react-dom';
 
-## Notes about this boilerplate
+// Import the Button component
+import Button from 'qasir-ui/inputs/Button';
 
-Create Material-UI App is built on top of [Create React App](https://github.com/facebook/create-react-app), which means all features that create-react-app supports are available.
+function App() {
+  return <Button variant="contained">Hello World</Button>;
+}
 
-We recommend sticking with this boilerplate for new projects since we trying to keep here the newest stable configuration.
+ReactDOM.render(<App />, document.querySelector('#app'));
+```
 
-## CONTRIBUTING
+## Documentation
 
-Any feature requests, issues, PRs to this project are very welcome!
+Check out our [documentation website](https://qasir-ui.qasir.xyz/).
 
-#### Credits
+## Changelog
 
-[telegram:@usulpro](https://t.me/usulpro)
+If you have recently updated, please read the [changelog](https://github.com/qasir-id/qasir-ui/releases) for details of what has changed.
 
-[![@UsulPro](https://img.shields.io/badge/github-UsulPro-blue.svg)](https://github.com/UsulPro)
+## License
 
-[![@react-theming](https://img.shields.io/badge/github-React%20Theming-red.svg)](https://github.com/react-theming)
-
-**anonymous [survey](https://app.qpointsurvey.com/s.aspx?c=F2VOSpTXOlnHHqMaZKSSV5a1ylaCDoRfhut3oNCox34~) to collect feedback about this project**
+This project is licensed under the terms of the
+[MIT license](/LICENSE).

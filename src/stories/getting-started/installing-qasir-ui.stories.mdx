@@ -1,0 +1,59 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { TabsState } from '@storybook/components';
+
+<Meta title="Getting Started/Installing Qasir-UI" 
+  parameters={{  
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Installing Qasir-UI</Title>
+<Subtitle>Qasir-UI provides developers with React.js components, css, html and assets.</Subtitle>
+
+### 1. Create boilerplate project
+
+<p>To kickstart your new project with the Kit, we do recommend to generate a boilerplate React app with</p>
+
+<ul>
+  <li>
+    <p>
+      <a target="_blank" href="https://create-react-app.dev/" class="link">create-react-app</a> tool you will be provided with a solid build setup with zero effort (that is, no configuration needed on your part).
+    </p>    
+  </li>
+  <li>
+    <p>
+      <a target="_blank" href="https://nextjs.org/" class="link">Next.js</a> gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
+    </p>
+  </li>
+  <li>
+    <p>
+      <a target="_blank" href="https://fe-qasir.gitbook.io/qiblat-documentation/" class="link">Qiblat</a> is a Qasir's Frontend Framework has been designed to provide you the lifecycle of developing the front-end app. All features extended & advanced customize from Next.js
+    </p>
+  </li>
+</ul>
+
+### 2. Add the Kit as a dependency
+
+<p>The next step is to add the Kit to your project as a dependancy. You can choose to install it through <code>npm</code> or <code>yarn</code>: they are both valid package managers and we don't want to recommend one over the other, but once you pick your favourite tool, simply stick with it and avoid using them simultaneously.</p>
+
+<p>To install and save in your package.json dependencies, run:</p>
+
+<TabsState initial="npm">
+  <div id="npm" title="NPM"><div>
+
+```sh
+npm i qasir-ui
+```
+
+  </div></div>
+  <div id="yarn" title="YARN"><div>
+
+```sh
+yarn add qasir-ui
+```
+
+  </div></div>  
+</TabsState>

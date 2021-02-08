@@ -1,0 +1,51 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+<Meta title="Components/Inputs/Select/README" />
+
+<Title>Select</Title>
+<Subtitle>Select components are used for collecting user provided information from a list of options.</Subtitle>
+
+### Import
+
+```jsx
+import FormControl from '@material-ui/core/FormControl';
+import MenuItem from '@material-ui/core/MenuItem';
+
+import Select from 'qasir-ui/inputs/Select';
+import InputLabel from 'qasir-ui/inputs/InputLabel';
+```
+
+### Usage
+
+```jsx
+<FormControl variant="outlined" style={{ minWidth: 150 }}>
+  <InputLabel>Simple Select</InputLabel>
+  <Select
+    label="Simple Select"
+    inputProps={{
+      name: 'simple-select',
+    }}
+  >
+    <MenuItem value="">
+      <em>None</em>
+    </MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
+</FormControl>
+```
+
+### Props
+
+<IFrame url="https://material-ui.com/api/select/#props" height="80%" defaultCollapsed />
+
+### Design
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=3894%3A468"
+  height="50%"
+  defaultCollapsed
+/>

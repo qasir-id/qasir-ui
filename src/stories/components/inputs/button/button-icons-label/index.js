@@ -9,26 +9,46 @@ import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
 import SaveIcon from '@material-ui/icons/Save';
 
 // Components
-import Button from 'components/inputs/button';
+import Button from 'components/inputs/Button';
+
+export const ButtonPrimaryStartIcon = (props) => (
+  <Button variant="contained" color="primary" startIcon={<DeleteIcon />} {...props}>
+    Delete
+  </Button>
+);
+
+export const ButtonSecondaryEndIcon = (props) => (
+  <Button variant="contained" color="secondary" endIcon={<SendIcon />} {...props}>
+    Send
+  </Button>
+);
+
+export const ButtonDisableStartIcon = (props) => (
+  <Button variant="contained" disabled startIcon={<CloudUploadIcon />} {...props}>
+    Upload
+  </Button>
+);
+
+export const ButtonOutlineStartIcon = (props) => (
+  <Button variant="outlined" startIcon={<KeyboardVoiceIcon />} {...props}>
+    Talk
+  </Button>
+);
+
+export const ButtonTextStartIcon = (props) => (
+  <Button variant="text" startIcon={<SaveIcon />} {...props}>
+    Save
+  </Button>
+);
 
 const ButtonIconsLabel = () => {
   return (
     <>
-      <Button variant="contained" color="primary" startIcon={<DeleteIcon />}>
-        Delete
-      </Button>
-      <Button variant="contained" color="secondary" endIcon={<SendIcon />}>
-        Send
-      </Button>
-      <Button variant="contained" disabled startIcon={<CloudUploadIcon />}>
-        Upload
-      </Button>
-      <Button variant="outlined" startIcon={<KeyboardVoiceIcon />}>
-        Talk
-      </Button>
-      <Button variant="text" startIcon={<SaveIcon />}>
-        Save
-      </Button>
+      {ButtonPrimaryStartIcon()}
+      {ButtonSecondaryEndIcon()}
+      {ButtonDisableStartIcon()}
+      {ButtonOutlineStartIcon()}
+      {ButtonTextStartIcon()}
     </>
   );
 };

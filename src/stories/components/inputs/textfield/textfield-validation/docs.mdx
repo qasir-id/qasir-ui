@@ -1,0 +1,25 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {TextFieldValidationError, TextFieldValidationErrorHelperText} from './index';
+
+<Title>Validation</Title>
+<Subtitle>The <code>error</code> prop toggles the error state, the <code>helperText</code> prop can then be used to provide feedback to the user about the error.</Subtitle>
+
+### Import
+
+```jsx
+import TextField from 'qasir-ui/inputs/TextField';
+```
+
+### Usage
+
+<TextFieldValidationError style={{marginTop: 20}} />
+
+```jsx
+<TextField error label="Error" defaultValue="Hello World" variant="outlined" />
+```
+
+<TextFieldValidationErrorHelperText />
+
+```jsx
+<TextField error label="Error" defaultValue="Hello World" helperText="Incorrect entry." variant="outlined" />
+```

@@ -1,0 +1,572 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import colors from 'components/variables/colors';
+
+<Meta title="Documentation/Core/Colours" 
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Colours</Title>
+<Subtitle>At Qasir, colors play an important role when we are working with a product, a service or a space. The right combination of colors can influence how users feel, think, and behave.</Subtitle>
+
+### Principles
+
+<ul>
+    <li>
+        <b>Hierarchical</b>
+        <p>Color indicates which elements are interactive, how they relate to other elements, and their level of prominence. Important elements should stand out the most.</p>
+    </li>
+    <li>
+        <b>Legible</b>
+        <p>Text and important elements, like icons, should meet legibility standards when appearing on colored backgrounds.</p>
+    </li>
+    <li>
+        <b>Expressive</b>
+        <p>Show brand colors at memorable moments that reinforce your brand’s style.</p>
+    </li>
+</ul>
+
+### Primary Color
+
+<p>Qasir color palette has been created to reflect the spirit of our brand. Red is used across all our communication as an essential element of branding. Black is used primarily for body text and headings, and White & Grey is used for screen backgrounds and negative space.</p>
+
+<div style={{display: 'flex'}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Red50</span>
+            <span style={{display: 'block', color: colors.white}}>#F04B32</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Black90</span>
+            <span style={{display: 'block', color: colors.white}}>#474955</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', border: `1px solid ${colors.black90}`}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>White</span>
+            <span style={{display: 'block', color: colors.black90}}>#FFFFFF</span>
+        </div>
+    </div>
+</div>
+
+### Secondary Color
+
+<p>Secondary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </p>
+
+<div style={{display: 'flex'}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Black50</span>
+            <span style={{display: 'block', color: colors.white}}>#737580</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Black30</span>
+            <span style={{display: 'block', color: colors.white}}>#B0B2BB</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey70</span>
+            <span style={{display: 'block', color: colors.black90}}>#DADCE5</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey50</span>
+            <span style={{display: 'block', color: colors.black90}}>#E9EBEF</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey30</span>
+            <span style={{display: 'block', color: colors.black90}}>#F2F4F7</span>
+        </div>
+    </div>
+</div>
+
+### Tertiary Color
+
+<p>Tertiary color provides more ways to accent and distinguish our product. Each color is selected with purpose in order to provide meaningful feedback within our products. </p>
+
+<div style={{display: 'flex'}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Orange50</span>
+            <span style={{display: 'block', color: colors.white}}>#FFA000</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.blue50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Blue50</span>
+            <span style={{display: 'block', color: colors.white}}>#4F94FC</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.green50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Green50</span>
+            <span style={{display: 'block', color: colors.white}}>#33CC59</span>
+        </div>
+    </div>
+</div>
+
+### Shades & Tint
+
+<p>We intend for tints and shades to be ever evolving, offering an endless palette to choose from. Usage of these colors varies depending on scenarios, but they come in handy for components in our products.</p>
+
+<div style={{display: 'flex'}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Red90</span>
+            <span style={{display: 'block', color: colors.white}}>#84291B</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Red70</span>
+            <span style={{display: 'block', color: colors.white}}>#C03C28</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Red50</span>
+            <span style={{display: 'block', color: colors.white}}>#F04B32</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Red30</span>
+            <span style={{display: 'block', color: colors.black90}}>#F79C8E</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.red10}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Red10</span>
+            <span style={{display: 'block', color: colors.black90}}>#FBC9C1</span>
+        </div>
+    </div>
+</div>
+
+<div style={{display: 'flex', marginTop: 20}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Black90</span>
+            <span style={{display: 'block', color: colors.white}}>#474955</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Black70</span>
+            <span style={{display: 'block', color: colors.white}}>#5C5E66</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Black50</span>
+            <span style={{display: 'block', color: colors.white}}>#737580</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Black30</span>
+            <span style={{display: 'block', color: colors.black90}}>#B0B2BB</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.black10}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Black10</span>
+            <span style={{display: 'block', color: colors.black90}}>#D5D6D9</span>
+        </div>
+    </div>
+</div>
+
+<div style={{display: 'flex', marginTop: 20}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Orange90</span>
+            <span style={{display: 'block', color: colors.white}}>#8C5800</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Orange70</span>
+            <span style={{display: 'block', color: colors.white}}>#CC8000</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Orange50</span>
+            <span style={{display: 'block', color: colors.white}}>#FFA000</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Orange30</span>
+            <span style={{display: 'block', color: colors.black90}}>#FFCB73</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.orange10}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Orange10</span>
+            <span style={{display: 'block', color: colors.black90}}>#FFE3B2</span>
+        </div>
+    </div>
+</div>
+
+<div style={{display: 'flex', marginTop: 20}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.blue90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Blue90</span>
+            <span style={{display: 'block', color: colors.white}}>#2B518B</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.blue70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Blue70</span>
+            <span style={{display: 'block', color: colors.white}}>#3F76CA</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.blue50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Blue50</span>
+            <span style={{display: 'block', color: colors.white}}>#4F94FC</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.blue30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Blue30</span>
+            <span style={{display: 'block', color: colors.black90}}>#9EC4FD</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.blue10}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Blue10</span>
+            <span style={{display: 'block', color: colors.black90}}>#CADFFE</span>
+        </div>
+    </div>
+</div>
+
+<div style={{display: 'flex', marginTop: 20}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.green90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Green90</span>
+            <span style={{display: 'block', color: colors.white}}>#1C7031</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.green70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.white, marginBottom: 5}}>Green70</span>
+            <span style={{display: 'block', color: colors.white}}>#29A347</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.green50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Green50</span>
+            <span style={{display: 'block', color: colors.black90}}>#33CC59</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.green30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Green30</span>
+            <span style={{display: 'block', color: colors.black90}}>#8FE3A4</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.green10}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Green10</span>
+            <span style={{display: 'block', color: colors.black90}}>#C2F0CD</span>
+        </div>
+    </div>
+</div>
+
+<div style={{display: 'flex', marginTop: 20}}>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey90}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey90</span>
+            <span style={{display: 'block', color: colors.black90}}>#CFD1DA</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey70}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey70</span>
+            <span style={{display: 'block', color: colors.black90}}>#DADCE5</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey50}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey50</span>
+            <span style={{display: 'block', color: colors.black90}}>#E9EBEF</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey30}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey30</span>
+            <span style={{display: 'block', color: colors.black90}}>#F2F4F7</span>
+        </div>
+    </div>
+    <div style={{width: 150, height: 150, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.grey10}}>
+        <div style={{textAlign: 'center'}}>
+            <span style={{display: 'block', color: colors.black90, marginBottom: 5}}>Grey10</span>
+            <span style={{display: 'block', color: colors.black90}}>#FBFCFD</span>
+        </div>
+    </div>
+</div>
+
+### Color Usage
+
+<p>Colors in Qasirapp are used sparingly to draw attention to important elements and those that we want the user to take action on, this maintains visual hierarchy. Also certain colors have inherent meaning for a large majority of users. For example, we use shade of red to communicate an error, this helps to communicate visually. Following is a set of specific guidelines for when and how to use each color in our palette.</p>
+
+<h4 style={{marginTop: 20}}>Divider</h4>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
+    <thead>
+        <tr>
+            <th style={{textAlign: 'center', width: '1%'}}>Color</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.grey50}}></div>
+            </td>
+            <td>Grey50</td>
+            <td>#E9EBEF</td>
+            <td>General Divider, Line Divider</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 style={{marginTop: 30}}>Background</h4>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
+    <thead>
+        <tr>
+            <th style={{textAlign: 'center', width: '1%'}}>Color</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, border: '1px solid #DADCE5'}}></div>
+            </td>
+            <td>White</td>
+            <td>#FFFFFF</td>
+            <td>Main color for mobile phone/tablet/ios and Web Backround</td>
+        </tr>
+        <tr style={{backgroundColor: '#FFFFFF'}}>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.grey30}}></div>
+            </td>
+            <td>Grey30</td>
+            <td>#F2F4F7</td>
+            <td>Secondary color for web background</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 style={{marginTop: 30}}>Outline</h4>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
+    <thead>
+        <tr>
+            <th style={{textAlign: 'center', width: '1%'}}>Color</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.grey70}}></div>
+            </td>
+            <td>Grey70</td>
+            <td>#DADCE5</td>
+            <td>General Outline, Textfield Outline</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 style={{marginTop: 30}}>Button</h4>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
+    <thead>
+        <tr>
+            <th style={{textAlign: 'center', width: '1%'}}>Color</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.red50}}></div>
+            </td>
+            <td>Red50</td>
+            <td>#F04B32</td>
+            <td>Primary Button</td>
+        </tr>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.grey50}}></div>
+            </td>
+            <td>Grey50</td>
+            <td>#E9EBEF</td>
+            <td>Secondary Button</td>
+        </tr>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.black30}}></div>
+            </td>
+            <td>Black30</td>
+            <td>#DADCE5</td>
+            <td>Disable Button</td>
+        </tr>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.orange50}}></div>
+            </td>
+            <td>Orange50</td>
+            <td>#FFA000</td>
+            <td>Warning Button, Confirmation Button</td>
+        </tr>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.green50}}></div>
+            </td>
+            <td>Green50</td>
+            <td>#33CC59</td>
+            <td>Success Button, Positive Action</td>
+        </tr>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.red10}}></div>
+            </td>
+            <td>Red10</td>
+            <td>#FBC9C1</td>
+            <td>Selected Button</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 style={{marginTop: 30}}>Icon</h4>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
+    <thead>
+        <tr>
+            <th style={{textAlign: 'center', width: '1%'}}>Color</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.black50}}></div>
+            </td>
+            <td>Black50</td>
+            <td>#737580</td>
+            <td>Icon Enabled</td>
+        </tr>        
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.black30}}></div>
+            </td>
+            <td>Black30</td>
+            <td>#DADCE5</td>
+            <td>Icon Disabled</td>
+        </tr>        
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.red50}}></div>
+            </td>
+            <td>Red50</td>
+            <td>#F04B32</td>
+            <td>Icon Active</td>
+        </tr>        
+    </tbody>
+</table>
+
+<h4 style={{marginTop: 30}}>Text</h4>
+<table style={{border: '1px solid #EEF0F2', width: '100%', fontSize: 14, color: 'rgba(51,51,51,0.75)'}}>
+    <thead>
+        <tr>
+            <th style={{textAlign: 'center', width: '1%'}}>Color</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.black90}}></div>
+            </td>
+            <td>Black90</td>
+            <td>#474955</td>
+            <td>Main Text Color for Title, Header, SubHeader, Body, Textfield, Secondary Button</td>
+        </tr>        
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.black50}}></div>
+            </td>
+            <td>Black50</td>
+            <td>#737580</td>
+            <td>Secondary Text Color for Body</td>
+        </tr>        
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.black30}}></div>
+            </td>
+            <td>Black30</td>
+            <td>#B0B2BB</td>
+            <td>Caption, Placeholder Text</td>
+        </tr>        
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.white, border: '1px solid #DADCE5'}}></div>
+            </td>
+            <td>White</td>
+            <td>#FFFFFF</td>
+            <td>Primary/Disable button, or in Dark Background</td>
+        </tr>     
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.red50}}></div>
+            </td>
+            <td>Red50</td>
+            <td>#F04B32</td>
+            <td>Error caption, Link, Kas Negative Statement</td>
+        </tr>     
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.red50}}></div>
+            </td>
+            <td>Orange50</td>
+            <td>#FFA000</td>
+            <td>Warning Caption, Low Stock Caption</td>
+        </tr>     
+        <tr>
+            <td>
+                <div style={{width: 40, height: 40, backgroundColor: colors.green50}}></div>
+            </td>
+            <td>Green50</td>
+            <td>#33CC59</td>
+            <td>Success State, Positive Statement, Caption</td>
+        </tr>   
+    </tbody>
+</table>
+
+### Full documentation
+
+<a class="link" target="_blank" href="https://material.io/design/color/the-color-system.html">https://material.io/design/color/the-color-system.html</a>

@@ -1,0 +1,56 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import ChipsArray from './index';
+import dedent from 'ts-dedent';
+
+<Title>Chips Array</Title>
+
+<Subtitle>
+An example of rendering multiple Chips from an array of values. Deleting a chip removes it from the array. Note that since no <code>onClick</code> property is defined, the Chip can be focused, but does not gain depth while clicked or touched.
+</Subtitle>
+
+
+
+### Import
+```js
+import Chip from 'qasir-ui/data-display/Chip';
+```
+
+### Usage
+
+<ChipsArray style={{margin: 5}}/>
+
+
+```js
+export default function ChipsArray() {
+  const [chipData, setChipData] = React.useState([
+      { key: 0, label: 'Imam' },
+      { key: 1, label: 'Ngadiono' },
+      { key: 2, label: 'Harry' },
+      { key: 3, label: 'Adi' },
+      { key: 4, label: 'Shendy' },
+      { key: 5, label: 'Ridho' },
+  ]);
+
+
+  const handleDelete = (chipToDelete) => () => {
+    setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
+  };
+
+
+  return (
+    <>
+      {chipData.map((data) => {
+        return (
+          <span key={data.key}>
+            <Chip
+              color="primary"
+              label={data.label}
+              onDelete={data.label === 'Imam' ? undefined : handleDelete(data)}
+            />
+          </span>
+        );
+      })}
+    </>
+  );
+};
+```

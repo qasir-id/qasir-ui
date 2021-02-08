@@ -1,0 +1,99 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Core/Navigation"
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Navigation</Title>
+<Subtitle>Navigation enables users to move through an app.</Subtitle>
+
+### Types of navigation
+<p>Navigation is the act of moving between screens of an app to complete tasks. It’s enabled through several means: dedicated navigation components, embedding navigation behavior into content, and platform affordances.</p>
+
+<ul>
+  <li>
+    <h4>Navigational directions</h4>
+    <p>Based on your app’s information architecture, a user can move in one of three navigational directions:</p>
+    <ul>
+      <li>
+        <b>Lateral navigation</b> refers to moving between screens at the same level of hierarchy. An app’s primary navigation component should provide access to all destinations at the top level of its hierarchy.
+      </li>
+      <li>
+        <b>Forward navigation</b> refers to moving between screens at consecutive levels of hierarchy, steps in a flow, or across an app. Forward navigation embeds navigation behavior into containers (such as cards, lists, or images), buttons, links, or by using search.
+      </li>
+      <li>
+        <b>Reverse navigation</b> refers to moving backwards through screens either chronologically (within one app or across different apps) or hierarchically (within an app). Platform conventions determine the exact behavior of reverse navigation within an app.
+      </li>
+    </ul>
+  </li>    
+</ul>
+
+### Lateral navigation
+<p>Lateral navigation refers to movement between screens at the same level of hierarchy. It enables access to different app destinations and features, or pivoting between related items in a set.</p>
+
+<ul>
+  <li>
+    <h4>Destinations and hierarchy</h4>
+<p>An app's primary navigation component should provide access to all destinations at the top level of its hierarchy. Apps with two or more top-level destinations can provide lateral navigation through a navigation drawer, bottom navigation bar, or tabs.</p>
+
+<table class="mdc-data-table__table"><thead><tr class="mdc-data-table__header-row">
+<th class="mdc-data-table__header-cell">Component</th>
+<th class="mdc-data-table__header-cell">Use for</th>
+<th class="mdc-data-table__header-cell"># destinations</th>
+<th class="mdc-data-table__header-cell">Devices</th>
+</tr>
+</thead><tbody class="mdc-data-table__content"><tr class="mdc-data-table__row">
+<td class="mdc-data-table__cell">Navigation drawer</td>
+<td class="mdc-data-table__cell">Top-level destinations</td>
+<td class="mdc-data-table__cell">5+</td>
+<td class="mdc-data-table__cell">Mobile, Tablet, Desktop</td>
+</tr>
+<tr class="mdc-data-table__row">
+<td class="mdc-data-table__cell">Bottom navigation bar</td>
+<td class="mdc-data-table__cell">Top-level destinations</td>
+<td class="mdc-data-table__cell">3-5</td>
+<td class="mdc-data-table__cell">Mobile</td>
+</tr>
+<tr class="mdc-data-table__row">
+<td class="mdc-data-table__cell">Tabs</td>
+<td class="mdc-data-table__cell">Any level of hierarchy</td>
+<td class="mdc-data-table__cell">2+</td>
+<td class="mdc-data-table__cell">Mobile, Tablet, Desktop</td>
+</tr>
+</tbody></table>
+  </li>    
+</ul>
+
+### Forward navigation
+<p>Forward navigation refers to one of three types of movement between screens to complete a task:</p>
+
+<ul>
+<li><strong>Downward</strong> in an app's hierarchy to access deeper content, from a <strong>parent</strong> screen (higher level of hierarchy) to a <strong>child</strong> screen (lower level)</li>
+<li><strong>Sequentially</strong> through a <strong>flow</strong>, or an ordered sequence of screens, such as a checkout process</li>
+<li><strong>Directly</strong> from one screen to any other in the app, such as from a home screen to a screen deep in an app's hierarchy</li>
+</ul>
+
+### Reverse navigation
+<p>Reverse navigation refers to backward movement between screens. It can move users chronologically through their recent screen history, or upwards through an app's hierarchy.</p>
+
+<ul>
+  <li>
+    <h4>Reverse chronological navigation</h4>
+    <p>Reverse chronological navigation refers to navigating in reverse order through a user's history of recently viewed screens. It can move users between screens within an app or across multiple apps. For example, the Back button on a web browser is a form of reverse chronological navigation.</p>
+    <p>This type of navigation is typically provided by the operating system or platform. Individual platforms define how it behaves and how users can access that functionality.</p>
+  </li>
+  <li>
+    <h4>Upward navigation</h4>
+    <p>Upward navigation allows users to navigate one level upwards within a single app's hierarchy, until the app's home or top-level screen is reached. For example, the Up arrow in a top app bar is a form of upwards reverse navigation.</p>
+    <p>Upward navigation should be implemented for all child screens in an app and follow platform guidance. Android and web apps should use the Material Up action, while iOS apps should use the back button within an iOS Navigation Bar.</p>
+  </li>
+</ul>
+
+### Full documentation
+
+<a class="link" target="_blank" href="https://material.io/design/navigation/understanding-navigation.html">https://material.io/design/navigation/understanding-navigation.html</a>

@@ -1,0 +1,50 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import CustomChip from './index'
+
+<Title>Custom Chip</Title>
+
+<Subtitle>
+Override Font Color and Background Color to the component. Check below for more details.
+</Subtitle>
+
+
+
+### Import
+```js
+import Chip from 'qasir-ui/data-display/Chip';
+```
+
+### Usage
+
+<CustomChip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
+
+
+```jsx
+<Chip customBackground="#FFFF00" customFont="#008000" label="Custom Color"/>
+```
+
+### Props
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+
+  </tr>
+  <tr>
+    <td>customBackground</td>
+    <td>String</td>
+    <td>The background color of the component. It supports those theme colors that make sense for this component.</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>customFont</td>
+    <td>String</td>
+    <td>The font color of the component. It supports those theme colors that make sense for this component.</td>
+    <td>-</td>
+  </tr>
+</table>
+
+

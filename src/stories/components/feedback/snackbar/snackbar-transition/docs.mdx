@@ -1,0 +1,79 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import SnackbarTransition from './index';
+
+<Title>Transition snackbars</Title>
+
+<Subtitle>
+Grow is the default transition but you can use a different one.
+</Subtitle>
+
+### Import
+```js
+// Vendors
+import React from 'react';
+
+// Qasir UI
+import Button from 'qasir-ui/inputs/Button';
+import Snackbar from 'qasir-ui/feedback/Snackbar';
+import Fade from 'qasir-ui/utils/Fade';
+import Slide from 'qasir-ui/utils/Slide';
+import Grow from 'qasir-ui/utils/Grow';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<SnackbarTransition/>
+
+```jsx
+function SlideTransition(props) {
+  return <Slide {...props} direction="up" />;
+}
+
+function GrowTransition(props) {
+  return <Grow {...props} />;
+}
+
+const SnackbarTransition = (props) => {
+  const [state, setState] = React.useState({
+    open: false,
+    Transition: Fade,
+  });
+
+  const handleClick = (Transition) => () => {
+    setState({
+      open: true,
+      Transition,
+    });
+  };
+
+  const handleClose = () => {
+    setState({
+      ...state,
+      open: false,
+    });
+  };
+
+  return (
+    <div>
+      <Button onClick={handleClick(GrowTransition)} variant="outlined">
+        Grow Transition
+      </Button>
+      <Button onClick={handleClick(Fade)} variant="outlined">
+        Fade Transition
+      </Button>
+      <Button onClick={handleClick(SlideTransition)} variant="outlined">
+        Slide Transition
+      </Button>
+      <Snackbar
+        open={state.open}
+        onClose={handleClose}
+        TransitionComponent={state.Transition}
+        message="I love snacks"
+        key={state.Transition.name}
+      />
+    </div>
+  );
+};
+
+export default SnackbarTransition;
+```

@@ -1,0 +1,30 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import BoxPositions from './index';
+
+<Title>Positions</Title>
+<Subtitle>Use these shorthand utilities for quickly configuring the position of an element.</Subtitle>
+
+### Import
+
+```jsx
+import Box from 'qasir-ui/layout/Box';
+```
+
+### Usage
+
+<BoxPositions />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ height: 100, width: '100%', position: 'relative' }}>
+      <Box bgcolor="#c0d7e8" p={2} position="absolute" top={40} left="40%" zIndex="100">
+        z-index 100
+      </Box>
+      <Box bgcolor="#cfe8fc" p={2} position="absolute" top={0} left="43%" zIndex="200">
+        z-index 200
+      </Box>
+    </div>
+  `}
+/>

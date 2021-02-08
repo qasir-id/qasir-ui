@@ -1,26 +1,43 @@
-import { Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {ButtonPrimary, ButtonSecondary, ButtonDisable, ButtonOutline, ButtonText} from './index';
 
-# Type Buttons
+<Title>Type Buttons</Title>
+<Subtitle>There are text, contained, and toggle buttons. Text buttons are typically used for less important actions.</Subtitle>
 
-<Subtitle>
-  There are text, contained, and toggle buttons. Text buttons are typically used for less important actions.
-</Subtitle>
-<Preview withSource="none">
-  <Story id="components-inputs-button-example--types" />
-</Preview>
+### Import
 
-```js
-import Button from 'qasir-ui/components/input/button';
+```jsx
+import Button from 'qasir-ui/inputs/Button';
 ```
 
-```html
+### Usage
+
+<ButtonPrimary style={{marginTop: 20}} />
+
+```jsx
 <Button variant="contained" color="primary">Primary</Button>
+```
 
+<ButtonSecondary />
+
+```jsx
 <Button variant="contained" color="secondary">Secondary</Button>
+```
 
+<ButtonDisable />
+
+```jsx
 <Button variant="contained" disabled>Disable</Button>
+```
 
+<ButtonOutline />
+
+```jsx
 <Button variant="outlined">Outline</Button>
+```
 
+<ButtonText />
+
+```jsx
 <Button variant="text">Text</Button>
 ```

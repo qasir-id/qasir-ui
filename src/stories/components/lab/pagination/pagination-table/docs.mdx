@@ -1,0 +1,44 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import TablePaginationComponent from './index'
+
+<Meta title="Components/Lab/Table Pagination" />
+
+<Title> Table Pagination </Title>
+<Subtitle>
+The Pagination component was designed to paginate a list of arbitrary items when infinite loading isn't used. It's preferred in contexts where SEO is important, for instance, a blog.
+For the pagination of a large set of tabular data, you should use the TablePagination component.
+</Subtitle>
+
+### Import 
+
+```js
+import TablePagination from 'qasir-ui/lab/TablePagination';
+```
+
+### Usage
+
+<TablePaginationComponent />
+
+```jsx
+<TablePagination
+  component="div"
+  count={100}
+  page={page}
+  onChangePage={handleChangePage}
+  rowsPerPage={rowsPerPage}
+  onChangeRowsPerPage={handleChangeRowsPerPage}
+/>
+```
+
+### Props
+
+<IFrame url="https://material-ui.com/api/table-pagination/#props" height="80%" defaultCollapsed />
+
+### Design
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
+  height="50%"
+  defaultCollapsed
+/>

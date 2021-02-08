@@ -1,0 +1,107 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import {BoxTypographyTextAlignment, BoxTypographyFontWeight, BoxTypographyFontSize, 
+BoxTypographyFontStyle, BoxTypographyFontFamily, BoxTypographyLetterSpacing, BoxTypographyLineHeight} from './index';
+
+<Title>Typography</Title>
+<Subtitle>Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.</Subtitle>
+
+### Import
+
+```jsx
+import Box from 'qasir-ui/layout/Box';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<BoxTypographyTextAlignment />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box textAlign="justify" m={1}>
+        Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed
+        odio operae, eu vulputate felis rhoncus.
+      </Box>
+      <Box textAlign="left" m={1}>
+        Left aligned text.
+      </Box>
+      <Box textAlign="center" m={1}>
+        Center aligned text.
+      </Box>
+      <Box textAlign="right" m={1}>
+        Right aligned text.
+      </Box>
+  `}
+/>
+
+<BoxTypographyFontWeight />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box fontWeight={700}>Bold</Box>
+  `}
+/>
+
+<BoxTypographyFontSize />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box fontSize={14}>Font size 14</Box>
+  `}
+/>
+
+<BoxTypographyFontStyle />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box fontStyle="normal" m={1}>
+      Normal font style.
+    </Box>
+    <Box fontStyle="italic" m={1}>
+      Italic font Style.
+    </Box>
+  `}
+/>
+
+<BoxTypographyFontFamily />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box fontFamily="fontFamily" m={1}>
+      Default
+    </Box>
+    <Box fontFamily="Monospace" m={1}>
+      Monospace
+    </Box>
+  `}
+/>
+
+<BoxTypographyLetterSpacing />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box letterSpacing={6} m={1}>
+      Letter Spacing 6px.
+    </Box>
+  `}
+/>
+
+<BoxTypographyLineHeight />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box lineHeight="normal" m={1}>
+      Normal height.
+    </Box>
+    <Box lineHeight={2} m={1}>
+      line-height: 2
+    </Box>
+  `}
+/>

@@ -1,0 +1,63 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {TextFieldFormPropsText, TextFieldFormPropsRequired, TextFieldFormPropsDisabled, TextFieldFormPropsPassword, TextFieldFormPropsReadonly, TextFieldFormPropsNumber, 
+  TextFieldFormPropsSearch, TextFieldFormPropsHelpertext
+} from './index';
+
+<Title>Form Props</Title>
+<Subtitle>Standard form attributes are supported e.g. <code>required</code>, <code>disabled</code>, type, etc. as well as a <code>helperText</code> which is used to give context about a field’s input, such as how the input will be used.</Subtitle>
+
+### Import
+
+```jsx
+import TextField from 'qasir-ui/inputs/TextField';
+```
+
+# Usage
+
+<TextFieldFormPropsText style={{marginTop: 20}} />
+
+```jsx
+<TextField type="text" label="Text" defaultValue="Hello World" variant="outlined" />
+```
+
+<TextFieldFormPropsRequired />
+
+```jsx
+<TextField required label="Required*" defaultValue="Hello World" variant="outlined" />
+```
+
+<TextFieldFormPropsDisabled />
+
+```jsx
+<TextField disabled defaultValue="Disabled" variant="outlined" labelWidth={0} />
+```
+
+<TextFieldFormPropsPassword />
+
+```jsx
+<TextField label="Password" type="password" autoComplete="current-password" variant="outlined" />
+```
+
+<TextFieldFormPropsReadonly />
+
+```jsx
+<TextField label="Read Only" defaultValue="Hello World" InputProps={{ readOnly: true }} variant="outlined" />
+```
+
+<TextFieldFormPropsNumber />
+
+```jsx
+<TextField label="Number" type="number" InputLabelProps={{ shrink: true }} variant="outlined" />
+```
+
+<TextFieldFormPropsSearch />
+
+```jsx
+<TextField label="Search field" type="search" variant="outlined" />
+```
+
+<TextFieldFormPropsHelpertext />
+
+```jsx
+<TextField label="Helper text" defaultValue="Hello World" helperText="Some important text" variant="outlined" />
+```

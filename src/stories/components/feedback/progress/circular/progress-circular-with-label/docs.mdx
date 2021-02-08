@@ -1,0 +1,64 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import ProgressCircularWithLabel from './index';
+
+<Title>Circular with label</Title>
+
+<Subtitle>
+Determinate indicators display how long an operation will take.
+</Subtitle>
+
+### Import
+```js
+// Vendors
+import React from 'react';
+
+// Qasir UI
+import CircularProgress from 'qasir-ui/feedback/CircularProgress';
+import Typography from 'qasir-ui/data-display/Typography';
+import Box from 'qasir-ui/layout/Box';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<ProgressCircularWithLabel/>
+
+```jsx
+function CircularProgressWithLabel(props) {
+  return (
+    <Box position="relative" display="inline-flex">
+      <CircularProgress variant="determinate" {...props} />
+      <Box
+        top={0}
+        left={0}
+        bottom={0}
+        right={0}
+        position="absolute"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Typography variant="caption" component="div" color="textSecondary">{`${Math.round(
+          props.value
+        )}%`}</Typography>
+      </Box>
+    </Box>
+  );
+}
+
+const ProgressCircularWithLabel = (props) => {
+  const [progress, setProgress] = React.useState(10);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+    }, 800);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  return <CircularProgressWithLabel value={progress} />;
+};
+
+export default ProgressCircularWithLabel;
+```

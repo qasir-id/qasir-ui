@@ -1,0 +1,54 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { IFrame } from 'storybook-addon-designs/esm/blocks';
+import { Badge, TabsState } from '@storybook/components';
+
+<Meta title="Components/Layout/Box" />
+
+<Title>Box</Title>
+<Subtitle>The Box component serves as a wrapper component for most of the CSS utility needs.</Subtitle>
+
+### Import
+
+```jsx
+import Box from 'qasir-ui/layout/Box';
+```
+
+### Usage
+
+```jsx
+<Box component="span" m={1}>
+  <Button />
+</Box>
+```
+
+### Props
+
+<TabsState initial="borders">
+  <div id="borders" title="Borders">
+      <IFrame url="https://material-ui.com/system/borders/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="display" title="Display">
+      <IFrame url="https://material-ui.com/system/display/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="flexbox" title="Flexbox">
+      <IFrame url="https://material-ui.com/system/flexbox/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="palette" title="Palette">
+      <IFrame url="https://material-ui.com/system/palette/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="positions" title="Positions">
+      <IFrame url="https://material-ui.com/system/positions/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="shadows" title="Shadows">
+      <IFrame url="https://material-ui.com/system/shadows/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="sizing" title="Sizing">
+      <IFrame url="https://material-ui.com/system/sizing/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="spacing" title="Spacing">
+      <IFrame url="https://material-ui.com/system/spacing/#api" height="80%" defaultCollapsed />
+  </div>
+  <div id="typography" title="Typography">
+      <IFrame url="https://material-ui.com/system/typography/#api" height="80%" defaultCollapsed />
+  </div>
+</TabsState>

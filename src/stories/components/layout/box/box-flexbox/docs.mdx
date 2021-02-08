@@ -1,0 +1,347 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import {BoxFlex, BoxFlexDirection, BoxFlexWrap, 
+BoxFlexJustifyContent, BoxFlexAlignItems, BoxFlexAlignContent, BoxFlexOrder, 
+BoxFlexGrow, BoxFlexShrink, BoxFlexAlignSelf} from './index';
+
+<Title>Flexbox</Title>
+<Subtitle>Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities.</Subtitle>
+
+### Import
+
+```jsx
+import Box from 'qasir-ui/layout/Box';
+```
+
+### Usage 
+
+### Properties for the Parent
+
+<BoxFlex />
+
+```jsx
+<Box display="flex">I'm a flexbox container!</Box>
+```
+
+<BoxFlexDirection />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" flexDirection="row" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+      </Box>
+      <Box display="flex" flexDirection="row-reverse" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexWrap />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" flexWrap="nowrap" css={{ maxWidth: 300 }} bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 4
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 5
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 6
+        </Box>
+      </Box>
+      <Box display="flex" flexWrap="wrap" css={{ maxWidth: 300 }} bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 4
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 5
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 6
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexJustifyContent />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" justifyContent="flex-start" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+      <Box display="flex" justifyContent="flex-end" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+      <Box display="flex" justifyContent="center" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexAlignItems />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" alignItems="flex-start" css={{ height: 100 }} bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+      <Box display="flex" alignItems="flex-end" css={{ height: 100 }} bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+      <Box display="flex" alignItems="center" css={{ height: 100 }} bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexAlignContent />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        alignContent="flex-start"
+        css={{ maxWidth: 300, height: 200 }}
+        bgcolor="#cfe8fc" mb={1} p={1}
+      >
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        alignContent="flex-end"
+        css={{ maxWidth: 300, height: 200 }}
+        bgcolor="#cfe8fc" mb={1} p={1}
+      >
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+### Properties for the Children
+
+<BoxFlexOrder />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} order={2} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} order={3} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} order={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexGrow />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} flexGrow={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexShrink />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} width="100%" bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} flexShrink={1} bgcolor="#c0d7e8">
+          Item 2
+        </Box>
+        <Box p={1} flexShrink={0} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+
+<BoxFlexAlignSelf />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <div style={{ width: '100%' }}>
+      <Box display="flex" alignItems="flex-start" css={{ height: 100 }} bgcolor="#cfe8fc" mb={1} p={1}>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 1
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8" alignSelf="flex-end">
+          Item 2
+        </Box>
+        <Box p={1} bgcolor="#c0d7e8">
+          Item 3
+        </Box>
+      </Box>
+    </div>
+  `}
+/>
+

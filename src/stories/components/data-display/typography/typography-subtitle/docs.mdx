@@ -1,0 +1,31 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {TypographySubtitle1, TypographySubtitle2, TypographySubtitle3} from './index';
+
+<Title>Subtitle</Title>
+<Subtitle>The tag h2 to h6 complements the list of tags used for titles. As these tags are sorted by levels it is correct to state that h2 should be used in a text more important than the h3 text and so on.</Subtitle>
+
+### Import
+
+```jsx
+import Typography from 'qasir-ui/data-display/Typography';
+```
+
+### Usage
+
+<TypographySubtitle1 style={{marginTop: 20}} />
+
+```jsx
+<Typography variant="subtitle1">Subtitle 1</Typography>
+```
+
+<TypographySubtitle2 />
+
+```jsx
+<Typography variant="subtitle2">Subtitle 2</Typography>
+```
+
+<TypographySubtitle3 />
+
+```jsx
+<Typography className="MuiTypography-subtitle3" component="h6">Subtitle 3</Typography>
+```

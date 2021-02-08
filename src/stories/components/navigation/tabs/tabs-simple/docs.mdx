@@ -1,0 +1,103 @@
+import { ArgsTable, Title, Subtitle, Meta } from '@storybook/addon-docs/blocks';
+import { Design, IFrame, Figma } from 'storybook-addon-designs/esm/blocks';
+import { Badge } from '@storybook/components';
+
+import SimpleTabs from './index';
+
+<Meta title="Components/Navigation/Tabs"/>
+
+
+<Title>Simple Tabs</Title>
+
+<Subtitle>Tabs make it easy to explore and switch between different views.
+</Subtitle>
+
+<SimpleTabs /> 
+
+
+### Import 
+```js
+import Box from '@material-ui/core/Box';
+
+import Typography from 'components/data-display/Typography';
+import Tabs from 'components/navigation/Tabs';
+import Tab from 'components/navigation/Tab';
+```
+
+```js
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+
+
+export default function SimpleTabs(props) {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <div>
+      <div>
+        <Tabs 
+        value={value} 
+        onChange={handleChange} 
+        aria-label="simple tabs example"
+        indicatorColor="primary"
+        textColor="primary"
+        TabIndicatorProps={{children: <div />}}
+        {...props}
+        >
+          <Tab label="All Products" {...a11yProps(0)} {...props} />
+          <Tab label="Categories" {...a11yProps(1)} {...props}/>
+        </Tabs>
+      </div>
+    </div>
+  );
+}
+
+
+```
+
+### Props
+
+<IFrame url="https://material-ui.com/api/tabs/#props" height="80%" defaultCollapsed />
+
+### Design
+
+<Figma
+  url="https://www.figma.com/file/gBOrYt3aAEcgk2QZDPrWKCIl/Qasir-Design-System?node-id=2409%3A861"
+  height="50%"
+  defaultCollapsed
+/>

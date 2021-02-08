@@ -1,0 +1,37 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import HiddenBreakpointUp from './index';
+
+<Title>Breakpoint Up</Title>
+<Subtitle>Using any breakpoint <code>up</code> property, the given <em>children</em> will be hidden <em>at or above</em> the breakpoint.</Subtitle>
+
+### Import
+
+```jsx
+import Hidden from 'qasir-ui/layout/Hidden';
+```
+
+### Usage
+
+<HiddenBreakpointUp />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Hidden xsUp>
+      <span>xsUp</span>
+    </Hidden>
+    <Hidden smUp>
+      <span>smUp</span>
+    </Hidden>
+    <Hidden mdUp>
+      <span>mdUp</span>
+    </Hidden>
+    <Hidden lgUp>
+      <span>lgUp</span>
+    </Hidden>
+    <Hidden xlUp>
+      <span>xlUp</span>
+    </Hidden>
+  `}
+/>

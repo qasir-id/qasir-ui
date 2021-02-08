@@ -1,0 +1,138 @@
+import { Title, Subtitle } from '@storybook/addon-docs/blocks';
+import {
+  OutlinedBasicChip, 
+  OutlinedDisabledChip, 
+  OutlinedAvatarChip,
+  OutlinedImageChip,
+  OutlinedIconChipClickable,
+  OutlinedCustomIconChip,
+  OutlinedClickableChipComp,
+  OutlinedPrimaryChip,
+  OutlinedPrimaryDeleteAble,
+  OutlinedPrimaryDelete,
+  OutlinedChipSecondary
+} from './index.js';
+
+<Title>Chip Props</Title>
+<Subtitle>Chips allow users to enter information, make selections, filter content, or trigger actions.
+While included here as a standalone component, the most common use will be in some form of input, so some of the behaviour demonstrated here is not shown in context.</Subtitle>
+
+### Import
+
+```js
+import Chip from 'qasir-ui/data-display/Chip';
+```
+
+### Usage
+
+<OutlinedBasicChip style={{marginTop: 20}} />
+
+```jsx
+<Chip label="Basic" />
+```
+
+<OutlinedDisabledChip />
+
+```jsx
+<Chip label="Disabled" disabled />
+```
+
+<OutlinedAvatarChip />
+
+```jsx
+<Chip 
+  avatar={<Avatar>M</Avatar>} 
+  label="Clickable" 
+  onClick={() => alert('clicked')}
+/>
+```
+
+<OutlinedImageChip />
+
+```jsx
+<Chip
+  avatar={<Avatar alt="Natacha" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" />}
+  label="Deletable"
+  onDelete={() => alert('deleted')}
+/>
+```
+
+<OutlinedIconChipClickable />
+
+```jsx
+<Chip
+  icon={<FaceIcon />}
+  label="Clickable deletable"
+  onClick={() => alert('clicked')}
+  onDelete={() => alert('deleted')}
+/>
+```
+
+<OutlinedCustomIconChip />
+
+```jsx
+<Chip
+  label="Custom delete icon"
+  onClick={() => alert('clicked')}
+  onDelete={() => alert('deleted')}
+  deleteIcon={<DoneIcon />}
+/>
+```
+
+<OutlinedClickableChipComp />
+
+```jsx
+<Chip 
+  label="Clickable Link" 
+  component="a" 
+  href="#chip" 
+  clickable 
+/>
+```
+
+<OutlinedPrimaryChip />
+
+```jsx
+<Chip
+  avatar={<Avatar>M</Avatar>}
+  label="Primary clickable"
+  clickable
+  color="primary"
+  onDelete={() => alert('deleted')}
+  deleteIcon={<DoneIcon />}
+/>
+```
+
+<OutlinedPrimaryDeleteAble />
+
+```jsx
+<Chip
+  icon={<FaceIcon />}
+  label="Primary clickable"
+  clickable
+  color="primary"
+  onDelete={() => alert('deleted')}
+  deleteIcon={<DoneIcon />}
+/>
+```
+
+<OutlinedPrimaryDelete />
+
+```jsx
+<Chip 
+  label="Deletable primary" 
+  onDelete={() => alert('deleted')} 
+  color="primary"
+/>
+```
+
+<OutlinedChipSecondary />
+
+```jsx
+<Chip
+  icon={<FaceIcon />}
+  label="Deletable secondary"
+  onDelete={() => alert('deleted')}
+  color="secondary"
+/>
+```

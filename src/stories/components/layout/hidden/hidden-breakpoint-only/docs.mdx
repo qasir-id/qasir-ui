@@ -1,0 +1,46 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import HiddenBreakpointUp from './index';
+
+<Title>Breakpoint only</Title>
+<Subtitle>Using the breakpoint <code>only</code> property, the given <em>children</em> will be hidden <em>at</em> the specified breakpoint(s).</Subtitle>
+
+<p>The <code>only</code> property can be used in two ways:</p>
+<ul>
+<li>list a single breakpoint</li>
+<li>list an array of breakpoints</li>
+</ul>
+
+### Import
+
+```jsx
+import Hidden from 'qasir-ui/layout/Hidden';
+```
+
+### Usage
+
+<HiddenBreakpointUp />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Hidden only="xs">
+        <span>Hidden on xs</span>
+      </Hidden>
+      <Hidden only="sm">
+        <span>Hidden on sm</span>
+      </Hidden>
+      <Hidden only="md">
+        <span>Hidden on md</span>
+      </Hidden>
+      <Hidden only="lg">
+        <span>Hidden on lg</span>
+      </Hidden>
+      <Hidden only="xl">
+        <span>Hidden on xl</span>
+      </Hidden>
+      <Hidden only={['sm', 'md']}>
+        <span>Hidden on sm and md</span>
+      </Hidden>
+  `}
+/>

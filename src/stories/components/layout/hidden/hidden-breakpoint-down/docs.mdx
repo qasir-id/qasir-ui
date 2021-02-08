@@ -1,0 +1,37 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import HiddenBreakpointDown from './index';
+
+<Title>Breakpoint Down</Title>
+<Subtitle>Using any breakpoint <code>Down</code> property, the given <em>children</em> will be hidden <em>at or below</em> the breakpoint.</Subtitle>
+
+### Import
+
+```jsx
+import Hidden from 'qasir-ui/layout/Hidden';
+```
+
+### Usage
+
+<HiddenBreakpointDown />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Hidden xsDown>
+      <span>xsDown</span>
+    </Hidden>
+    <Hidden smDown>
+      <span>smDown</span>
+    </Hidden>
+    <Hidden mdDown>
+      <span>mdDown</span>
+    </Hidden>
+    <Hidden lgDown>
+      <span>lgDown</span>
+    </Hidden>
+    <Hidden xlDown>
+      <span>xlDown</span>
+    </Hidden>
+  `}
+/>

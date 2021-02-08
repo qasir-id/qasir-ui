@@ -1,0 +1,63 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { Design, IFrame } from 'storybook-addon-designs/esm/blocks';
+
+<Meta title="Components/Feedback/Backdrop" />
+
+<Title>Backdrop</Title>
+<Subtitle>The backdrop component is used to provide emphasis on a particular element or parts of it.</Subtitle>
+
+<p>The backdrop signals to the user of a state change within the application and can be used for creating loaders, dialogs and more. In its simplest form, the backdrop component will add a dimmed layer over your application.</p>
+
+### Import
+
+```jsx
+// Vendors
+import React from 'react';
+
+// Material UI
+import { makeStyles } from '@material-ui/core/styles';
+
+// Qasir UI
+import Backdrop from 'qasir-ui/feedback/Backdrop';
+import CircularProgress from 'qasir-ui/feedback/CircularProgress';
+import Button from 'qasir-ui/inputs/Button';
+```
+
+### Usage
+
+```jsx
+const useStyles = makeStyles((theme) => ({
+  backdrop: {
+    zIndex: 1201,
+    color: '#F04B32',
+  },
+}));
+
+const backdrop = () => {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
+  return (
+    <>
+      <Button variant="outlined" color="primary" onClick={handleToggle}>
+        Show backdrop
+      </Button>
+      <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    </>
+  );
+};
+
+export default backdrop;
+```
+
+### Props
+
+<IFrame url="https://material-ui.com/api/backdrop/#props" height="80%" defaultCollapsed />

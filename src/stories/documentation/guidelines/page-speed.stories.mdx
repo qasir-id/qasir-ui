@@ -1,0 +1,77 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Guidelines/Page Speed" 
+  parameters={{      
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }} 
+/>
+
+<Title>Page speed</Title>
+<Subtitle>Qasir UI offices are often in remote and developing areas. Make sure the user experience is still acceptable.</Subtitle>
+
+<table>
+  <thead>
+    <tr>
+      <th>Connection</th>
+      <th>Description</th>
+      <th>Download speed</th>
+      <th>Latency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VSAT</td>
+      <td>around 400 WFP offices globally rely on VSAT connections</td>
+      <td>50-60 Kbps</td>
+      <td>600ms up to 700ms</td>
+    </tr>
+    <tr>
+      <td>2G</td>
+      <td>Usually found in rural areas of developing countries</td>
+      <td>250 Kbps</td>
+      <td>300 ms</td>
+    </tr>
+    <tr>
+      <td>Slow 3G</td>
+      <td>Usually found in rural areas</td>
+      <td>500 Kbps</td>
+      <td>100 ms</td>
+    </tr>
+    <tr>
+      <td>Fast 3G</td>
+      <td>Usually found in cities</td>
+      <td>&gt;1500 Kbps</td>
+      <td>40 ms</td>
+    </tr>    
+  </tbody>
+</table>
+
+### Test with Google Chrome
+
+<p>The Network tab in <code>Chrome DevTools</code> has an option to faux throttle your network, so you can experience what your users might experience visiting your application on 3G, 2G and GPRS connections. Besides the obvious, it’s also useful for visualising how the page load.</p>
+
+<ul>
+  <li>
+    <p>
+      Open DevTools (<code>cmd</code> + <code>alt</code> + <code>i</code>)
+    </p>
+  </li>
+  <li>
+    <p>
+      Click the <code>Network</code> tab
+    </p>
+  </li>
+  <li>
+    <p>Select which type of connection you want to imitate</p>
+  </li>
+  <li>
+    <p>
+      Reload the page to see assets downloading at that connection speed
+    </p>
+  </li>
+</ul>
+
+<p>You can make a custom Network Throttling Profile vor VSAT connections by clicking the option at the very top of the dropdown menu and use the values above.</p>

@@ -1,0 +1,30 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import { Design, IFrame } from 'storybook-addon-designs/esm/blocks';
+
+<Meta title="Components/Feedback/Snackbar" />
+
+<Title>Snackbar</Title>
+<Subtitle>Snackbars provide brief messages about app processes. The component is also known as a toast.</Subtitle>
+
+<p><a class="link" target="_blank" href="https://material-ui.com/components/snackbars/">Snackbars</a> inform users of a process that an app has performed or will perform. They appear temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user input to disappear.</p>
+<p>Snackbars contain a single line of text directly related to the operation performed. They may contain a text action, but no icons. You can use them to display notifications.</p>
+
+### Frequency
+
+<p>Only one snackbar may be displayed at a time.</p>
+
+### Import
+
+```jsx
+import Snackbar from 'qasir-ui/feedback/Snackbar';
+```
+
+### Usage
+
+```jsx
+<Snackbar />
+```
+
+### Props
+
+<IFrame url="https://material-ui.com/api/snackbar/#props" height="80%" defaultCollapsed />

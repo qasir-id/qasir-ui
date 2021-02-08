@@ -1,14 +1,14 @@
 {
-  "name": "qasir-ui",
-  "version": "1.0.0",
-  "private": true,
+  "name": "qasir-ui-dev",
+  "version": "1.0.12",
+  "private": false,
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^11.0.0",
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "autosuggest-highlight": "^3.1.1",
-    "clsx": "latest",
+    "clsx": "^1.1.1",
     "dayjs": "^1.8.29",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -17,13 +17,20 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "yarn && start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=nnkmnd7wfvm"
+    "start": "npx http-server ./storybook-static",
+    "chromatic": "npx chromatic --project-token=nnkmnd7wfvm",
+    "build:variables": "rm -rf variables && mkdir variables && babel src/components/variables -d variables --copy-files",
+    "build:layout": "rm -rf layout && mkdir layout && babel src/components/layout -d layout --copy-files",
+    "build:inputs": "rm -rf inputs && mkdir inputs && babel src/components/inputs -d inputs --copy-files",
+    "build:navigation": "rm -rf navigation && mkdir navigation && babel src/components/navigation -d navigation --copy-files",
+    "build:surfaces": "rm -rf surfaces && mkdir surfaces && babel src/components/surfaces -d surfaces --copy-files",
+    "build:feedback": "rm -rf feedback && mkdir feedback && babel src/components/feedback -d feedback --copy-files",
+    "build:data-display": "rm -rf data-display && mkdir data-display && babel src/components/data-display -d data-display --copy-files",
+    "build:utils": "rm -rf utils && mkdir utils && babel src/components/utils -d utils --copy-files",
+    "build:lab": "rm -rf lab && mkdir lab && babel src/components/lab -d lab --copy-files",
+    "build": "npm-run-all build:variables build:layout build:inputs build:navigation build:surfaces build:feedback build:data-display build:utils build:lab"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,28 +48,36 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.10.4",
-    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/plugin-transform-react-jsx": "^7.12.11",
     "@babel/preset-env": "^7.10.4",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-design-assets": "^5.3.19",
-    "@storybook/addon-docs": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addon-storysource": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/preset-create-react-app": "^3.1.3",
-    "@storybook/react": "^5.3.19",
-    "@storybook/theming": "^5.3.19",
+    "@babel/preset-react": "^7.12.10",
+    "@etchteam/storybook-addon-status": "^2.1.0",
+    "@storybook/addon-a11y": "^6.1.16",
+    "@storybook/addon-actions": "^6.1.16",
+    "@storybook/addon-controls": "^6.1.16",
+    "@storybook/addon-design-assets": "^6.1.16",
+    "@storybook/addon-docs": "^6.1.16",
+    "@storybook/addon-viewport": "^6.1.16",
+    "@storybook/addons": "^6.1.16",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.16",
+    "@storybook/theming": "^6.1.16",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.0.0",
+    "http-server": "^0.12.3",
+    "npm-run-all": "^4.1.5",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-is": "^16.13.1",
-    "storybook-addon-designs": "^5.4.0",
+    "storybook-addon-designs": "^5.4.3",
+    "storybook-addon-performance": "^0.14.0",
     "ts-loader": "^8.0.0"
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ],
     "plugins": [
       "@babel/plugin-transform-react-jsx"

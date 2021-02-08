@@ -1,0 +1,28 @@
+import { Title, Subtitle, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import BoxShadows from './index';
+
+<Title>Shadows</Title>
+<Subtitle>Add or remove shadows to elements with box-shadow utilities.</Subtitle>
+
+### Import
+
+```jsx
+import Box from 'qasir-ui/layout/Box';
+```
+
+<h3 style={{marginBottom: 20}}>Usage</h3>
+
+<BoxShadows />
+
+<Source
+  language='jsx'
+  code={dedent`
+     <Box
+    boxShadow="#4F94FC 0px 1px 8px 0px"
+    bgcolor="#cfe8fc"    
+    p={1}
+    style={{ width: '8rem', height: '5rem' }}
+  />
+  `}
+/>
