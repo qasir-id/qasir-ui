@@ -6,55 +6,54 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import Checkbox from 'components/inputs/Checkbox';
-import CheckboxDocs from './description.docs.mdx'
+import CheckboxDocs from './description.docs.mdx';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+}));
+
+const Wrapper = ({ children }) => {
+  const classes = useStyles();
+  return <div className={classes.root}>{children}</div>;
+};
+
+export default {
+  title: 'Components/Inputs/Checkbox',
+  parameters: {
+    design: { disabled: true },
+    options: { showPanel: true },
+  },
+  argTypes: {
+    size: {
+      name: 'Size',
+      control: {
+        type: 'select',
+        options: ['small', 'medium'],
       },
     },
-  }));
-  
-  const Wrapper = ({ children }) => {
-    const classes = useStyles();
-    return <div className={classes.root}>{children}</div>;
-  };
-
-  export default {
-    title: 'Components/Inputs/Checkbox',
-    parameters: {
-      design: { disabled: true },
-      options: { showPanel: true },
+    color: {
+      name: 'Color',
+      control: {
+        type: 'select',
+        options: ['default', 'primary', 'secondary'],
+      },
     },
-    argTypes: {
-       size: {
-           name: 'Size',
-           control: {
-               type: 'select',
-               options: ['small', 'medium']
-           }
-       },
-       color: {
-           name: 'Color',
-           control: {
-               type: 'select',
-               options: ['default', 'primary', 'secondary']
-           }
-       },
-       disabled: {
-           name: 'Disabled',
-           control: 'boolean'
-       }
-    }
-  };
+    disabled: {
+      name: 'Disabled',
+      control: 'boolean',
+    },
+  },
+};
 
-export const Description = (props, {size, color, disabled}) => {
-
-  const [checked,setChecked] = React.useState(false)
+export const Description = (props, { size, color, disabled }) => {
+  const [checked, setChecked] = React.useState(false);
   const handleChange = (event) => {
-      setChecked(event.target.checked);
-  }
+    setChecked(event.target.checked);
+  };
   return (
     <Wrapper>
       <Checkbox
@@ -68,17 +67,17 @@ export const Description = (props, {size, color, disabled}) => {
       />
     </Wrapper>
   );
-}
+};
 Description.story = {
-    parameters: {
-        status: 'Development', // Stable | Development | Deprecated
-        docs: {
-            page: CheckboxDocs
-        }
-    }
-}
+  parameters: {
+    status: 'Stable', // Stable | Development | Deprecated
+    docs: {
+      page: CheckboxDocs,
+    },
+  },
+};
 Description.args = {
-    size: 'medium',
-    color: 'secondary',
-    disabled: false
-}
+  size: 'medium',
+  color: 'secondary',
+  disabled: false,
+};
